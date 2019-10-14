@@ -9,11 +9,11 @@ module.exports = {
             },
             {
                 text: '生活',
-                link: '/life/Life.html'
+                link: '/life/Life'
             },
             {
                 text: '旅程',
-                link: '/journey/Journey.html'
+                link: '/journey/Journey'
             },
             {
                 text: 'GitHub',
@@ -41,6 +41,21 @@ module.exports = {
                         '/notes/css/Class',
                         '/notes/css/Color',
                         '/notes/css/Shadow',
+                    ]
+                }
+            ],
+            '/journey/': [{
+                    title: '国内',
+                    collapsable: true,
+                    children: [
+                        '/journey/domestic/ZjHz'
+                    ]
+                },
+                {
+                    title: '国外',
+                    collapsable: true,
+                    children: [
+                        '/journey/foreign/YnHn'
                     ]
                 }
             ]

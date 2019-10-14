@@ -33,7 +33,7 @@
 </template>
 <script>
 import ShnElDemoBlock from '../shn-el-demo-block'
-import { TOOLS } from '../../public/js/shn-base.js'
+import { TOOLS } from '../../../public/js/shn-base.js'
 
 export default {
   components: {
@@ -134,20 +134,11 @@ export default {
     fCode(code) {
       return TOOLS.fCode(code)
     }
-  },
-  mounted() {
-    const distinct = arr =>
-      arr.filter((element, index, self) => {
-        return self.indexOf(element) !== index
-      })
-
-    let arr = ['🐑', 1, 2, '🐑', '🐑', 3, '🐑', '🐑', 3]
-    console.log(distinct(arr)) // 输出[1, 2, 3, 4, 5]
   }
 }
 </script>
 <style lang="scss" scoped>
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 900px) {
   .css-shadow {
     width: 100% !important;
     .box {

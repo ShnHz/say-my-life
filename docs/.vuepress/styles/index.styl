@@ -105,17 +105,25 @@ body, html {
 }
 
 /* * index * */
-.home .hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+.home {
+    max-width: 1000px !important;
+    .hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
 
-    img {
-        max-height: 500px !important;
-    }
+        img {
+            max-height: 500px !important;
+        }
 
-    h1 {
-        font-size: 2rem !important;
+        h1 {
+            font-size: 2rem !important;
+            margin: 1.4rem auto !important;
+        }
+
+        .description {
+            margin: 1.4rem auto !important;
+        }
     }
 }
