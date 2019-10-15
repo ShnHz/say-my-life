@@ -42,6 +42,13 @@ module.exports = {
                         '/notes/css/Color',
                         '/notes/css/Shadow',
                     ]
+                },
+                {
+                    title: 'Vue',
+                    collapsable: true,
+                    children: [
+                        '/notes/vue/Sass'
+                    ]
                 }
             ],
             '/journey/': [{
