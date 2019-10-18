@@ -51,6 +51,7 @@ module.exports = {
                         '/notes/vue/Rem',
                         '/notes/vue/GlobalComponents',
                         '/notes/vue/Axios',
+                        '/notes/vue/VueLazyload',
                     ]
                 }
             ],
@@ -58,14 +59,33 @@ module.exports = {
                     title: '国内',
                     collapsable: true,
                     children: [
-                        '/journey/domestic/ZjHz'
+                        '/journey/domestic/ZjHz',
+                        '/journey/domestic/JxYs',
+                        '/journey/domestic/Cq',
+                        '/journey/domestic/ScCd',
+                        '/journey/domestic/ZjQdh',
+                        '/journey/domestic/AhHs',
+                        '/journey/domestic/ZjNh',
+                        '/journey/domestic/SxHs',
+                        '/journey/domestic/SxXa',
+                        '/journey/domestic/ZjQz',
+                        '/journey/domestic/ZjDjd',
+                        '/journey/domestic/ShDsn',
+                        '/journey/domestic/JsCz',
+                        '/journey/domestic/JsWx',
+                        '/journey/domestic/Tj',
+
                     ]
                 },
                 {
                     title: '国外',
                     collapsable: true,
                     children: [
-                        '/journey/foreign/YnHn'
+                        '/journey/foreign/YnHn',
+                        '/journey/foreign/YnXg',
+                        '/journey/foreign/YnHzm',
+                        '/journey/foreign/TgMg',
+                        '/journey/foreign/TgBty'
                     ]
                 }
             ],

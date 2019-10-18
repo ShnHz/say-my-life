@@ -102,3 +102,16 @@ html {
     color: #282828;
 }
 ```
+
+### vue-lazyload loading 及 error
+``` css
+img[lazy="loading"],img[lazy="error"] {
+  width: 30px !important;
+  height: 30px !important;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -15px;
+  margin-top: -15px;
+}
+```
