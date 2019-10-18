@@ -47,7 +47,10 @@ module.exports = {
                     title: 'Vue',
                     collapsable: true,
                     children: [
-                        '/notes/vue/Sass'
+                        '/notes/vue/Sass',
+                        '/notes/vue/Rem',
+                        '/notes/vue/GlobalComponents',
+                        '/notes/vue/Axios',
                     ]
                 }
             ],
@@ -65,7 +68,15 @@ module.exports = {
                         '/journey/foreign/YnHn'
                     ]
                 }
-            ]
+            ],
+            '/life/': [{
+                title: '年度计划',
+                collapsable: true,
+                children: [
+                    '/life/plan/2018',
+                    '/life/plan/2019'
+                ]
+            }]
         },
         sidebarDepth: 0, // e'b将同时提取markdown中h2 和 h3 标题，显示在侧边栏上。
         lastUpdated: 'Last Updated' // 文档更新时间：每个文件git最后提交的时间
