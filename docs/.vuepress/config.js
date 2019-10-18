@@ -73,8 +73,7 @@ module.exports = {
                         '/journey/domestic/ShDsn',
                         '/journey/domestic/JsCz',
                         '/journey/domestic/JsWx',
-                        '/journey/domestic/Tj',
-
+                        '/journey/domestic/Tj'
                     ]
                 },
                 {
