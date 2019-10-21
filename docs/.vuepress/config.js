@@ -52,6 +52,7 @@ module.exports = {
                         '/notes/vue/GlobalComponents',
                         '/notes/vue/Axios',
                         '/notes/vue/VueLazyload',
+                        '/notes/vue/Nprogress'
                     ]
                 }
             ],
@@ -60,6 +61,7 @@ module.exports = {
                     collapsable: true,
                     children: [
                         '/journey/domestic/ZjHz',
+                        '/journey/domestic/ZjNb',
                         '/journey/domestic/JxYs',
                         '/journey/domestic/Cq',
                         '/journey/domestic/ScCd',
@@ -73,7 +75,23 @@ module.exports = {
                         '/journey/domestic/ShDsn',
                         '/journey/domestic/JsCz',
                         '/journey/domestic/JsWx',
-                        '/journey/domestic/Tj'
+                        '/journey/domestic/Tj',
+                        '/journey/domestic/Bj',
+                        '/journey/domestic/ZjYds',
+                        '/journey/domestic/Sh',
+                        '/journey/domestic/JsSz',
+                        '/journey/domestic/JsNj',
+                        '/journey/domestic/ZjXds',
+                        '/journey/domestic/ZjSx',
+                        '/journey/domestic/ZjTz',
+                        '/journey/domestic/HnWc',
+                        '/journey/domestic/HnSy',
+                        '/journey/domestic/ZjXs',
+                        '/journey/domestic/JxWy',
+                        '/journey/domestic/FjXm',
+                        '/journey/domestic/ZjZs',
+                        '/journey/domestic/ZjYw',
+                        '/journey/domestic/ZjHd',
                     ]
                 },
                 {
