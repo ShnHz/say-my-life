@@ -87,6 +87,7 @@ a:link {
     color: #333;
     text-decoration: none;
     cursor: pointer;
+    transition: all 0.2s linear;
 }
 
 body,
@@ -113,5 +114,39 @@ img[lazy="loading"],img[lazy="error"] {
   top: 50%;
   margin-left: -15px;
   margin-top: -15px;
+}
+```
+
+### 注解字体
+``` css
+.annotation {
+    font-size: 13px;
+    color: #888;
+}
+```
+
+### 可点击
+``` css
+.cursor-pointer {
+    cursor: pointer;
+}
+```
+### 同行 flex 居中
+``` css
+.filter-col {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+```
+
+### 整行 flex 居中
+``` css
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 ```
