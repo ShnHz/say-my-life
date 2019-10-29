@@ -52,7 +52,8 @@ module.exports = {
                         '/notes/vue/GlobalComponents',
                         '/notes/vue/Axios',
                         '/notes/vue/VueLazyload',
-                        '/notes/vue/Nprogress'
+                        '/notes/vue/Nprogress',
+                        '/notes/vue/Title'
                     ]
                 }
             ],
@@ -120,6 +121,14 @@ module.exports = {
                     children: [
                         '/life/diary/2019-09',
                         '/life/diary/2019-10',
+                    ]
+                },
+                {
+                    title: '游戏',
+                    collapsable: true,
+                    children: [
+                        '/life/game/GTA5',
+                        '/life/game/极限竞速4：地平线',
                     ]
                 }
             ]
