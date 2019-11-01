@@ -1,3 +1,5 @@
+@import './mobile.styl';
+
 /* * all * */
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
     margin: 0;
@@ -85,6 +87,15 @@ div::-webkit-scrollbar-track, ul::-webkit-scrollbar-track, pre::-webkit-scrollba
 }
 
 /* all */
+.theme-container {
+    .suggestions {
+        border-radius: 5px;
+        border: 1px solid #e4e7ed;
+        box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+        margin-top: 15px;
+    }
+}
+
 .content__default {
     max-width: 100% !important;
     margin: 0 0 !important;
@@ -166,6 +177,21 @@ div::-webkit-scrollbar-track, ul::-webkit-scrollbar-track, pre::-webkit-scrollba
 
         .description {
             margin: 1.4rem auto !important;
+        }
+    }
+}
+
+/* * photo-list * */
+.photo-list {
+    .el-image {
+        >img {
+            border-radius: 3px;
+            transition: all 0.3s ease;
+            transform-origin: center center;
+
+            &:hover {
+                transform: scale(1.05);
+            }
         }
     }
 }

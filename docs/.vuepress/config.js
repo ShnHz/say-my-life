@@ -2,6 +2,7 @@ module.exports = {
     base: '/say-my-life/',
     title: 'Say My Life - Shn',
     description: '说说我的生活',
+    plugins: ['@vuepress/back-to-top'],
     themeConfig: {
         nav: [{
                 text: '笔记',
@@ -109,7 +110,7 @@ module.exports = {
             ],
             '/life/': [{
                     title: '年度计划',
-                    collapsable: true,
+                    collapsable: false,
                     children: [
                         '/life/plan/2018',
                         '/life/plan/2019'
@@ -119,6 +120,8 @@ module.exports = {
                     title: '日记',
                     collapsable: true,
                     children: [
+                        '/life/diary/2019-03',
+                        '/life/diary/2019-05',
                         '/life/diary/2019-09',
                         '/life/diary/2019-10',
                     ]
@@ -129,6 +132,12 @@ module.exports = {
                     children: [
                         '/life/game/GTA5',
                         '/life/game/极限竞速4：地平线',
+                        '/life/game/都市天际线',
+                        '/life/game/过山车之星',
+                        '/life/game/动物园之星',
+                        '/life/game/SD敢达',
+                        '/life/game/跑跑卡丁车',
+                        '/life/game/NBA2KOL2'
                     ]
                 }
             ]

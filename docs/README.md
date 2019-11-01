@@ -8,6 +8,6 @@ features:
   details: 每天都要学习，每天都要成长。
 - title: 记录旅行
   details: 多出去走走看看，才有资格拥有诗和远方。
-footer: Happy Life | Copyright © 2019-present Sang Hang Ning
+footer: Happy Life Copyright © 2019-present Sang Hang Ning
 ---
 
