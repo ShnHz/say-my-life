@@ -27,6 +27,10 @@ export default {
       type: String,
       default: ''
     },
+    imgType:{
+      type: String,
+      default: 'jpg'
+    },
     number: {
       type: Number,
       default: 0
@@ -38,9 +42,9 @@ export default {
     }
   },
   mounted() {
-    for (let i = 1; i < this.number; i++) {
+    for (let i = 1; i <= this.number; i++) {
       this.imgsArr.push(
-        `http://cdn.chenyingshuang.cn/${this.value}${this.imgName}${i}.jpg?imageMogr2/auto-orient`
+        `http://cdn.chenyingshuang.cn/${this.value}${this.imgName}${i}.${this.imgType}?imageMogr2/auto-orient`
       )
     }
   },

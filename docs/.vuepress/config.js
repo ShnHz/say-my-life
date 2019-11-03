@@ -137,7 +137,8 @@ module.exports = {
                         '/life/game/动物园之星',
                         '/life/game/SD敢达',
                         '/life/game/跑跑卡丁车',
-                        '/life/game/NBA2KOL2'
+                        '/life/game/NBA2KOL2',
+                        '/life/game/英雄联盟'
                     ]
                 }
             ]
