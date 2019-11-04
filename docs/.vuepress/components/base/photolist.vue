@@ -58,8 +58,9 @@ export default {
 <style lang="scss" scoped>
 .photo-list {
   > div {
-    width: 255px;
+    width: 20%;
     height: 150px;
+    min-width: 255px;
     padding: 10px;
   }
   .loading-image-slot,

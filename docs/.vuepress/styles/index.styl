@@ -1,4 +1,5 @@
 @import './mobile.styl';
+@import './map.styl';
 
 /* * all * */
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
@@ -86,6 +87,10 @@ div::-webkit-scrollbar-track, ul::-webkit-scrollbar-track, pre::-webkit-scrollba
     cursor: pointer;
 }
 
+.no-padding {
+    padding: 0 !important;
+}
+
 /* all */
 .theme-container {
     .suggestions {
@@ -99,6 +104,7 @@ div::-webkit-scrollbar-track, ul::-webkit-scrollbar-track, pre::-webkit-scrollba
 .content__default {
     max-width: 100% !important;
     margin: 0 0 !important;
+    // padding: 0 !important;
     overflow-x: hidden;
 
     h2 {

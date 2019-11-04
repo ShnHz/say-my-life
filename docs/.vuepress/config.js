@@ -62,38 +62,50 @@ module.exports = {
                     title: '国内',
                     collapsable: true,
                     children: [
+                        // 直辖市
+                        '/journey/domestic/Bj',
+                        '/journey/domestic/Tj',
+                        '/journey/domestic/Sh',
+                        '/journey/domestic/Cq',
+
+                        // 浙江
                         '/journey/domestic/ZjHz',
                         '/journey/domestic/ZjNb',
-                        '/journey/domestic/JxYs',
-                        '/journey/domestic/Cq',
-                        '/journey/domestic/ScCd',
-                        '/journey/domestic/ZjQdh',
-                        '/journey/domestic/AhHs',
-                        '/journey/domestic/ZjNh',
-                        '/journey/domestic/SxHs',
-                        '/journey/domestic/SxXa',
                         '/journey/domestic/ZjQz',
-                        '/journey/domestic/ZjDjd',
-                        '/journey/domestic/ShDsn',
-                        '/journey/domestic/JsCz',
-                        '/journey/domestic/JsWx',
-                        '/journey/domestic/Tj',
-                        '/journey/domestic/Bj',
-                        '/journey/domestic/ZjYds',
-                        '/journey/domestic/Sh',
-                        '/journey/domestic/JsSz',
-                        '/journey/domestic/JsNj',
-                        '/journey/domestic/ZjXds',
+                        '/journey/domestic/ZjNh',
                         '/journey/domestic/ZjSx',
                         '/journey/domestic/ZjTz',
-                        '/journey/domestic/HnWc',
-                        '/journey/domestic/HnSy',
                         '/journey/domestic/ZjXs',
-                        '/journey/domestic/JxWy',
-                        '/journey/domestic/FjXm',
                         '/journey/domestic/ZjZs',
                         '/journey/domestic/ZjYw',
                         '/journey/domestic/ZjHd',
+                        '/journey/domestic/ZjQdh',
+                        '/journey/domestic/ZjDjd',
+                        '/journey/domestic/ZjYds',
+                        '/journey/domestic/ZjXds',
+
+                        // 江苏
+                        '/journey/domestic/JsNj',
+                        '/journey/domestic/JsCz',
+                        '/journey/domestic/JsWx',
+                        '/journey/domestic/JsSz',
+
+                        // 江西
+                        '/journey/domestic/JxYs',
+                        '/journey/domestic/JxWy',
+
+                        // 四川
+                        '/journey/domestic/ScCd',
+                        // 安徽
+                        '/journey/domestic/AhHs',
+                        // 陕西
+                        '/journey/domestic/SxHs',
+                        '/journey/domestic/SxXa',
+                        // 海南
+                        '/journey/domestic/HnWc',
+                        '/journey/domestic/HnSy',
+                        // 福建
+                        '/journey/domestic/FjXm',
                     ]
                 },
                 {
