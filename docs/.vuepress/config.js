@@ -4,6 +4,7 @@ module.exports = {
     description: '说说我的生活',
     plugins: ['@vuepress/back-to-top'],
     themeConfig: {
+        logo: '/img/logo.png',
         nav: [{
                 text: '笔记',
                 link: '/notes/Notes'
