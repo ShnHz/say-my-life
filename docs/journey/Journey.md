@@ -1,1 +1,4 @@
+---
+pageClass: journey
+---
 <map-map/>

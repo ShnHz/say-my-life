@@ -19,9 +19,14 @@ module.exports = {
             {
                 text: 'GitHub',
                 items: [{
-                    text: 'GitHub地址',
-                    link: 'https://github.com/ShnHz'
-                }]
+                        text: 'ShnHz',
+                        link: 'https://github.com/ShnHz'
+                    },
+                    {
+                        text: '项目地址',
+                        link: 'https://github.com/ShnHz/say-my-life'
+                    }
+                ]
             }
         ],
         sidebar: {

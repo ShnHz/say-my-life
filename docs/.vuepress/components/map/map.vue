@@ -52,9 +52,6 @@ export default {
     }
   },
   mounted() {
-    document.getElementById('map').parentNode.className =
-      'theme-default-content content__default no-padding'
-
     this.height = window.innerHeight - 58 + 'px'
     this.$nextTick(function() {
       let _this = this
