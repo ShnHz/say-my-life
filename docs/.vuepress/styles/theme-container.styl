@@ -1,6 +1,31 @@
+// journey
 .theme-container.journey {
     .theme-default-content {
         padding: 0 !important;
+    }
+
+    .page {
+        padding-bottom: 0 !important;
+    }
+
+    .page-edit {
+        display: none;
+    }
+}
+
+// notes
+.theme-container.notes {
+    .theme-default-content {
+        width: 100%;
+        position: relative;
+        padding: 0 !important;
+        padding-top: 3.6rem !important;
+        overflow-x: visible !important;
+        text-align: center;
+        >:not(.particles) {
+            z-index: 2;
+            position: relative;
+        }
     }
 
     .page {

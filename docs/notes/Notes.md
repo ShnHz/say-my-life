@@ -1,0 +1,5 @@
+---
+pageClass: notes
+---
+
+<base-particles />
