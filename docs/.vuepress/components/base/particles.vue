@@ -1,9 +1,26 @@
 <template>
-  <div :style="{'height':height}" class="particles" id="particles"></div>
+  <div :style="{'height':height}" class="particles">
+    <vue-particles
+      :clickEffect="true"
+      :hoverEffect="true"
+      :lineLinked="true"
+      :lineOpacity="0.4"
+      :linesDistance="150"
+      :linesWidth="1"
+      :moveSpeed="1"
+      :particleOpacity="0.7"
+      :particleSize="4"
+      :particlesNumber="60"
+      clickMode="push"
+      color="#ccc"
+      hoverMode="grab"
+      linesColor="#aaa"
+      shapeType="circle"
+      style="height:100%"
+    ></vue-particles>
+  </div>
 </template>
 <script>
-import particles from 'particles.js'
-
 export default {
   data() {
     return {
@@ -11,14 +28,12 @@ export default {
     }
   },
   mounted() {
-    particlesJS.load('particles', ' /json/particles.json')
     this.height = window.innerHeight - 58 + 'px'
-    this.width = window.innerWidth - 58 + 'px'
   }
 }
 </script>
 <style lang="scss" scoped>
-#particles {
+.particles {
   z-index: 0;
   width: 100%;
   position: absolute;

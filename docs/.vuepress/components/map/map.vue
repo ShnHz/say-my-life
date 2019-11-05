@@ -118,8 +118,7 @@ export default {
           }, 1000)
         }
       })
-    },
-    init() {}
+    }
   }
 }
 </script>

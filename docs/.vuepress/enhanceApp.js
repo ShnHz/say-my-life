@@ -7,6 +7,8 @@ import '../.vuepress/public/iconfont/iconfont.css'
 import vueWaterfallEasy from 'vue-waterfall-easy'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import '../.vuepress/public/css/element-variables.scss'
+import VueParticles from 'vue-particles'  
 
 export default ({
     Vue, // VuePress 正在使用的 Vue 构造函数
@@ -15,5 +17,5 @@ export default ({
     Vue.use(VueHighlightJS)
     Vue.use(ElementUI)
     Vue.component('vue-waterfall-easy', vueWaterfallEasy)
-
+    Vue.use(VueParticles) 
 }
