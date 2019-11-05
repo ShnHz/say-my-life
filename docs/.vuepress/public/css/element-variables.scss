@@ -5,3 +5,30 @@ $--color-primary: #3eaf7c;
 $--font-path: '~element-ui/lib/theme-chalk/fonts';
 
 @import "~element-ui/packages/theme-chalk/src/index";
+
+
+.el-checkbox.is-checked {
+    .el-checkbox__inner {
+        background-color: #3eaf7c !important;
+        border-color: #3eaf7c !important;
+    }
+}
+
+.el-checkbox.delayed.is-checked {
+    .el-checkbox__inner {
+        background-color: #fab905 !important;
+        border-color: #fab905 !important;
+    }
+}
+
+.el-checkbox.delete.is-checked {
+    .el-checkbox__inner {
+        background-color: #f56c6c !important;
+        border-color: #f56c6c !important;
+
+        &::after {
+            transform: rotate(90deg) scaleY(1) !important;
+            border-bottom: 0;
+        }
+    }
+}

@@ -3,6 +3,12 @@ module.exports = {
     title: 'Say My Life - Shn',
     description: '说说我的生活',
     plugins: ['@vuepress/back-to-top'],
+    head: [
+        ['link', {
+            rel: 'icon',
+            href: `/favicon.ico`
+        }]
+    ],
     themeConfig: {
         logo: '/img/logo.png',
         nav: [{
@@ -48,6 +54,7 @@ module.exports = {
                         '/notes/css/Class',
                         '/notes/css/Color',
                         '/notes/css/Shadow',
+                        '/notes/css/Scss',
                     ]
                 },
                 {
