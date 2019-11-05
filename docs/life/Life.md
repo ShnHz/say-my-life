@@ -1,0 +1,4 @@
+---
+pageClass: life
+---
+<base-life />

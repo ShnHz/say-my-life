@@ -1,6 +1,9 @@
 // journey
-.theme-container.journey {
+.theme-container.journey,.theme-container.life {
     .theme-default-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         padding: 0 !important;
     }
 
@@ -22,6 +25,7 @@
         padding-top: 3.6rem !important;
         overflow-x: visible !important;
         text-align: center;
+
         >:not(.particles) {
             z-index: 2;
             position: relative;
@@ -34,5 +38,15 @@
 
     .page-edit {
         display: none;
+    }
+}
+
+// diary
+.theme-container.diary {
+    .theme-default-content {
+        p {
+            padding-left: 20px;
+            border-left: 1px solid #efefef;
+        }
     }
 }

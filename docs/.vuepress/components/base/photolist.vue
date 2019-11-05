@@ -4,6 +4,7 @@
       :key="item"
       :previewSrcList="getSrcList(index)"
       :src="item"
+      :style="{'height':`${imgBoxHeight}px`}"
       fit="cover"
       lazy
       v-for="(item,index) in imgsArr"
@@ -27,9 +28,13 @@ export default {
       type: String,
       default: ''
     },
-    imgType:{
+    imgType: {
       type: String,
       default: 'jpg'
+    },
+    imgBoxHeight: {
+      type: Number,
+      default: 170
     },
     number: {
       type: Number,
@@ -70,7 +75,7 @@ export default {
     justify-content: center;
     height: 100%;
     border-radius: 3px;
-    border: 1px #EBEDF0 solid;
+    border: 1px #ebedf0 solid;
   }
 }
 @media screen and (max-width: 900px) {
