@@ -72,6 +72,17 @@ module.exports = {
                         '/notes/vue/GlobalComponents', //vue 全局组件
                         '/notes/vue/VueLazyload',
                     ]
+                },
+                {
+                    title: '动画',
+                    collapsable: true,
+                    children: [
+                        '/notes/animation/Mountain',
+                        '/notes/animation/ShapesColor',
+                        '/notes/animation/CoolSquare',
+                        '/notes/animation/XRay',
+                        '/notes/animation/Pikachu',
+                    ]
                 }
             ],
             '/journey/': [{
