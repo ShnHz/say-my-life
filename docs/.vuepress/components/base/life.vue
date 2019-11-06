@@ -1,6 +1,6 @@
 <template>
   <div :style="{'height':height}" class="life flex">
-    <img height="300" src="/img/life-index_white.gif" />
+    <img height="300" src="../../public/img/life-index_white.gif" />
   </div>
 </template>
 <script>
