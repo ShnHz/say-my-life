@@ -14,7 +14,7 @@ const components = {
 export default components
 ```
 
-###### mian.js 文件内印日
+###### main.js 文件内输入
 ``` js
 import components from './components'
 Vue.use(components);

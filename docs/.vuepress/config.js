@@ -37,14 +37,17 @@ module.exports = {
             }
         ],
         sidebar: {
-            '/notes/': [{
+            '/notes/': [
+                '/notes/Web',
+                {
                     title: 'JavaScript',
                     collapsable: true,
                     children: [
+                        '/notes/js/Distinct',
+                        '/notes/js/FlattenDeep',
                         '/notes/js/Promise',
                         '/notes/js/Sort',
-                        '/notes/js/Distinct',
-                        '/notes/js/FlattenDeep'
+                        '/notes/js/String',
                     ]
                 },
                 {
@@ -61,13 +64,13 @@ module.exports = {
                     title: 'Vue',
                     collapsable: true,
                     children: [
-                        '/notes/vue/Sass',
-                        '/notes/vue/Rem',
-                        '/notes/vue/GlobalComponents',
                         '/notes/vue/Axios',
-                        '/notes/vue/VueLazyload',
                         '/notes/vue/Nprogress',
-                        '/notes/vue/Title'
+                        '/notes/vue/Rem',
+                        '/notes/vue/Sass',
+                        '/notes/vue/Title',
+                        '/notes/vue/GlobalComponents', //vue 全局组件
+                        '/notes/vue/VueLazyload',
                     ]
                 }
             ],

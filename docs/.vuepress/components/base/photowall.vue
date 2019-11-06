@@ -33,21 +33,25 @@ export default {
     number: {
       type: Number,
       default: 0
+    },
+    imgType: {
+      type: String,
+      default:'jpg'
     }
   },
   mounted() {
     if (this.value && this.number > 10) {
       for (let i = 1; i < 10; i++) {
         this.imgsArr.push({
-          src: `http://cdn.chenyingshuang.cn/${this.value}${i}.jpg?imageMogr2/auto-orient`,
-          href: `http://cdn.chenyingshuang.cn/${this.value}${i}.jpg?imageMogr2/auto-orient`
+          src: `http://cdn.chenyingshuang.cn/${this.value}${i}.${this.imgType}?imageMogr2/auto-orient`,
+          href: `http://cdn.chenyingshuang.cn/${this.value}${i}.${this.imgType}?imageMogr2/auto-orient`
         })
       }
     } else {
       for (let i = 1; i < this.number; i++) {
         this.imgsArr.push({
-          src: `http://cdn.chenyingshuang.cn/${this.value}${i}.jpg?imageMogr2/auto-orient`,
-          href: `http://cdn.chenyingshuang.cn/${this.value}${i}.jpg?imageMogr2/auto-orient`
+          src: `http://cdn.chenyingshuang.cn/${this.value}${i}.${this.imgType}?imageMogr2/auto-orient`,
+          href: `http://cdn.chenyingshuang.cn/${this.value}${i}.${this.imgType}?imageMogr2/auto-orient`
         })
       }
     }
@@ -63,8 +67,8 @@ export default {
       if (this.number > this.index) {
         for (let i = this.index; i < this.index + 10; i++) {
           this.imgsArr.push({
-            src: `http://cdn.chenyingshuang.cn/${this.value}${i}.jpg?imageMogr2/auto-orient`,
-            href: `http://cdn.chenyingshuang.cn/${this.value}${i}.jpg?imageMogr2/auto-orient`
+            src: `http://cdn.chenyingshuang.cn/${this.value}${i}.${this.imgType}?imageMogr2/auto-orient`,
+            href: `http://cdn.chenyingshuang.cn/${this.value}${i}.${this.imgType}?imageMogr2/auto-orient`
           })
         }
         this.index += 10
