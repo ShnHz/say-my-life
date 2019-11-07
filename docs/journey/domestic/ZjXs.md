@@ -6,7 +6,7 @@ pageClass: diary
 ###### 我爸妈开车来宁波接我去象山玩，因为6.20是我的生日，算是陪我过个生日吧，很感动。
 <base-photowall value="journey/zjxs/" :number="27" imgType="JPG"/>
 
-### 2019.06.18 ☁️ 😁
+### 2016.06.18 ☁️ 😁
 从宁波出发前往象山，第一站来到的就是象山影视城 <br>
 <img src="http://cdn.chenyingshuang.cn/journey/zjxs/2.JPG" width="300"/> 
 <img src="http://cdn.chenyingshuang.cn/journey/zjxs/4.JPG" width="300"/> <br>
@@ -27,7 +27,7 @@ pageClass: diary
 <img src="http://cdn.chenyingshuang.cn/journey/zjxs/18.JPG?imageMogr2/auto-orient" width="270"/>
 <img src="http://cdn.chenyingshuang.cn/journey/zjxs/19.JPG?imageMogr2/auto-orient" width="270"/><br>
 
-### 2019.06.19 ☁️ 😁
+### 2016.06.19 ☁️ 😁
 第二天我爸联系了一个当地渔民，讨价还价把我们拉到了一个外海岛上，貌似海还是依旧黄，不过比沿海要好太多了。第一次坐渔船也是很新奇！<br>
 <img src="http://cdn.chenyingshuang.cn/journey/zjxs/21.JPG?imageMogr2/auto-orient" width="270"/>
 <img src="http://cdn.chenyingshuang.cn/journey/zjxs/22.JPG?imageMogr2/auto-orient" width="270"/>
