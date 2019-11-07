@@ -28,6 +28,20 @@
         </p>
       </div>
     </div>
+    <div class="second">
+      <span class="time">
+        2018
+        <span class="unit">年</span>03
+        <span class="unit">月</span>26
+        <span class="unit">日</span>08:44
+        <span class="unit">开</span>
+      </span>
+      <span>
+        15
+        <span class="unit">车</span>10D
+        <span class="unit">号</span>
+      </span>
+    </div>
   </div>
 </template>
 <script>
@@ -43,7 +57,7 @@ export default {}
 
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  background: #CAE8ED;
+  background: #cae8ed;
   .id {
     color: #f56c6c;
     font-weight: 600;
@@ -57,7 +71,21 @@ export default {}
   }
   .station {
     .train-id {
+      line-height: 1.4;
+      position: absolute;
+      top: 0px;
+      border-bottom: 1px #222 solid;
+      overflow: hidden;
+      &::after {
         position: absolute;
+        bottom: -5px;
+        right: -5px;
+        content: '';
+        width: 0;
+        height: 0;
+        border: 4px solid transparent;
+        border-left: 8px solid #222;
+      }
     }
     > div {
       flex: 1;
@@ -83,6 +111,18 @@ export default {}
     .end-station {
       margin-left: 40px;
       text-align: left;
+    }
+  }
+  .unit {
+    font-size: 12px;
+    font-weight: 500;
+    margin-right: 4px;
+  }
+  .second {
+    font-weight: 600;
+    font-size: 14px;
+    .time{
+        margin-right: 15px;
     }
   }
 }
