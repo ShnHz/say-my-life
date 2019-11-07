@@ -56,11 +56,12 @@
       <span>**** ****</span>0620 桑杭宁
     </div>
     <img alt class="qrcode" src="../../public/img/train-ticket-qrcode.png" />
+    <img alt class="train-bg" src="../../public/img/train.png" />
     <div class="footer">66100310950321Q021361郑州东售</div>
   </div>
 </template>
 <script>
-export default {}
+export default {};
 </script>
 <style lang="scss" scoped>
 .train-ticket {
@@ -96,7 +97,7 @@ export default {}
         position: absolute;
         bottom: -5px;
         right: -5px;
-        content: '';
+        content: "";
         width: 0;
         height: 0;
         border: 4px solid transparent;
@@ -166,8 +167,15 @@ export default {}
     width: 50px;
     height: 50px;
     position: absolute;
-    right:20px ;
+    right: 20px;
     bottom: 30px;
+  }
+  .train-bg {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.1;
   }
   .footer {
     width: 100%;
@@ -177,6 +185,18 @@ export default {}
     padding: 5px 0 5px 20px;
     font-size: 12px;
     background: #a1e6eba2;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .train-ticket {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .train-ticket {
+    width: 350px;
   }
 }
 </style>
