@@ -42,6 +42,21 @@
         <span class="unit">号</span>
       </span>
     </div>
+    <div class="third flex">
+      <div>
+        <span class="unit">￥</span>80.5
+        <span class="unit">元</span>
+      </div>
+      <div>网</div>
+      <div>二等座</div>
+    </div>
+    <div class="forth">限乘当日当次车</div>
+    <div class="fivth">
+      362323
+      <span>**** ****</span>0620 桑杭宁
+    </div>
+    <img alt class="qrcode" src="../../public/img/train-ticket-qrcode.png" />
+    <div class="footer">66100310950321Q021361郑州东售</div>
   </div>
 </template>
 <script>
@@ -57,7 +72,8 @@ export default {}
 
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  background: #cae8ed;
+  background: #c4e5ea;
+  overflow: hidden;
   .id {
     color: #f56c6c;
     font-weight: 600;
@@ -118,12 +134,49 @@ export default {}
     font-weight: 500;
     margin-right: 4px;
   }
-  .second {
+  .second,
+  .third {
     font-weight: 600;
     font-size: 14px;
-    .time{
-        margin-right: 15px;
+    .time {
+      margin-right: 28px;
     }
+  }
+  .third {
+    > div {
+      flex: 1;
+      text-align: center;
+      &:first-child {
+        text-align: left;
+      }
+    }
+  }
+  .forth {
+    font-size: 14px;
+  }
+  .fivth {
+    margin-top: 25px;
+    span {
+      margin: 0 5px;
+      position: relative;
+      top: 3px;
+    }
+  }
+  .qrcode {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right:20px ;
+    bottom: 30px;
+  }
+  .footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 5px 0 5px 20px;
+    font-size: 12px;
+    background: #a1e6eba2;
   }
 }
 </style>
