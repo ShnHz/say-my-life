@@ -1,74 +1,176 @@
 <template>
   <div class="train-ticket">
     <p>
-      <span class="id">Z95Q021361</span>
-      <span class="check-in">检票：4A</span>
+      <span class="id">{{id}}</span>
+      <span class="check-in">检票：{{checkIn}}</span>
     </p>
     <div class="station flex">
       <div class="train-id">
-        G
-        <span style="font-size:18px">1560</span>
+        {{trainType}}
+        <span style="font-size:18px">{{trainId}}</span>
       </div>
       <div class="start-station">
         <p>
-          <span class="station-cn">郑州东</span>
+          <span class="station-cn">{{startStation}}</span>
           <span class="zhan">站</span>
         </p>
         <p>
-          <span class="station-pinyin">ShangHaiHongQiao</span>
+          <span class="station-pinyin">{{startStationEn}}</span>
         </p>
       </div>
       <div class="end-station">
         <p>
-          <span class="station-cn">安阳东</span>
+          <span class="station-cn">{{endStation}}</span>
           <span class="zhan">站</span>
         </p>
         <p>
-          <span class="station-pinyin">ChuZhou</span>
+          <span class="station-pinyin">{{endStationEn}}</span>
         </p>
       </div>
     </div>
     <div class="second">
       <span class="time">
-        2018
-        <span class="unit">年</span>03
-        <span class="unit">月</span>26
-        <span class="unit">日</span>08:44
+        {{year}}
+        <span class="unit">年</span>
+        {{month}}
+        <span class="unit">月</span>
+        {{day}}
+        <span class="unit">日</span>
+        {{hour}}:{{minute}}
         <span class="unit">开</span>
       </span>
       <span>
-        15
-        <span class="unit">车</span>10D
+        {{trainNum}}
+        <span class="unit">车</span>
+        {{trainSeatNum}}
         <span class="unit">号</span>
       </span>
     </div>
     <div class="third flex">
       <div>
-        <span class="unit">￥</span>80.5
+        <span class="unit">￥</span>
+        {{price}}
         <span class="unit">元</span>
       </div>
-      <div>网</div>
-      <div>二等座</div>
+      <div>
+        <span v-if="net">网</span>
+      </div>
+      <div>{{trainSeatLv}}</div>
     </div>
     <div class="forth">限乘当日当次车</div>
     <div class="fivth">
-      362323
-      <span>**** ****</span>0620 桑杭宁
+      3623
+      <span>** **** **** **</span>19 桑杭宁
     </div>
     <img alt class="qrcode" src="../../public/img/train-ticket-qrcode.png" />
     <img alt class="train-bg" src="../../public/img/train.png" />
-    <div class="footer">66100310950321Q021361郑州东售</div>
+    <div class="footer">{{footer}}</div>
   </div>
 </template>
 <script>
-export default {};
+export default {
+  props: {
+    id: {
+      type: String,
+      default: 'Z95Q021361'
+    },
+    checkIn: {
+      type: String,
+      default: '4A'
+    },
+    trainType: {
+      type: String,
+      default: 'G'
+    },
+    trainId: {
+      type: String,
+      default: '1560'
+    },
+    trainType: {
+      type: String,
+      default: 'G'
+    },
+    startStation: {
+      type: String,
+      default: '杭州东'
+    },
+    endStation: {
+      type: String,
+      default: '宁波'
+    },
+    startStationEn: {
+      type: String,
+      default: 'HangZhouDong'
+    },
+    endStationEn: {
+      type: String,
+      default: 'NingBo'
+    },
+    date: {
+      type: String,
+      default: '2018/03/26 08:44'
+    },
+    trainNum: {
+      type: String,
+      default: '15'
+    },
+    trainNum: {
+      type: String,
+      default: '15'
+    },
+    trainSeatNum: {
+      type: String,
+      default: '10D'
+    },
+    trainSeatLv: {
+      type: String,
+      default: '二等座'
+    },
+    price: {
+      type: String,
+      default: '80.5'
+    },
+    net: {
+      type: Boolean,
+      default: true
+    },
+    footer: {
+      type: String,
+      default: '66100310950321Q021361郑州东售'
+    }
+  },
+  computed: {
+    year: function() {
+      return new Date(this.date).getFullYear()
+    },
+    month: function() {
+      return this.appendZero(new Date(this.date).getMonth() + 1)
+    },
+    day: function() {
+      return this.appendZero(new Date(this.date).getDate())
+    },
+    hour: function() {
+      return this.appendZero(new Date(this.date).getHours())
+    },
+    minute: function() {
+      return this.appendZero(new Date(this.date).getMinutes())
+    }
+  },
+  methods: {
+    appendZero(obj) {
+      if (obj < 10) return '0' + '' + obj
+      else return obj
+    }
+  }
+}
 </script>
 <style lang="scss" scoped>
 .train-ticket {
+  display: inline-block;
   width: 350px;
   height: 220px;
   position: relative;
-  margin: 20px 0;
+  margin: 20px 20px 20px 0;
   padding: 5px 20px;
 
   border-radius: 10px;
@@ -97,7 +199,7 @@ export default {};
         position: absolute;
         bottom: -5px;
         right: -5px;
-        content: "";
+        content: '';
         width: 0;
         height: 0;
         border: 4px solid transparent;
@@ -133,13 +235,13 @@ export default {};
   .unit {
     font-size: 12px;
     font-weight: 500;
-    margin-right: 4px;
+    margin-right: 2px;
   }
   .second,
   .third {
     font-weight: 600;
     font-size: 14px;
-    .time {
+    .date {
       margin-right: 28px;
     }
   }
