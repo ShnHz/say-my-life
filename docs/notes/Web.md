@@ -33,3 +33,8 @@ pageClass: diary
 [「UI」GetThthr](http://www.invisionapp.com/inside-design/design-resources/tethr/) <br>
 [「UI」掘金 - 灵感专题](https://juejin.im/post/5d10360b6fb9a07eb94f9687) <br>
 [「前端代码分享」CODEPEN](https://codepen.io/popular/pens) <br>
+
+### CSS3动画
+[「CSS3」Animate.css](https://daneden.github.io/animate.css/) <br>
+[「CSS3」抖动](http://elrumordelaluz.github.io/csshake/) <br>
+[「CSS3」hover](http://ianlunn.github.io/Hover/) <br>
