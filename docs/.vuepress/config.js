@@ -45,6 +45,7 @@ module.exports = {
                     children: [
                         '/notes/js/Distinct',
                         '/notes/js/FlattenDeep',
+                        '/notes/js/Object',
                         '/notes/js/Promise',
                         '/notes/js/Sort',
                         '/notes/js/String',
