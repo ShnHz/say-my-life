@@ -77,6 +77,7 @@ module.exports = {
                     title: '动画',
                     collapsable: true,
                     children: [
+                        '/notes/animation/ButtonHover',
                         '/notes/animation/Mountain',
                         '/notes/animation/ShapesColor',
                         '/notes/animation/CoolSquare',
