@@ -114,10 +114,6 @@ export default {
       type: String,
       default: '15'
     },
-    trainNum: {
-      type: String,
-      default: '15'
-    },
     trainSeatNum: {
       type: String,
       default: '10D'

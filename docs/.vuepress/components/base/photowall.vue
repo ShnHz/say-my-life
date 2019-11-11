@@ -36,7 +36,7 @@ export default {
     },
     imgType: {
       type: String,
-      default:'jpg'
+      default: 'jpg'
     }
   },
   mounted() {
@@ -65,13 +65,13 @@ export default {
   methods: {
     getData() {
       if (this.number > this.index) {
-        for (let i = this.index; i < this.index + 10; i++) {
+        for (let i = this.index; i < this.index + 1; i++) {
           this.imgsArr.push({
             src: `http://cdn.chenyingshuang.cn/${this.value}${i}.${this.imgType}?imageMogr2/auto-orient`,
             href: `http://cdn.chenyingshuang.cn/${this.value}${i}.${this.imgType}?imageMogr2/auto-orient`
           })
         }
-        this.index += 10
+        this.index++
       } else {
         this.$refs.waterfall.waterfallOver()
       }
