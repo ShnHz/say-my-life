@@ -2,8 +2,6 @@
 pageClass: diary
 ---
 ## 浙江奉化雪窦山 XueDouShan 
-###### 那时候可能是一个人出去散心，选择了台州。
-
 <base-photowall value="journey/zjxds/" :number="28"/>
 
 ### 2017.10.22 ☀️ 😄
