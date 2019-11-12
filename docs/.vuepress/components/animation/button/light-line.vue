@@ -49,7 +49,7 @@ export default {
       outline-offset: -1px;
       &:hover {
         outline: 0.2px solid;
-      outline-color: rgba(85, 85, 85, 0);
+        outline-color: rgba(85, 85, 85, 0);
         outline-offset: 10px;
         box-shadow: inset 0 0 20px rgba(200, 200, 200, 0.5),
           0 0 20px rgba(200, 200, 200, 0.2);

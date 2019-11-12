@@ -12,3 +12,6 @@ pageClass: animation-no-title-inline
 
 <!-- 发散边线  -->
 <animation-button-light-line />
+
+<!-- 发散边线  -->
+<animation-button-light-distortion-effect />
