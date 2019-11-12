@@ -65,13 +65,17 @@ export default {
   methods: {
     getData() {
       if (this.number > this.index) {
-        for (let i = this.index; i < this.index + 1; i++) {
-          this.imgsArr.push({
-            src: `http://cdn.chenyingshuang.cn/${this.value}${i}.${this.imgType}?imageMogr2/auto-orient`,
-            href: `http://cdn.chenyingshuang.cn/${this.value}${i}.${this.imgType}?imageMogr2/auto-orient`
-          })
+        for (let i = this.index; i < this.index + 10; i++) {
+          if (i > this.number) {
+            break
+          } else {
+            this.imgsArr.push({
+              src: `http://cdn.chenyingshuang.cn/${this.value}${i}.${this.imgType}?imageMogr2/auto-orient`,
+              href: `http://cdn.chenyingshuang.cn/${this.value}${i}.${this.imgType}?imageMogr2/auto-orient`
+            })
+          }
         }
-        this.index++
+        this.index = this.index + 10
       } else {
         this.$refs.waterfall.waterfallOver()
       }
