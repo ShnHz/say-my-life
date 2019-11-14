@@ -1,7 +1,7 @@
 ---
 pageClass: diary
 ---
-## 浙江台州 TaiZhou 
+## 浙江台州 TaiZhou √
 
 ###### 那时候可能是一个人出去散心，选择了台州。
 <base-train-ticket startStation="宁波" startStationEn="NingBo" endStation="台州" endStationEn="TaiZhou" date="2017/4/1 10:00" trainId="7503" trainNum="06" trainSeatNum="02A" checkIn="5B" id="Z12C008535" footer="33284300120402C008535宁波售" price="52"/>

@@ -17,10 +17,10 @@ export default {
 <style lang="scss" scoped>
 .light-distortion-effect {
   position: relative;
-  // top: -2px;
   width: 20%;
   min-width: 200px;
-  height: 200px;
+  height: 100px;
+  top: -1px;
   .button {
     width: 100px;
     height: 30px;
@@ -39,6 +39,8 @@ export default {
       text-decoration: none;
       text-transform: uppercase;
       width: 100%;
+      border-radius: 24px;
+      box-shadow: 0 2px 8px 2px #{rgba(#275efe, 0.32)}
     }
     .btn:hover {
       text-decoration: none;
@@ -50,7 +52,7 @@ export default {
       position: relative;
       display: inline-flex;
       color: #000;
-      border: solid 1px #000;
+      // border: solid 1px #000;
       transition-duration: 0.4s;
       overflow: hidden;
     }
@@ -64,13 +66,13 @@ export default {
 
     /* 文字1を上に */
     .effect04:hover {
-      background-color: #000;
+      background-color: #275efe;
     }
 
     /* HOVERしたら文字1を上に */
     .effect04:hover span {
       -webkit-transform: translateY(-400%) scale(-0.1, 20);
-      transform: translateY(-400%) scale(-0.1, 20);
+      transform: translateY(-500%) scale(-0.1, 20);
     }
 
     /*文字2*/
@@ -82,6 +84,7 @@ export default {
       right: 0;
       height: 30px;
       margin: auto;
+      font-weight: 500;
       -webkit-transform: translateY(500%) scale(-0.1, 20);
       transform: translateY(500%) scale(-0.1, 20);
     }

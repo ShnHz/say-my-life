@@ -18,7 +18,7 @@ export default {
 .light-reflection {
   width: 20%;
   min-width: 200px;
-  height: 200px;
+  height: 100px;
   .button {
     width: 100px;
     height: 30px;
@@ -37,6 +37,8 @@ export default {
       text-decoration: none;
       text-transform: uppercase;
       width: 100%;
+      border-radius: 24px;
+      box-shadow: 0 2px 8px -1px #{rgba(#151924, 0.32)}
     }
     .btn:hover {
       text-decoration: none;
@@ -45,9 +47,8 @@ export default {
     /*btn_background*/
     .effect01 {
       color: #fff;
-      border: 4px solid #000;
-      box-shadow: 0px 0px 0px 1px #000 inset;
-      background-color: #000;
+      border: 4px solid #2f3545;
+      background-color: #2f3545;
       overflow: hidden;
       position: relative;
       transition: all 0.3s ease-in-out;
@@ -55,7 +56,7 @@ export default {
     .effect01:hover {
       border: 4px solid #666;
       background-color: #fff;
-      box-shadow: 0px 0px 0px 2px #eee inset;
+      box-shadow: 0 4px 20px -2px #{rgba(#151924, 0.5)}
     }
 
     /*btn_text*/
@@ -71,7 +72,7 @@ export default {
     /*highlight*/
     .effect01:after {
       background: #fff;
-      border: 0px solid #000;
+      border: 0px solid #2f3545;
       content: '';
       height: 155px;
       left: -75px;
@@ -86,7 +87,7 @@ export default {
     }
     .effect01:hover:after {
       background: #fff;
-      border: 20px solid #000;
+      border: 20px solid #2f3545;
       opacity: 0;
       left: 120%;
       -webkit-transform: rotate(40deg);

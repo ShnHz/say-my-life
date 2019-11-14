@@ -16,7 +16,7 @@ export default {
 .light-line {
   width: 20%;
   min-width: 200px;
-  height: 200px;
+  height: 100px;
   .button {
     width: 100px;
     height: 30px;
@@ -36,7 +36,7 @@ export default {
       text-decoration: none;
       text-transform: uppercase;
       width: 100%;
-
+      border-radius: 24px;
       &:hover {
         text-decoration: none;
       }

@@ -2,7 +2,7 @@
 pageClass: diary
 ---
 
-## 浙江象山 XiangShan 
+## 浙江象山 XiangShan √
 ###### 我爸妈开车来宁波接我去象山玩，因为6.20是我的生日，算是陪我过个生日吧，很感动。
 <base-photowall value="journey/zjxs/" :number="27" imgType="JPG"/>
 

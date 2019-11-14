@@ -19,9 +19,11 @@ export default {
 </script>
 <style lang="scss" scoped>
 .line-svg {
+  position: relative;
+  top:-1px;
   width: 20%;
   min-width: 200px;
-  height: 200px;
+  height: 100px;
   .button {
     width: 100px;
     height: 30px;
@@ -40,21 +42,22 @@ export default {
       text-decoration: none;
       text-transform: uppercase;
       width: 100%;
-
+      line-height: 30px;
       &:hover {
         text-decoration: none;
       }
     }
     .btn-1 {
-      background: darken(#fff, 1.5%);
+      // background: darken(#fff, 1.5%);
       font-weight: 100;
 
       svg {
         height: 30px;
         left: 0;
         position: absolute;
-        top: -6px;
+        // top: -6px;
         width: 100px;
+        overflow: visible;
       }
 
       rect {
@@ -62,15 +65,16 @@ export default {
         stroke: #E1332D;
         stroke-width: 2;
         stroke-dasharray: 422, 0;
-        transition: all 0.35s linear;
+        rx: 20;
+        transition: all .5s linear;
       }
     }
     .btn-1:hover {
       background: rgba(#E1332D, 0);
 
       rect {
-        stroke-width: 5;
-        stroke-dasharray: 15, 205;
+        stroke-width: 2;
+        stroke-dasharray: 15, 170;
         stroke-dashoffset: 48;
         transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
       }

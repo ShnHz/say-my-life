@@ -1,7 +1,7 @@
 ---
 pageClass: diary
 ---
-## 浙江宁海 NingHai 
+## 浙江宁海 NingHai √
 
 ###### 感谢钱昕昕的盛情邀请，我们一行四个人前往钱总的家做客。
 <base-train-ticket startStation="宁波" startStationEn="NingBo" endStation="宁海" endStationEn="NingHai" date="2018/11/10 09:13" trainId="7543" trainNum="07" trainSeatNum="12A" checkIn="2B" id="Z4R084404" footer="3328430004111R084404宁波售" price="20"/>

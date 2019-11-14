@@ -1,7 +1,7 @@
 ---
 pageClass: diary
 ---
-## 浙江奉化雪窦山 XueDouShan 
+## 浙江奉化雪窦山 XueDouShan √
 <base-photowall value="journey/zjxds/" :number="28"/>
 
 ### 2017.10.22 ☀️ 😄
