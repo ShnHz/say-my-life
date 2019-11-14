@@ -50,7 +50,7 @@ export default {
     --font-shadow: var(--font-size);
     padding: 8px 0;
     font-family: 'Roboto';
-    font-weight: 500;
+    font-weight: 500; 
     line-height: var(--font-size);
     border-radius: 24px;
     display: block;
