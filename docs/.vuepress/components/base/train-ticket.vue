@@ -2,7 +2,7 @@
   <div class="train-ticket">
     <p>
       <span class="id">{{id}}</span>
-      <span class="check-in">检票：{{checkIn}}</span>
+      <span class="check-in" v-if="checkIn != 'none'">检票：{{checkIn}}</span>
     </p>
     <div class="station flex">
       <div class="train-id">
