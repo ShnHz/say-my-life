@@ -47,6 +47,7 @@ $button-color: #48ad98;
     box-shadow: 0 2px 8px -1px #{rgba($button-color, 0.32)};
     transition: all 0.5s ease-out;
     span {
+      position: relative;
       z-index: 1;
     }
     &::before {

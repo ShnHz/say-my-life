@@ -33,7 +33,7 @@ export default {
       cursor: pointer;
       font-size: 14px;
       font-weight: 400;
-      line-height: 27px;
+      line-height: 30px;
       max-width: 160px;
       position: relative;
       text-decoration: none;
@@ -71,8 +71,8 @@ export default {
 
     /* HOVERしたら文字1を上に */
     .effect04:hover span {
-      -webkit-transform: translateY(-400%) scale(-0.1, 20);
-      transform: translateY(-500%) scale(-0.1, 20);
+      -webkit-transform: translateY(-600%) scale(-0.1, 20);
+      transform: translateY(-600%) scale(-0.1, 20);
     }
 
     /*文字2*/
@@ -85,8 +85,8 @@ export default {
       height: 30px;
       margin: auto;
       font-weight: 500;
-      -webkit-transform: translateY(500%) scale(-0.1, 20);
-      transform: translateY(500%) scale(-0.1, 20);
+      -webkit-transform: translateY(600%) scale(-0.1, 20);
+      transform: translateY(600%) scale(-0.1, 20);
     }
 
     /* HOVERしたら文字2を上に */

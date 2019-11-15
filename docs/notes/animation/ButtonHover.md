@@ -24,3 +24,9 @@ pageClass: animation-no-title-inline
 
 <!-- 发散边线  -->
 <animation-button-light-line />
+
+<!-- 弹出层  -->
+<animation-button-layers />
+
+<!-- 多重过度  -->
+<animation-button-multiple />

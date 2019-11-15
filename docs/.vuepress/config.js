@@ -43,6 +43,7 @@ module.exports = {
                     title: 'JavaScript',
                     collapsable: true,
                     children: [
+                        '/notes/js/BinaryTree',
                         '/notes/js/Distinct',
                         '/notes/js/FlattenDeep',
                         '/notes/js/Object',
