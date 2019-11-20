@@ -34,7 +34,7 @@ export default {
     },
     imgBoxHeight: {
       type: Number,
-      default: 170
+      default: 180
     },
     number: {
       type: Number,

@@ -4,8 +4,8 @@ pageClass: diary
 ## 浙江衢州 QuZhou √
 
 ###### 从老家回杭州要路过衢州，然后我就自己坐绿皮来找方阿姨玩哈哈哈
-<base-train-ticket startStation="玉山" startStationEn="YuShan" endStation="衢州" endStationEn="QuZhou" date="2018/10/04 09:29" trainType="K" trainId="210" trainNum="06" trainSeatNum="092" checkIn="none" id="A005275" footer="3328430004111R084404玉山售" price="20" trainSeatLv="新空调硬座"/>
-<base-train-ticket startStation="衢州" startStationEn="QuZhou" endStation="杭州" endStationEn="HangZhou" date="2018/10/04 19:55" trainType="G" trainId="1374" trainNum="03" trainSeatNum="18F" checkIn="none" id="Z8N008269" footer="32621300221005G030266衢州售" price="109.5"/>
+<base-train-ticket startStation="玉山" startStationEn="YuShan" endStation="衢州" endStationEn="QuZhou" date="2018/10/04 09:29" trainType="K" trainId="210" trainNum="06" trainSeatNum="092" checkIn="none" id="A005275" footer="32666310141005A005275玉山售" price="14.5" trainSeatLv="新空调硬座"/>
+<base-train-ticket startStation="衢州" startStationEn="QuZhou" endStation="杭州" endStationEn="HangZhou" date="2018/10/04 19:55" trainType="G" trainId="1374" trainNum="03" trainSeatNum="18F" checkIn="none" id="Z22G030266" footer="32621300221005G030266衢州售" price="109.5"/>
 
 <base-photowall value="journey/zjqz/" :number="30"/>
 
