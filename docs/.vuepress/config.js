@@ -150,7 +150,8 @@ module.exports = {
                     ]
                 }
             ],
-            '/life/': [{
+            '/life/': [
+                {
                     title: '年度计划',
                     collapsable: false,
                     children: [
@@ -183,7 +184,8 @@ module.exports = {
                         '/life/game/NBA2KOL2',
                         '/life/game/英雄联盟'
                     ]
-                }
+                },
+                '/life/Anime',
             ]
         },
         sidebarDepth: 0, // e'b将同时提取markdown中h2 和 h3 标题，显示在侧边栏上。
