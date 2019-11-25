@@ -150,3 +150,35 @@ img[lazy="loading"],img[lazy="error"] {
     position: relative;
 }
 ```
+
+### 根据文字长度自适应
+``` css
+.fit-content {
+    width:fit-content;
+    width:-webkit-fit-content;
+    width:-moz-fit-content;
+}
+```
+
+### 无限旋转360度
+``` css
+div{
+    -webkit-animation: rotate360 20s infinite linear;
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+}
+
+@-webkit-keyframes rotate360 {
+    0% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+        -ms-transform: rotate(-360deg);
+        -webkit-transform: rotate(-360deg);
+    }
+}
+```
