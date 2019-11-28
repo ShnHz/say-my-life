@@ -10,7 +10,7 @@ pageClass: diary
 进雪窦山第一眼望去就是弥勒道场,道场内有一尊巨大的弥勒佛。<br>
 <img src="http://cdn.chenyingshuang.cn/journey/zjxds/22.jpg?imageMogr2/auto-orient" height="250"/>
 <img src="http://cdn.chenyingshuang.cn/journey/zjxds/21.jpg?imageMogr2/auto-orient" height="250"/>
-<img src="http://cdn.chenyingshuang.cn/journey/zjxds/23.jpg?imageMogr2/auto-orient" width="333"/>
+<img src="http://cdn.chenyingshuang.cn/journey/zjxds/23.jpg?imageMogr2/auto-orient" width="333"/><br>
 看完了弥勒佛，进山！一直走一直走。<br>
 👇老王和我。<br>
 <img src="http://cdn.chenyingshuang.cn/journey/zjxds/16.jpg?imageMogr2/auto-orient" height="250"/>
