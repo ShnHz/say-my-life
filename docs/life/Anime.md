@@ -20,3 +20,4 @@
 <base-anime src="life/anime/东京喰种.jpg" name="东京喰种"/>
 <base-anime src="life/anime/进击的巨人.jpg" name="进击的巨人"/>
 <base-anime src="life/anime/铁胆火车侠.jpg" name="铁胆火车侠"/>
+<base-anime src="life/anime/Fatestay night.jpg" name="Fate/stay night"/>
