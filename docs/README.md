@@ -11,3 +11,4 @@ features:
 footer: Happy Life Copyright © 2019-present Sang Hang Ning
 ---
 
+<base-hide-password />
