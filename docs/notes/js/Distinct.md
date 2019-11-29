@@ -31,3 +31,22 @@ const distinct = arr => arr.filter( (element, index, self) => {
 let arr = ['🐑', 1, 2, '🐑', '🐑', 3, '🐑', '🐑', 3]
 console.log(distinct(arr)); // 输出["🐑", "🐑", "🐑", "🐑", 3]
 ```
+
+### 数组根据对象中的元素去重
+``` js {6}
+function arrayUniqueObject(arr,name){
+    var hash = {};
+        return arr.reduce(function (item, next) {
+            hash[next[name]] ? '' : hash[next[name]] = true && item.push(next);
+            return item;
+    }, []);
+}
+
+let arr = [
+    {id:1,name:'小明'},
+    {id:1,name:'小红'},
+    {id:2,name:'小智'}
+]
+
+console.log(arrayUniqueObject(arr,'id')) // 输出[{id:1,name:'小明'},{id:2,name:'小智'}]
+```

@@ -1,5 +1,4 @@
 module.exports = {
-    host:'www.sanghangning.com',
     base: '/say-my-life/',
     title: 'Say My Life - Shn',
     description: '说说我的生活',
