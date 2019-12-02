@@ -61,53 +61,15 @@ div::-webkit-scrollbar-track, ul::-webkit-scrollbar-track, pre::-webkit-scrollba
     background: #F1F1F1 !important;
 }
 
-/* shn */
-/* ==for FF/chrome/opera/IE8== */
-.clearfloat:after {
-    clear: both;
-    content: '.';
-    display: block;
-    width: 0;
-    height: 0;
-    visibility: hidden;
+#app, .theme-container, .page {
+    height: 100%;
 }
 
-.ellipsis {
-    display: inline-block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    vertical-align: bottom;
+.theme-default-content {
+    position relative;
+    min-height: calc(100% - 120px);
 }
 
-.annotation {
-    font-size: 13px;
-    color: #888;
-}
-
-.cursor-pointer {
-    cursor: pointer;
-}
-
-.no-padding {
-    padding: 0 !important;
-}
-
-.flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.filter-col {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-/* all */
 .logo {
     position: relative;
     height: 1.8rem !important;
@@ -166,6 +128,7 @@ div::-webkit-scrollbar-track, ul::-webkit-scrollbar-track, pre::-webkit-scrollba
 }
 
 .page-nav {
+    padding-bottom: 30px !important;
     .inner {
         // border-top: 0 !important;
     }
@@ -185,6 +148,52 @@ div::-webkit-scrollbar-track, ul::-webkit-scrollbar-track, pre::-webkit-scrollba
             color: #606266 !important;
         }
     }
+}
+
+/* shn */
+/* ==for FF/chrome/opera/IE8== */
+.clearfloat:after {
+    clear: both;
+    content: '.';
+    display: block;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.ellipsis {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: bottom;
+}
+
+.annotation {
+    font-size: 13px;
+    color: #888;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.filter-col {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 /* * index * */
@@ -220,6 +229,7 @@ div::-webkit-scrollbar-track, ul::-webkit-scrollbar-track, pre::-webkit-scrollba
             transition: all 0.3s ease;
             transform-origin: center center;
             backface-visibility: hidden;
+
             &:hover {
                 transform: scale(1.05);
             }
