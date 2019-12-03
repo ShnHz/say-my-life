@@ -51,6 +51,17 @@ export default {
     },
     lock: function(val) {
       this.$store.commit('setLock', val)
+    },
+    getVisible: function(val) {
+      if (!this.show && val) {
+        this.show = true
+        this.inputFocus()
+      }
+    }
+  },
+  computed: {
+    getVisible() {
+      return this.$store.state.pwboxVisible
     }
   },
   created() {

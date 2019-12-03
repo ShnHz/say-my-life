@@ -1,6 +1,6 @@
 <template>
   <div :class="{'hide':!$store.state.lock}" class="lock-box flex">
-    <div>
+    <div @click="showPwbox">
       <i class="shni shn-lock"></i>
       <p>该内容已被锁定，输入密码后解锁</p>
       <p class="annotation">Ctrl + Enter 快捷键唤起输入面板</p>
@@ -8,7 +8,13 @@
   </div>
 </template>
 <script>
-export default {}
+export default {
+  methods: {
+    showPwbox() {
+      this.$store.commit('setPwboxVisible', !this.$store.state.pwboxVisible)
+    }
+  }
+}
 </script>
 <style lang="scss" scoped>
 .lock-box {
@@ -24,6 +30,7 @@ export default {}
     opacity: 0;
   }
   div {
+    cursor: pointer;
     z-index: 0;
     text-align: center;
     line-height: 2;

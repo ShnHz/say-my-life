@@ -5,11 +5,15 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    lock: true
+    lock: true,
+    pwboxVisible: false
   },
   mutations: {
     setLock(state, data) {
       state.lock = data
+    },
+    setPwboxVisible(state, data) {
+      state.pwboxVisible = data
     },
   },
   actions: {
