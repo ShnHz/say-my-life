@@ -13,6 +13,9 @@ pageClass: animation-no-title-inline
 <!-- 圆大小  -->
 <animation-button-circle-size />
 
+<!-- 火箭  -->
+<animation-button-rocket-launch />
+
 <!-- 光的折射 -->
 <animation-button-light-reflection />
 
