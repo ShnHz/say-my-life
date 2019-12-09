@@ -29,6 +29,28 @@
         <code class="css">{{fCode(sharpEdge.code.css)}}</code>
       </template>
     </shn-el-demo-block>
+
+    <shn-el-demo-block :height="353" title="3D内嵌感" id="sharp-edge-curve">
+      <template v-slot:demo>
+        <div class="box box-4"></div>
+        <div class="box box-5"></div>
+      </template>
+      <template v-slot:code>
+        <code class="css">
+          .box{
+            border: 1px solid #8f9092;
+            box-shadow: 0 4px 3px 1px #fcfcfc, 0 6px 8px #d6d7d9, 0 -4px 4px #cecfd1,
+              0 -6px 4px #fefefe, inset 0 0 3px 0 #cecfd1;
+            background-image: linear-gradient(
+              to top,
+              #d8d9db 0%,
+              #fff 80%,
+              #fdfdfd 100%
+            );
+          }
+        </code>
+      </template>
+    </shn-el-demo-block>
   </div>
 </template>
 <script>
@@ -163,6 +185,38 @@ export default {
   }
   .box-3 {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  .box-4 {
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    border-radius: 30px;
+    border: 1px solid #8f9092;
+    box-shadow: 0 4px 3px 1px #fcfcfc, 0 6px 8px #d6d7d9, 0 -4px 4px #cecfd1,
+      0 -6px 4px #fefefe, inset 0 0 3px 0 #cecfd1;
+    background-image: linear-gradient(
+      to top,
+      #d8d9db 0%,
+      #fff 80%,
+      #fdfdfd 100%
+    );
+  }
+
+  .box-5 {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+    border-radius: 50px;
+    border: 1px solid #8f9092;
+    box-shadow: 0 4px 3px 1px #fcfcfc, 0 6px 8px #d6d7d9, 0 -4px 4px #cecfd1,
+      0 -6px 4px #fefefe, inset 0 0 3px 0 #cecfd1;
+    background-image: linear-gradient(
+      to top,
+      #d8d9db 0%,
+      #fff 80%,
+      #fdfdfd 100%
+    );
   }
 
   .box-curve {
