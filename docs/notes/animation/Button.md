@@ -2,7 +2,7 @@
 pageClass: animation-no-title-inline
 ---
 
-## 有趣动画 - 按钮hover
+## 有趣动画 - 按钮
 
 <!-- 查看更多  -->
 <animation-button-show-more />
@@ -15,6 +15,12 @@ pageClass: animation-no-title-inline
 
 <!-- 火箭  -->
 <animation-button-rocket-launch />
+
+<!-- 添加到购物车  -->
+<animation-button-add-to-cart />
+
+<!-- yes Or no  -->
+<animation-button-yesorno-switch />
 
 <!-- 光的折射 -->
 <animation-button-light-reflection />
@@ -33,3 +39,6 @@ pageClass: animation-no-title-inline
 
 <!-- 长按上传  -->
 <animation-button-publish-hold />
+
+<!-- colorball  -->
+<animation-button-color-ball />

@@ -81,12 +81,13 @@ module.exports = {
                     title: '动画',
                     collapsable: true,
                     children: [
-                        '/notes/animation/ButtonHover',
-                        '/notes/animation/Mountain',
-                        '/notes/animation/ShapesColor',
+                        '/notes/animation/Button',
                         '/notes/animation/CoolSquare',
-                        '/notes/animation/XRay',
+                        '/notes/animation/Face',
+                        '/notes/animation/Mountain',
                         '/notes/animation/Pikachu',
+                        '/notes/animation/ShapesColor',
+                        '/notes/animation/XRay',
                     ]
                 }
             ],
@@ -152,8 +153,7 @@ module.exports = {
                     ]
                 }
             ],
-            '/life/': [
-                {
+            '/life/': [{
                     title: '年度计划',
                     collapsable: false,
                     children: [
