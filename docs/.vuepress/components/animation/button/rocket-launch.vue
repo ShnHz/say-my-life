@@ -1,5 +1,5 @@
 <template>
-  <div class="filter-col show-more">
+  <div class="filter-col rocker-launch">
     <a @click="handleClick" class="rocket-button" id="rocket-button">
       <div class="default">
         <span>单击火箭</span>
@@ -77,7 +77,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.show-more {
+.rocker-launch {
   width: 20%;
   min-width: 200px;
   height: 100px;
@@ -423,7 +423,7 @@ export default {
 }
 
 @media screen and (max-width: 900px) {
-  .show-more {
+  .rocker-launch {
     width: 100%;
     height: 100px;
   }

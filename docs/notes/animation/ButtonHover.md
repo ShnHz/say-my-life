@@ -25,11 +25,11 @@ pageClass: animation-no-title-inline
 <!-- 边线动画  -->
 <animation-button-line-svg />
 
-<!-- 发散边线  -->
-<animation-button-light-line />
-
 <!-- 弹出层  -->
 <animation-button-layers />
 
 <!-- 多重过度  -->
 <animation-button-multiple />
+
+<!-- 长按上传  -->
+<animation-button-publish-hold />

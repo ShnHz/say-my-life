@@ -31,7 +31,7 @@ export default {
       cursor: pointer;
       font-size: 14px;
       font-weight: 400;
-      line-height: 23px;
+      line-height: 22px;
       max-width: 160px;
       position: relative;
       text-decoration: none;
@@ -63,6 +63,7 @@ export default {
     .effect01 span {
       transition: all 0.2s ease-out;
       z-index: 2;
+      margin-left: 2px;
     }
     .effect01:hover span {
       letter-spacing: 0.13em;

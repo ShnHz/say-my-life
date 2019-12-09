@@ -70,6 +70,7 @@ module.exports = {
                         '/notes/vue/Axios',
                         '/notes/vue/Nprogress',
                         '/notes/vue/Rem',
+                        '/notes/vue/Router',
                         '/notes/vue/Sass',
                         '/notes/vue/Title',
                         '/notes/vue/GlobalComponents', //vue 全局组件
@@ -176,6 +177,7 @@ module.exports = {
                     collapsable: true,
                     children: [
                         '/life/game/GTA5',
+                        '/life/game/荒野大镖客2',
                         '/life/game/极限竞速4：地平线',
                         '/life/game/都市天际线',
                         '/life/game/过山车之星',
