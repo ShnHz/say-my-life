@@ -46,3 +46,12 @@ console.log(object_)
  * 
  **/
 ```
+
+### 对象序列化
+###### 对象序列化是指将对象的状态转换为字符串。
+``` js
+JSON.stringify(o[, filter][, indent])
+//序列化原始值、对象或数组
+JSON.parse(s[, reviver])
+//解析JSON格式的字符串
+```

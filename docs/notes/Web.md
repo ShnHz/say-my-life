@@ -16,6 +16,7 @@ pageClass: diary
 [「Vue」Highcharts](https://www.highcharts.com.cn/) <br>
 [「Vue」Element](https://element.eleme.io/#/zh-CN/component/installation) <br>
 [「Vue」Vant](https://youzan.github.io/vant/?source=vuejsorg#/zh-CN/intro) <br>
+[「Vue」Vue-Awesome-Swiper](https://github.com/surmon-china/vue-awesome-swiper) <br>
 [「React」React](https://react.docschina.org/) <br>
 [「React」Ant Design](https://ant.design/docs/react/introduce-cn) <br>
 [「Icon」IconFont](https://www.iconfont.cn/) <br>
@@ -43,3 +44,4 @@ pageClass: diary
 [「CSS3」Animate.css](https://daneden.github.io/animate.css/) <br>
 [「CSS3」抖动](http://elrumordelaluz.github.io/csshake/) <br>
 [「CSS3」hover](http://ianlunn.github.io/Hover/) <br>
+[「CSS3」打字特效 typed.js](https://github.com/mattboldt/typed.js) <br>

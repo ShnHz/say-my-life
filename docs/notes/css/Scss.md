@@ -44,3 +44,15 @@ $--transition-all-3-ease:all 0.3s ease;
 
 $--md-fade-transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1),opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) !default;
 ```
+
+### 深度选择器
+优雅的只在当前页面中覆盖ui库中组件的样式
+``` scss
+.van-tabs ::v-deep .van-ellipsis { color: blue};
+//编译前
+
+.van-tabs[data-...] .van-ellipsis{
+    color:blue;
+}
+//编译后
+```

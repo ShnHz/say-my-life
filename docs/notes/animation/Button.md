@@ -19,6 +19,9 @@ pageClass: animation-no-title-inline
 <!-- 添加到购物车  -->
 <animation-button-add-to-cart />
 
+<!-- 跑步的人  -->
+<animation-button-running-man />
+
 <!-- yes Or no  -->
 <animation-button-yesorno-switch />
 

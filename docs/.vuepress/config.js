@@ -69,6 +69,7 @@ module.exports = {
                     children: [
                         '/notes/vue/Axios',
                         '/notes/vue/Nprogress',
+                        '/notes/vue/Interval',
                         '/notes/vue/Rem',
                         '/notes/vue/Router',
                         '/notes/vue/Sass',
