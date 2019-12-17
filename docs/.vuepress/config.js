@@ -1,6 +1,6 @@
 module.exports = {
     base: '/say-my-life/',
-    title: 'Say My Life - Shn',
+    title: 'Say My Life',
     description: '说说我的生活',
     plugins: ['@vuepress/back-to-top'],
     head: [
@@ -10,7 +10,7 @@ module.exports = {
         }]
     ],
     themeConfig: {
-        logo: '/img/logo.png',
+        logo: '/img/logo_shn.png',
         nav: [{
                 text: '笔记',
                 link: '/notes/Notes'
