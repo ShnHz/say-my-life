@@ -40,10 +40,12 @@ export default {
         } else {
           this.shake = true
           this.error = true
-
           setTimeout(() => {
             _this.shake = false
           }, 300)
+          setTimeout(() => {
+            _this.code = ''
+          }, 700)
         }
       } else {
         this.lock = true

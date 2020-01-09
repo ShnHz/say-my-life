@@ -39,6 +39,12 @@ export default {
     number: {
       type: Number,
       default: 0
+    },
+    list: {
+      type: Array,
+      default: () => {
+        return []
+      }
     }
   },
   data() {
@@ -47,10 +53,14 @@ export default {
     }
   },
   mounted() {
-    for (let i = 1; i <= this.number; i++) {
-      this.imgsArr.push(
-        `http://cdn.chenyingshuang.cn/${this.value}${this.imgName}${i}.${this.imgType}?imageMogr2/auto-orient`
-      )
+    if (this.list.length > 0) {
+      this.imgsArr = this.list
+    } else {
+      for (let i = 1; i <= this.number; i++) {
+        this.imgsArr.push(
+          `http://cdn.chenyingshuang.cn/${this.value}${this.imgName}${i}.${this.imgType}?imageMogr2/auto-orient`
+        )
+      }
     }
   },
   methods: {
