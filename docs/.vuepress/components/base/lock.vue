@@ -30,6 +30,8 @@ export default {
     opacity: 0;
   }
   div {
+    position: absolute;
+    top: 300px;
     cursor: pointer;
     z-index: 0;
     text-align: center;

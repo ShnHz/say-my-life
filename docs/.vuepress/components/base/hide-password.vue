@@ -42,7 +42,7 @@ export default {
           this.error = true
           setTimeout(() => {
             _this.shake = false
-          }, 300);
+          }, 300)
           setTimeout(() => {
             _this.code = ''
           }, 700)
@@ -150,8 +150,10 @@ export default {
     height: 110px;
   }
   input {
-    position: absolute;
+    position: relative;
     opacity: 0;
+    top: 0;
+    margin: 0 auto;
   }
   .code-input-main {
     position: relative;

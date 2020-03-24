@@ -173,6 +173,7 @@ module.exports = {
                         '/life/diary/2019-09',
                         '/life/diary/2019-10',
                         '/life/diary/2019-11',
+                        '/life/diary/2020-03',
                     ]
                 },
                 {
@@ -188,7 +189,9 @@ module.exports = {
                         '/life/game/SD敢达',
                         '/life/game/跑跑卡丁车',
                         '/life/game/NBA2KOL2',
-                        '/life/game/英雄联盟'
+                        '/life/game/英雄联盟',
+                        '/life/game/奥日与黑暗森林',
+                        '/life/game/奥日与精灵意志'
                     ]
                 },
                 '/life/Anime',
