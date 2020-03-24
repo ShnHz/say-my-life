@@ -45,3 +45,12 @@ pageClass: diary
 [「CSS3」抖动](http://elrumordelaluz.github.io/csshake/) <br>
 [「CSS3」hover](http://ianlunn.github.io/Hover/) <br>
 [「CSS3」打字特效 typed.js](https://github.com/mattboldt/typed.js) <br>
+### 好玩的
+[LAND LINES](https://lines.chromeexperiments.com/) <br>
+[Mikutap](https://aidn.jp/mikutap/) <br>
+[小霸王，其乐无穷](https://www.yikm.net/) <br>
+[一款全能的下载工具motrix](https://motrix.app/zh-CN) <br>
+[30个CSS碎片拼图，30种濒临灭绝动物](http://www.webhek.com/misc-res/species-in-pieces/#) <br>
+[Play Lines FRVR](https://lines.frvr.com/) <br>
+[假装 Windows 升级界面](http://fakeupdate.net/) <br>
+
