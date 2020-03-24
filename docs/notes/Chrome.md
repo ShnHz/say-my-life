@@ -20,6 +20,8 @@ React Developer Tools <br>
 Adblock Plus <br>
 ColorPick Eyedropper <br>
 Page Ruler <br>
+Imagus(页面放大图片查看) <br>
+project-naptha(图片提取文字) <br>
 
 ### 调试动画
 ```

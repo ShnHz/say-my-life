@@ -76,6 +76,7 @@ module.exports = {
                         '/notes/vue/Title',
                         '/notes/vue/GlobalComponents', //vue 全局组件
                         '/notes/vue/VueLazyload',
+                        '/notes/vue/vueProgressiveImage'
                     ]
                 },
                 {

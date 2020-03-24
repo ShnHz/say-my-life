@@ -42,7 +42,7 @@ export default {
           this.error = true
           setTimeout(() => {
             _this.shake = false
-          }, 300)
+          }, 300);
           setTimeout(() => {
             _this.code = ''
           }, 700)
