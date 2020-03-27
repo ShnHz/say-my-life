@@ -5,7 +5,7 @@
 1.路由跳转 先判断是否登录 未登录只能访问白名单页面，访问其他页面全部重定向到登录页面
 2.登录行为触发，获取动态路由，递归解析动态路由信息，并且addRouter，同时存储到Vuex，并且记录获取路由的状态
 3.跳转页面不会获取动态路由，刷新页面重新获取动态路由
-<img src="http://user-gold-cdn.xitu.io/2019/4/11/16a0a6d2c4c9dda5?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"/>
+<img src="https://cdn.chenyingshuang.cn/notes/vue/router/router.jpg"/>
 
 ### 路由懒加载
 ###### 路由懒加载可以帮我们在进入首屏时不用加载过度的资源，从而减少首屏加载速度。

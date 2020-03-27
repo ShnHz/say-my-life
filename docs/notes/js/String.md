@@ -32,3 +32,61 @@ let string = '123456789abcdefg'
 
 console.log(string.replace('789','123')) // 输出123456123abcdefg
 ```
+
+### 返回字符串长度
+###### 汉字计数为2
+``` js
+/**
+ * 返回字符串长度，汉字计数为2
+ * @param  {str} 
+ */
+mixin_strLength(str) {
+    var a = 0;
+    for (var i = 0; i < str.length; i++) {
+        if (str.charCodeAt(i) > 255)
+            a += 2; //按照预期计数增加2
+        else
+            a++;
+    }
+    return a;
+}
+```
+
+### 字母大小写处理
+###### type:  1:首字母大写  2：首页母小写  3：大小写转换  4：全部大写  5：全部小写
+``` js
+/**
+ * @param  {str} 
+ * @param  {type}
+ *       type:  1:首字母大写  2：首页母小写  3：大小写转换  4：全部大写  5：全部小写
+ * @return {String}
+ */
+mixin_changeCase(str, type) {
+    type = type || 4
+    switch (type) {
+        case 1:
+            return str.replace(/\b\w+\b/g, function (word) {
+                return word.substring(0, 1).toUpperCase() + word.substring(1).toLowerCase();
+
+            });
+        case 2:
+            return str.replace(/\b\w+\b/g, function (word) {
+                return word.substring(0, 1).toLowerCase() + word.substring(1).toUpperCase();
+            });
+        case 3:
+            return str.split('').map(function (word) {
+                if (/[a-z]/.test(word)) {
+                    return word.toUpperCase();
+                } else {
+                    return word.toLowerCase()
+                }
+            }).join('')
+        case 4:
+            return str.toUpperCase();
+        case 5:
+            return str.toLowerCase();
+        default:
+            return str;
+    }
+}
+```

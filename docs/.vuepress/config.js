@@ -46,6 +46,7 @@ module.exports = {
                     children: [
                         '/notes/js/BinaryTree',
                         '/notes/js/Distinct',
+                        '/notes/js/Date',
                         '/notes/js/FlattenDeep',
                         '/notes/js/Object',
                         '/notes/js/Promise',

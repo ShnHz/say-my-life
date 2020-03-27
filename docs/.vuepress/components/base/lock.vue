@@ -18,7 +18,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .lock-box {
-  z-index: 19;
+  z-index: 9;
   width: 100%;
   height: calc(100% - 58px);
   position: absolute;
