@@ -53,6 +53,7 @@ export default {
 @media screen and (max-width: 900px) {
   .anime {
     margin: 0 0 50px 0;
+    width: 100%;
     .el-image {
       height: 500px;
       width: 100%;
