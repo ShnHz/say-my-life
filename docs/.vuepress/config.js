@@ -192,6 +192,7 @@ module.exports = {
                         '/life/game/跑跑卡丁车',
                         '/life/game/NBA2KOL2',
                         '/life/game/英雄联盟',
+                        '/life/game/王者荣耀',
                         '/life/game/奥日与黑暗森林',
                         '/life/game/奥日与精灵意志'
                     ]
