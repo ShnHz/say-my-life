@@ -40,6 +40,7 @@ module.exports = {
             '/notes/': [
                 '/notes/Web',
                 '/notes/Chrome',
+                '/notes/VsCode',
                 {
                     title: 'JavaScript',
                     collapsable: true,
