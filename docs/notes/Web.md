@@ -17,6 +17,7 @@ pageClass: diary
 [「Vue」Element](https://element.eleme.io/#/zh-CN/component/installation) <br>
 [「Vue」Vant](https://youzan.github.io/vant/?source=vuejsorg#/zh-CN/intro) <br>
 [「Vue」Vue-Awesome-Swiper](https://github.com/surmon-china/vue-awesome-swiper) <br>
+[「Vue」vue-design vue源码分析：elegant分支本地启动](https://github.com/HcySunYang/vue-design) <br>
 [「React」React](https://react.docschina.org/) <br>
 [「React」Ant Design](https://ant.design/docs/react/introduce-cn) <br>
 [「Icon」IconFont](https://www.iconfont.cn/) <br>
@@ -40,6 +41,12 @@ pageClass: diary
 [「UI」GetThthr](http://www.invisionapp.com/inside-design/design-resources/tethr/) <br>
 [「UI」掘金 - 灵感专题](https://juejin.im/post/5d10360b6fb9a07eb94f9687) <br>
 [「前端代码分享」CODEPEN](https://codepen.io/popular/pens) <br>
+[「免费字体」font space](https://www.fontspace.com/) <br>
+[「一键抠图」removebg](https://www.remove.bg/zh/upload) <br>
+[「配色」Color Hunt](https://colorhunt.co/) <br>
+[「配色」Adobe Color](https://color.adobe.com/zh/create/color-wheel) <br>
+[「自定义颜色svg」unDraw](https://undraw.co/illustrations) <br>
+
 ### CSS3动画
 [「CSS3」Animate.css](https://daneden.github.io/animate.css/) <br>
 [「CSS3」抖动](http://elrumordelaluz.github.io/csshake/) <br>
@@ -53,4 +60,4 @@ pageClass: diary
 [30个CSS碎片拼图，30种濒临灭绝动物](http://www.webhek.com/misc-res/species-in-pieces/#) <br>
 [Play Lines FRVR](https://lines.frvr.com/) <br>
 [假装 Windows 升级界面](http://fakeupdate.net/) <br>
-
+[壁纸](https://wallhaven.cc/) <br>
