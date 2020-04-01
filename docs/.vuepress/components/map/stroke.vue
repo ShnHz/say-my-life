@@ -91,8 +91,8 @@ export default {
         {
           strokeColor: '#F56C6C',
           strokeWeight: 5,
-          strokeOpacity: 0.5
-          // icons: [icons]
+          strokeOpacity: 0.5,
+          icons: [icons]
         }
       )
 
@@ -122,7 +122,7 @@ export default {
           // 创建标注对象并添加到地图
           var marker = new BMap.Marker(point, {
             icon: myIcon,
-            offset: new BMap.Size(0, -11),
+            offset: new BMap.Size(-1, -11),
             title: address
           })
 

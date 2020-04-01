@@ -1,5 +1,5 @@
 <template>
-  <p @click="strokeClick">#行程</p>
+  <p @click="strokeClick">#行程地图</p>
 </template>
 <script>
 export default {
