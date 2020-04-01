@@ -9,6 +9,8 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import '../.vuepress/public/css/element-variables.scss'
 import VueParticles from 'vue-particles'
+import VueCookies from 'vue-cookies'
+
 
 import store from './store'
 
@@ -20,7 +22,7 @@ export default ({
     Vue.use(ElementUI)
     Vue.component('vue-waterfall-easy', vueWaterfallEasy)
     Vue.use(VueParticles)
-
+    Vue.use(VueCookies)
 
     Vue.prototype.$store = store
 }

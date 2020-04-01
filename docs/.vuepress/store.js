@@ -6,7 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     lock: true,
-    pwboxVisible: false
+    pwboxVisible: false,
   },
   mutations: {
     setLock(state, data) {
@@ -14,7 +14,7 @@ export default new Vuex.Store({
     },
     setPwboxVisible(state, data) {
       state.pwboxVisible = data
-    },
+    }
   },
   actions: {
 
