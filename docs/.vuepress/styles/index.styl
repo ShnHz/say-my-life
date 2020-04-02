@@ -44,21 +44,23 @@ body, html {
 }
 
 /* 滚动条样式 */
-div::-webkit-scrollbar, ul::-webkit-scrollbar, pre::-webkit-scrollbar, body::-webkit-scrollbar, html::-webkit-scrollbar {
-    /* 滚动条整体样式 */
-    width: 8px !important;
-    /* 高宽分别对应横竖滚动条的尺寸 */
-    height: 8px !important;
+div::-webkit-scrollbar, ul::-webkit-scrollbar, pre::-webkit-scrollbar, body::-webkit-scrollbar, html::-webkit-scrollbar, aside::-webkit-scrollbar {
+    width: 12px !important;
+    padding: 0 4px !important;
 }
 
-div::-webkit-scrollbar-thumb, ul::-webkit-scrollbar-thumb, pre::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb, html::-webkit-scrollbar-thumb {
+div::-webkit-scrollbar-thumb, ul::-webkit-scrollbar-thumb, pre::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb, html::-webkit-scrollbar-thumb, aside::-webkit-scrollbar-thumb {
     /* 滚动条里面小方块 */
-    background: #909399 !important;
+    background-color: rgb(215, 215, 215) !important;
+    border: 3px solid transparent !important;
+    border-radius: 6px !important;
+    background-clip: content-box !important;
 }
 
-div::-webkit-scrollbar-track, ul::-webkit-scrollbar-track, pre::-webkit-scrollbar-track, body::-webkit-scrollbar-track, html::-webkit-scrollbar-track {
+div::-webkit-scrollbar-track, ul::-webkit-scrollbar-track, pre::-webkit-scrollbar-track, body::-webkit-scrollbar-track, html::-webkit-scrollbar-track, aside::-webkit-scrollbar-track {
     /* 滚动条里面轨道 */
-    background: #F1F1F1 !important;
+    background: #fafafa !important;
+    border-radius: 0 4px 4px 0;
 }
 
 #app, .theme-container, .page {
@@ -66,7 +68,7 @@ div::-webkit-scrollbar-track, ul::-webkit-scrollbar-track, pre::-webkit-scrollba
 }
 
 .theme-default-content {
-    position relative;
+    position: relative;
     min-height: calc(100% - 120px);
 }
 
@@ -129,6 +131,7 @@ div::-webkit-scrollbar-track, ul::-webkit-scrollbar-track, pre::-webkit-scrollba
 
 .page-nav {
     padding-bottom: 30px !important;
+
     .inner {
         // border-top: 0 !important;
     }

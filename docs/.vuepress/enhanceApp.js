@@ -10,6 +10,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 import '../.vuepress/public/css/element-variables.scss'
 import VueParticles from 'vue-particles'
 import VueCookies from 'vue-cookies'
+import axios from 'axios'
 
 
 import store from './store'
@@ -25,4 +26,5 @@ export default ({
     Vue.use(VueCookies)
 
     Vue.prototype.$store = store
+    Vue.prototype.$http = axios
 }

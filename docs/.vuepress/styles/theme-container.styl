@@ -106,3 +106,136 @@
         display: none;
     }
 }
+
+// blog
+.blog {
+    .theme-default-content {
+        position: relative;
+        max-width: 800px !important;
+        margin: 0 auto !important;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 1.75;
+        overflow: visible;
+
+        h3 {
+            padding-bottom: 12px;
+            font-size: 24px;
+            border-bottom: 1px solid #ececec;
+            font-weight: 500;
+        }
+
+        h4 {
+            font-size: 18px;
+            padding-bottom: 0;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        h5 {
+            font-size: 16px;
+        }
+
+        p {
+            margin: 22px 0;
+            line-height: inherit;
+        }
+
+        ul {
+            padding-left: 28px;
+
+            li {
+                list-style-type: disc;
+            }
+        }
+
+        strong {
+            font-weight: 700;
+        }
+
+        code.default {
+            background-color: #fff5f5;
+            color: #ff502c;
+            font-size: 0.87em;
+            padding: 0.065em 0.4em;
+            border-radius: 2px;
+            overflow-x: auto;
+        }
+
+        a {
+            font-weight: 400;
+            color: #0269c8;
+            border-bottom: 1px solid #d1e9ff;
+        }
+
+        blockquote {
+            color: #666;
+            padding: 1px 23px;
+            margin: 22px 0;
+            border-left: 4px solid #cbcbcb;
+            background-color: #f8f8f8;
+
+            >p {
+                margin: 10px 0;
+            }
+        }
+
+        table {
+            display: inline-block !important;
+            font-size: 14px;
+            width: auto;
+            max-width: 100%;
+            overflow: auto;
+            border: 1px solid #f6f6f6;
+
+            thead {
+                background: #f6f6f6;
+                color: #000;
+                text-align: left;
+            }
+
+            td, th {
+                padding: 0.4rem 0.6rem;
+                line-height: 2rem;
+            }
+
+            td {
+                min-width: 10rem;
+            }
+        }
+    }
+}
+
+.blog-catalog {
+    @extend .blog;
+
+    .theme-default-content  >ul:first-of-type {
+        position: absolute;
+        left: -280px;
+        top: 150px;
+        width: 240px;
+
+        li {
+            line-height: 2;
+        }
+
+        a {
+            color: #555;
+            width: 160px;
+            display: block;
+            overflow: hidden;
+            word-break: keep-all;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            border-bottom: none;
+        }
+
+        >li>a {
+            font-weight: 600;
+        }
+
+        >ul>li>a {
+            font-weight: 600;
+        }
+    }
+}

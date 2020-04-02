@@ -12,6 +12,9 @@ module.exports = {
     themeConfig: {
         logo: '/img/logo_shn.png',
         nav: [{
+                text: 'BLOG',
+                link: '/blog/Archives'
+            }, {
                 text: '笔记',
                 link: '/notes/Notes'
             },
