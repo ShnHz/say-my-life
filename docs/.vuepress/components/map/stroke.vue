@@ -1,5 +1,18 @@
 <template>
-  <div :style="{'height':height}" class="map" id="map" v-loading="true"></div>
+  <div :style="{'height':height,'width':'100%','position':'relative'}">
+    <div :style="{'height':height}" class="map" id="map" v-loading="true"></div>
+    <el-button @click="textShow = true" class="text-show-btn" size="mini" v-if="!textShow">展开文字路线</el-button>
+    <div class="text-wrap" v-show="textShow">
+      <i @click="textShow = false" class="shni shn-close_1"></i>
+      <el-timeline>
+        <el-timeline-item
+          :key="'stroke-text-item-' + item + index"
+          size="normal"
+          v-for="(item, index) in address"
+        >{{item}}</el-timeline-item>
+      </el-timeline>
+    </div>
+  </div>
 </template>
 <script>
 import position from '../../public/img/position.png' //以import的方式导入图片文件
@@ -10,7 +23,8 @@ export default {
       height: 0,
       width: 0,
 
-      address: ['浙江省杭州市杭州东站', '浙江省杭州市余杭区人民广场']
+      address: ['浙江省杭州市杭州东站', '浙江省杭州市余杭区人民广场'],
+      textShow: true
     }
   },
   mounted() {
@@ -21,7 +35,10 @@ export default {
       this.height = window.innerHeight - 58 + 'px'
       let _this = this
       _this.loadScript('XX997fp9jKEMv6p70M8lB4i4jIq3npRu').then(() => {
-        let strokeAddress = _this.$cookies.get('strokeAddress').split(',')
+        let strokeAddress = []
+        if (_this.$cookies.get('strokeAddress')) {
+          strokeAddress = _this.$cookies.get('strokeAddress').split(',')
+        }
         _this.address =
           strokeAddress.length == 0 ? _this.address : strokeAddress
         _this.getPoint(_this.address[0], null, false).then(initPoint => {
@@ -142,5 +159,38 @@ export default {
 <style lang="scss" scoped>
 .map {
   width: 100%;
+  height: 100%;
+}
+.text-show-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+.text-wrap {
+  z-index: 9999;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  padding-bottom: 0px;
+
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  i {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: rgb(175, 175, 175);
+  }
+
+  ::v-deep {
+    .el-timeline-item {
+      padding-bottom: 5px;
+    }
+  }
 }
 </style>
