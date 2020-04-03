@@ -44,3 +44,34 @@ function selectionSort(arr) {
 }
 console.log(selectionSort(arr)) //输出53,44,31,21,21,14,12,11
 ```
+
+### 排序 指定对象的某个key进行排序
+
+```js
+/**
+ * 排序 指定对象的某个key进行排序
+ * 
+ * 例: list = list.sort(this.mixin_objectKeyCompare(key,1))
+ * 
+ * @param {String} property 指定key
+ * @param {Number} order = 1 排序方式,1 升序 else 降序
+ * @return {Array}
+ * 
+ */
+mixin_objectKeyCompare(property, order = 1) {
+    return function (obj1, obj2) {
+        let value1 = obj1[property]
+        let value2 = obj2[property]
+        let reDateTime = /^(?:19|20)[0-9][0-9]-(?:(?:0[1-9])|(?:1[0-2]))-(?:(?:[0-2][1-9])|(?:[1-3][0-1])) (?:(?:[0-2][0-3])|(?:[0-1][0-9])):[0-5][0-9]:[0-5][0-9]$/
+        if (reDateTime.test(value1) && reDateTime.test(value2)) {
+            value1 = new Date(value1)
+            value2 = new Date(value2)
+        }
+        if (order == 1) {
+            return value1 - value2 // 升序
+        } else {
+            return value2 - value1 // 降序
+        }
+    }
+},
+```

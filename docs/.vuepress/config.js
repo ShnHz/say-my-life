@@ -2,7 +2,6 @@ module.exports = {
     base: '/say-my-life/',
     title: 'Say My Life',
     description: '说说我的生活',
-    plugins: ['@vuepress/back-to-top'],
     head: [
         ['link', {
             rel: 'icon',
