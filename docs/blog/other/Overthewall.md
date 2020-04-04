@@ -3,6 +3,7 @@ pageClass: blog
 ---
 
 ## 如何科学上网
+<p class="date">2020-04-03 16:00</p>
 
 ### 1.首先得买一个VPN。
 
