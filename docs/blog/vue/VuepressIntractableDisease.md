@@ -3,6 +3,7 @@ pageClass: blog
 ---
 
 ## VuePress的疑难杂症
+<p class="date">2020-04-03 12:04</p>
 
 <el-backtop :visibility-height="0"></el-backtop>
 
