@@ -1,7 +1,7 @@
 <template>
   <div class="archives-wrap">
     <div class="img-wrap">
-      <img src="/img/undraw_social_user.svg" />
+      <img src="../../public/img/undraw_social_user.svg" />
     </div>
     <div class="list-wrap">
       <el-timeline :reverse="false">
@@ -46,7 +46,7 @@ export default {
       let _this = this
       this.$http({
         method: 'GET',
-        url: `/json/blog.json`
+        url: `/say-my-life/json/blog.json`
       })
         .then(res => {
           _this.blogList = res.data
