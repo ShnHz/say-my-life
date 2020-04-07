@@ -1,2 +1,2 @@
 See [https://shnhz.github.io/say-my-life/](https://shnhz.github.io/say-my-life/) Or
-[www.sanghangning.cn](www.sanghangning.cn)
+[https://www.sanghangning.cn](https://www.sanghangning.cn)
