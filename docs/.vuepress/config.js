@@ -1,6 +1,6 @@
 module.exports = {
     base: '/say-my-life/',
-    title: 'Say My Life',
+    title: '野宁新之助',
     description: '说说我的生活',
     head: [
         ['link', {

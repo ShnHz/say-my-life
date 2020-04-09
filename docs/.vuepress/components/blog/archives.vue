@@ -71,7 +71,7 @@ export default {
 .archives-wrap {
   margin: 0 auto;
   padding-top: 50px;
-  width: 850px;
+  width: 1000px;
   display: flex;
   ::v-deep {
     .el-tag--mini {
@@ -87,7 +87,7 @@ export default {
     width: 220px;
     height: 600px;
     overflow: hidden;
-    margin-right: 100px;
+    margin-right: 200px;
     img {
       position: absolute;
       left: -500px;

@@ -1,3 +1,57 @@
+// index
+.index {
+    header {
+        transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+        border: none;
+        border-bottom: 1px solid #eaecef;
+
+        .links {
+            background: rgba(255, 255, 255, 0);
+        }
+    }
+
+    .theme-default-content {
+        width: 100%;
+    }
+
+    .home {
+        width: 100%;
+        padding: 0 0 3.6rem;
+        max-width: 100% !important;
+    }
+
+    .hero {
+        display: none;
+    }
+}
+
+.theme-container.index-header-transparent {
+    @extend .index;
+
+    header {
+        background: rgba(255, 255, 255, 0);
+        border: none;
+
+        .home-link {
+            opacity: 0;
+
+            .site-name {
+                color: #111;
+            }
+        }
+
+        .nav-item {
+            >.nav-link {
+                color: #fff;
+            }
+
+            .dropdown-title {
+                color: #fff;
+            }
+        }
+    }
+}
+
 // journey life
 .theme-container.journey, .theme-container.life {
     .theme-default-content {
@@ -136,14 +190,14 @@
             font-size: 16px;
         }
 
-        
         p {
             margin: 22px 0;
             line-height: inherit;
-            &.date{
+
+            &.date {
                 margin-top: 8px !important;
                 color: #909399;
-                font-size: 14px;    
+                font-size: 14px;
             }
         }
 
@@ -215,7 +269,7 @@
 .blog-catalog {
     @extend .blog;
 
-    .theme-default-content  >ul:first-of-type {
+    .theme-default-content >ul:first-of-type {
         position: absolute;
         left: -280px;
         top: 150px;

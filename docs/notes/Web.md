@@ -35,6 +35,7 @@ pageClass: diary
 [「字体」Transfonter](https://transfonter.org/) <br>
 [「作图」雪碧图制作](https://alloyteam.github.io/gopng/) <br>
 [「作图」录屏GIF](https://github.com/NickeManarin/ScreenToGif) <br>
+[「作图」裁剪GIF](https://www.iloveimg.com/zh-cn/crop-image/crop-gif) <br>
 
 ### UI参考
 [「UI」花瓣网](https://huaban.com/) <br>
