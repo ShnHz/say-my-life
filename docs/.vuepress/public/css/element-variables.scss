@@ -33,11 +33,19 @@ $--font-path: '~element-ui/lib/theme-chalk/fonts';
     }
 }
 
-.el-notification {
+.el-notification.main-them-notify {
     background: #3eaf7c;
 
     .el-notification__content {
         margin-top: 0px;
         color: #fff;
     }
+
+    .el-notification__closeBtn {
+        color: #fff;
+    }
+}
+
+.el-notification.ercode-notify {
+    width: auto;
 }

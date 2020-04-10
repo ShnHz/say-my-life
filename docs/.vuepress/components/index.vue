@@ -38,11 +38,22 @@
             加入书签
           </div>
           <div class="social-info">
-            <i class="shni shn-github-fill"></i>
-            <i class="shni shn-alipay-circle-fill"></i>
-            <i class="shni shn-QQ"></i>
-            <i class="shni shn-wechat-fill"></i>
+            <a href="https://github.com/ShnHz">
+              <i class="shni shn-github-fill"></i>
+            </a>
+            <i @click="openAlipay" class="shni shn-alipay-circle-fill"></i>
+            <i @click="openQQ" class="shni shn-QQ"></i>
+            <i @click="openWechat" class="shni shn-wechat-fill"></i>
           </div>
+        </div>
+
+        <div class="card-wrap card-love">
+          <div class="avatar-info">
+            <img alt src="https://cdn.chenyingshuang.cn/index/shn_avatar.jpg" />
+            <i class="shni shn-heart-fill"></i>
+            <img alt src="https://cdn.chenyingshuang.cn/index/cys_avatar.jpg" />
+          </div>
+          <p>{{loveInfo.daysNum}} 天 {{loveInfo.hoursNum}} 时 {{loveInfo.minutesNum}} 分 {{loveInfo.secondsNum}} 秒</p>
         </div>
       </aside>
       <!-- <div class="features-wrap"> -->
@@ -59,7 +70,15 @@ export default {
 
       blogList: [],
       showList: [],
-      pageSize: 8
+      pageSize: 8,
+
+      loveInfo: {
+        deadline: 'Nov 11,2016 00:00:00',
+        daysNum: '∞',
+        hoursNum: '∞',
+        minutesNum: '∞',
+        secondsNum: '∞'
+      }
     }
   },
   watch: {
@@ -85,12 +104,16 @@ export default {
     window.addEventListener('scroll', this.handleScroll)
   },
   mounted() {
+    this.loveTime()
     this.getInfo()
   },
   destroyed() {
     window.removeEventListener('scroll', this.handleScroll)
   },
   methods: {
+    /**
+     * 监听滚动条
+     */
     handleScroll() {
       this.scrollTop =
         window.pageYOffset ||
@@ -119,12 +142,78 @@ export default {
         currentPage * this.pageSize
       )
     },
+
+    /**
+     * 添加书签
+     */
     addBookMark() {
       this.$notify({
         message: '按 CTRL + D 将本页加入书签',
         position: 'bottom-left',
         showClose: false,
-        duration: 2000
+        duration: 2000,
+        customClass: 'main-them-notify'
+      })
+    },
+    /**
+     * 打开QQ
+     */
+    openQQ() {
+      this.$notify({
+        message: 'QQ号：664652740',
+        position: 'bottom-left',
+        showClose: true,
+        duration: 0,
+        customClass: 'main-them-notify'
+      })
+    },
+    /**
+     * 打开微信
+     */
+    openWechat() {
+      this.$notify({
+        message: '微信号：Shn664652740',
+        position: 'bottom-left',
+        showClose: true,
+        duration: 0,
+        customClass: 'main-them-notify'
+      })
+    },
+    /**
+     * 打开支付宝
+     */
+    openAlipay() {
+      this.$notify({
+        title: '打赏一下吧~',
+        position: 'bottom-left',
+        dangerouslyUseHTMLString: true,
+        message:
+          '<img src="https://cdn.chenyingshuang.cn/index/alipay_ercode.jpg" style="width:200px"/>',
+        duration: 0,
+        customClass: 'ercode-notify'
+      })
+    },
+    /**
+     * 打开支付宝
+     */
+    loveTime() {
+      let _this = this
+      let countDownDate = Date.parse(new Date(this.loveInfo.deadline))
+      let x = setInterval(function() {
+        let now = Date.parse(new Date())
+        var diff = now - countDownDate
+        _this.loveInfo.daysNum = Math.floor(diff / (1000 * 60 * 60 * 24))
+        _this.loveInfo.hoursNum = Math.floor(
+          (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        )
+        _this.loveInfo.minutesNum = Math.floor(
+          (diff % (1000 * 60 * 60)) / (1000 * 60)
+        )
+        _this.loveInfo.secondsNum = Math.floor((diff % (1000 * 60)) / 1000)
+      }, 1000)
+
+      this.$once('hook:beforeDestroy', () => {
+        clearInterval(x)
       })
     }
   }
@@ -180,6 +269,9 @@ export default {
       background: #fff;
       box-shadow: 0 4px 8px 6px rgba(7, 17, 27, 0.04);
       transition: all 0.3s;
+      &:not(:first-child) {
+        margin-top: 20px;
+      }
       &.card-info {
         color: #333;
         .avatar-info {
@@ -213,9 +305,54 @@ export default {
         .social-info {
           padding: 1rem 2rem;
           i {
+            cursor: pointer;
+            transition: all 0.3s ease;
             font-size: 26px;
             margin-right: 10px;
+            color: #333;
+            &:hover {
+              color: #3eaf7c;
+            }
           }
+        }
+      }
+      &.card-love {
+        text-align: center;
+        .avatar-info {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: #fff 2px solid;
+            box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+            margin: 0 20px;
+          }
+          i {
+            color: #f56c6c;
+            animation: xintiao 1.33s ease-in-out infinite;
+          }
+          @keyframes xintiao {
+            0% {
+              -webkit-transform: scale(1);
+              transform: scale(1);
+            }
+
+            50% {
+              -webkit-transform: scale(0.8);
+              transform: scale(0.8);
+            }
+
+            to {
+              -webkit-transform: scale(1);
+              transform: scale(1);
+            }
+          }
+        }
+        p{
+          margin-top: 10px;
         }
       }
     }
