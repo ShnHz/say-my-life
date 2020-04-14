@@ -4,13 +4,13 @@
             "name": "css"
         }],
         "url": "/say-my-life/blog/css/FilterBW.html",
-        "date": "2020-04-04 14:36",
+        "date": "2020/04/04 14:36",
         "summary": "因为今天是对抗击新冠肺炎疫情斗争牺牲烈士和逝世通报的全国哀悼日，很多网站都把页面变成了黑白色,那这个是怎么做的呢?"
     }, {
         "title": "如何科学上网",
         "tag": [],
         "url": "/say-my-life/blog/other/Overthewall.html",
-        "date": "2020-04-03 16:00"
+        "date": "2020/04/03 16:00"
     }, {
         "title": "这15个Vue自定义指令，让你的项目开发爽到爆",
         "tag": [{
@@ -20,7 +20,7 @@
             "type": "info"
         }],
         "url": "/say-my-life/blog/vue/VueDirective.html",
-        "date": "2020-04-03 15:30",
+        "date": "2020/04/03 15:30",
         "summary": "留了一些我觉得派得上用场的自定义指令"
     }, {
         "title": "VuePress的疑难杂症",
@@ -28,7 +28,7 @@
             "name": "vue"
         }],
         "url": "/say-my-life/blog/vue/VuepressIntractableDisease.html",
-        "date": "2020-04-03 12:04",
+        "date": "2020/04/03 12:04",
         "summary": "如何搭建一个VuePress技术文档/博客？enhanceApp.js 怎么写？如何更改首页内容？如何打包并部署到github pages/gitee pages？"
     },
     {
@@ -40,7 +40,7 @@
             "type": "info"
         }],
         "url": "/say-my-life/blog/css/Bem.html",
-        "date": "2020-04-03 10:58",
+        "date": "2020/04/03 10:58",
         "summary": "Bem 是块（block）、元素（element）、修饰符（modifier）的简写，由 Yandex 团队提出的一种前端 CSS 命名方法论"
     },
     {
@@ -52,7 +52,7 @@
             "type": "info"
         }],
         "url": "/say-my-life/blog/js/Pdfjs.html",
-        "date": "2020-04-02 10:58"
+        "date": "2020/04/02 10:58"
     },
     {
         "title": "高质量前端快照方案：来自页面的「自拍」",
@@ -63,7 +63,7 @@
             "type": "info"
         }],
         "url": "/say-my-life/blog/js/Screenshot.html",
-        "date": "2020-04-02 10:54",
+        "date": "2020/04/02 10:54",
         "summary":"将网页保存为图片（以下简称为快照），是用户记录和分享页面信息的有效手段，在各种兴趣测试和营销推广等形式的活动页面中尤为常见..."
     }
 ]
