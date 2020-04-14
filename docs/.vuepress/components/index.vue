@@ -172,7 +172,7 @@ export default {
   },
   mounted() {
     window.addEventListener('scroll', this.handleScroll)
-    this.bannerBg = Math.floor(Math.random() * 3 + 1)
+    this.bannerBg = Math.floor(Math.random() * 4 + 1)
     this.loveTime()
     this.getInfo()
   },

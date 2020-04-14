@@ -20,6 +20,9 @@ module.exports = {
     themeConfig: {
         logo: '/img/logo_shn.png',
         nav: [{
+                text: '首页',
+                link: '/'
+            }, {
                 text: '归档',
                 link: '/blog/Archives'
             }, {
