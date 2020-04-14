@@ -12,7 +12,7 @@ import VueParticles from 'vue-particles'
 import VueCookies from 'vue-cookies'
 import axios from 'axios'
 
-
+import Mixins from './utils/mixins';
 import store from './store'
 
 export default ({
@@ -24,6 +24,7 @@ export default ({
     Vue.component('vue-waterfall-easy', vueWaterfallEasy)
     Vue.use(VueParticles)
     Vue.use(VueCookies)
+    Vue.mixin(Mixins);
 
     Vue.prototype.$store = store
     Vue.prototype.$http = axios

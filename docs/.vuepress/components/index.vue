@@ -1,7 +1,7 @@
 <template>
   <div class="index-wrap">
     <div
-      :style="{'background-image':`url(https://cdn.chenyingshuang.cn/index/bg${Math.floor(Math.random()*1+1)}.jpg)`}"
+      :style="{'background-image':`url(https://cdn.chenyingshuang.cn/index/bg${bannerBg}.jpg)`}"
       class="banner-wrap"
     >
       <img alt src="../public/img/index-logo.gif" />
@@ -13,7 +13,24 @@
     </div>
     <main>
       <main>
-        <div class="card-wrap"></div>
+        <div :key="item.title + item.date" class="card-wrap" v-for="item in showList">
+          <a :href="item.url" class="article-title">{{item.title}}</a>
+
+          <p class="article-date">{{mixin_getDate(item.date,'MC dd,yyyy')}}</p>
+
+          <p class="article-summary" v-if="item.summary">{{item.summary}}</p>
+
+          <p>
+            <el-tag
+              :key="'archives-tag-' + item.title + _index + _item.name"
+              :type="_item.type ? _item.type : ''"
+              disable-transitions
+              effect="dark"
+              size="mini"
+              v-for="(_item,_index) in item.tag"
+            >{{_item.name}}</el-tag>
+          </p>
+        </div>
       </main>
       <aside>
         <div class="card-wrap card-info">
@@ -55,10 +72,26 @@
           </div>
           <p>{{loveInfo.daysNum}} 天 {{loveInfo.hoursNum}} 时 {{loveInfo.minutesNum}} 分 {{loveInfo.secondsNum}} 秒</p>
         </div>
+
+        <div class="card-wrap card-carousel">
+          <el-carousel :interval="10000" arrow="always" direction="vertical">
+            <el-carousel-item :key="item.title" v-for="item in carouselInfo">
+              <div
+                :style="{'background-image':`url(${item.bg})`,
+              'background-position':'center center',
+              'background-size':'cover'
+              }"
+                class="card-carousel-item"
+              >
+                <div>
+                  <h2>{{item.title}}</h2>
+                  <p>{{item.content}}</p>
+                </div>
+              </div>
+            </el-carousel-item>
+          </el-carousel>
+        </div>
       </aside>
-      <!-- <div class="features-wrap"> -->
-      <!-- <p class="text-item">我认为旅行是从大自然学习的最佳方式。走遍世界，这是我最大的梦想。</p> -->
-      <!-- </div> -->
     </main>
   </div>
 </template>
@@ -71,14 +104,33 @@ export default {
       blogList: [],
       showList: [],
       pageSize: 8,
+      bannerBg: 1,
 
       loveInfo: {
-        deadline: 'Nov 11,2016 00:00:00',
+        deadline: '2018.06.21',
         daysNum: '∞',
         hoursNum: '∞',
         minutesNum: '∞',
         secondsNum: '∞'
-      }
+      },
+      carouselInfo: [
+        {
+          title: '日记',
+          content: '做一个热爱生活的人，把生活记录下来。',
+          bg: 'https://cdn.chenyingshuang.cn/index/carousel1.jpg'
+        },
+        {
+          title: '旅行',
+          content:
+            '我认为旅行是从大自然学习的最佳方式。走遍世界，这是我最大的梦想。',
+          bg: 'https://cdn.chenyingshuang.cn/index/carousel2.jpg'
+        },
+        {
+          title: '好好打代码',
+          content: '每天都要学习！',
+          bg: 'https://cdn.chenyingshuang.cn/index/carousel3.jpg'
+        }
+      ]
     }
   },
   watch: {
@@ -102,6 +154,7 @@ export default {
   },
   created() {
     window.addEventListener('scroll', this.handleScroll)
+    this.bannerBg = Math.floor(Math.random() * 3 + 1)
   },
   mounted() {
     this.loveTime()
@@ -258,6 +311,30 @@ export default {
     display: flex;
     main {
       width: calc(75% - 15px);
+      ::v-deep {
+        .el-tag--mini {
+          margin-right: 5px;
+          line-height: 16px;
+        }
+      }
+      .card-wrap {
+        .article-title {
+          font-size: 18px;
+          color: rgba(0, 0, 0, 0.87);
+          line-height: 1.5;
+        }
+        .article-date {
+          font-size: 14px;
+          color: rgba(0, 0, 0, 0.6);
+        }
+        .article-summary {
+          padding: 16px 0 10px;
+          color: rgba(0, 0, 0, 0.87);
+          font-size: 14px;
+          line-height: 1.375rem;
+          font-weight: 400;
+        }
+      }
     }
     aside {
       width: 25%;
@@ -267,7 +344,7 @@ export default {
       padding: 1rem 1.2rem;
       border-radius: 8px;
       background: #fff;
-      box-shadow: 0 4px 8px 6px rgba(7, 17, 27, 0.04);
+      // box-shadow: 0 4px 8px 6px rgba(7, 17, 27, 0.04);
       transition: all 0.3s;
       &:not(:first-child) {
         margin-top: 20px;
@@ -351,8 +428,31 @@ export default {
             }
           }
         }
-        p{
+        p {
           margin-top: 10px;
+        }
+      }
+      &.card-carousel {
+        padding: 0 0;
+        overflow: hidden;
+        .card-carousel-item {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          > div {
+            position: absolute;
+            bottom: 0;
+            padding: 2rem 1.4rem;
+            h2 {
+              color: #fff;
+              font-size: 26px;
+              padding-bottom: 0.5rem;
+            }
+            p {
+              color: #fff;
+              font-size: 14px;
+            }
+          }
         }
       }
     }
@@ -364,6 +464,25 @@ export default {
     .banner-wrap {
       img {
         display: none;
+      }
+    }
+    > main {
+      display: inline-flex;
+      flex-direction: column;
+      width: 100%;
+      padding-top: 0;
+      > main {
+        order: 1;
+      }
+      > aside {
+        order: -1;
+      }
+      > main,
+      > aside {
+        display: block;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
       }
     }
   }
