@@ -390,7 +390,7 @@ export default {
           line-height: 2rem;
           text-align: center;
           font-size: 14px;
-          transition: all .3s ease;
+          transition: all 0.3s ease;
           i {
             position: relative;
             top: 1px;

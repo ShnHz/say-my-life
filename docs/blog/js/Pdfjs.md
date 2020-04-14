@@ -4,6 +4,13 @@ pageClass: blog
 
 ## pdf.js使用和JS实现嵌套Iframe页面F11全屏效果
 
+<p class="date">2020-04-02 10:58
+  <span id="/say-my-life/blog/js/Pdfjs.html" class="leancloud_visitors">
+      <i class="shni shn-eye-fill" />
+      <i class="leancloud-visitors-count"></i>
+  </span>
+</p>
+
 <el-backtop :visibility-height="0"></el-backtop>
 
 ### 1. Pdf.js使用
@@ -83,3 +90,5 @@ if(!PDFViewerApplication.supportsFullscreen) {
 另外：在 用IE11的时候全屏有可能不能显示全部pdf文件这样只需在viewer.html中<code class="default"><htmldir="ltr" mozdisallowselectionprint moznomarginboxesstyle="width: 100%"></code>宽度设为100%
 
 将<code class="default">iframe</code>标签内加上一个 <code class="default">allowFullScreen=true</code> 也是可行的
+
+<base-valine />

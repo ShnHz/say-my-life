@@ -3,7 +3,12 @@ pageClass: blog
 ---
 
 ## 如何科学上网
-<p class="date">2020-04-03 16:00</p>
+<p class="date">2020-04-03 16:00
+  <span id="/say-my-life/blog/other/Overthewall.html" class="leancloud_visitors">
+      <i class="shni shn-eye-fill" />
+      <i class="leancloud-visitors-count"></i>
+  </span>
+</p>
 
 ### 1.首先得买一个VPN。
 
@@ -32,3 +37,5 @@ iOS国区apple id是没有的，得切换到美区账号下载，美区账号这
 用app扫订单上的各种二维码就行啦
 
 添加成功之后选择一个已经添加的VPN服务器，点击右下角start，现在就可以愉快的谷歌了，建议各位科学上网是用来学习的哦
+
+<base-valine />

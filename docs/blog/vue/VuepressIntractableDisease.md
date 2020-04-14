@@ -3,7 +3,13 @@ pageClass: blog
 ---
 
 ## VuePress的疑难杂症
-<p class="date">2020-04-03 12:04</p>
+<p class="date">2020-04-03 12:04 
+  <span id="/say-my-life/blog/vue/VuepressIntractableDisease.html" class="leancloud_visitors">
+      <i class="shni shn-eye-fill" />
+      <i class="leancloud-visitors-count"></i>
+  </span>
+</p>
+
 
 <el-backtop :visibility-height="0"></el-backtop>
 
@@ -143,3 +149,29 @@ git push -f https://gitee.com/xxx/xxx.git master:gitee-pages
 
 cd -
 ```
+
+### 4. 如何引入百度统计？
+
+修改<code class="default">config.js</code>文件
+
+```js
+module.exports = {
+    head: [
+        ['link', {
+            rel: 'icon',
+            href: `/favicon.ico`
+        }],
+        ['script', {}, `
+            var _hmt = _hmt || [];
+            (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?********************";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+            })();
+        `]
+    ],
+}
+```
+
+<base-valine />

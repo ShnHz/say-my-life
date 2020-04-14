@@ -4,6 +4,13 @@ pageClass: blog
 
 ## CSS — BEM 命名规范
 
+<p class="date">2020-04-03 10:58
+  <span id="/say-my-life/blog/css/Bem.html" class="leancloud_visitors">
+      <i class="shni shn-eye-fill" />
+      <i class="leancloud-visitors-count"></i>
+  </span>
+</p>
+
 <el-backtop :visibility-height="0"></el-backtop>
 
 ### 1. 什么是 BEM 命名规范
@@ -158,3 +165,5 @@ BEM的关键是，可以获得更多的描述和更加清晰的结构，从其�
 <li><p>结构下，应避免过长的样式名称定义。</p></li>
 <li><p>层级最后不要超过 4 级，不然增加阅读的理解难度</p></li>
 </ul>
+
+<base-valine />

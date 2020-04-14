@@ -4,6 +4,13 @@ pageClass: blog
 
 ## 使用CSS改变DOM顺序
 
+<p class="date">2020-04-14 14:36
+  <span id="/say-my-life/blog/css/CssDomOrder.html" class="leancloud_visitors">
+      <i class="shni shn-eye-fill" />
+      <i class="leancloud-visitors-count"></i>
+  </span>
+</p>
+
 <el-backtop :visibility-height="0"></el-backtop>
 
 在适配移动端页面，有时会遇到元素重排序的问题，就像我的<a href="https://www.sanghangning.cn">博客</a>首页，PC端与移动端模块顺序是不一样的。
@@ -60,3 +67,5 @@ PC端：文章模块 -> 个人信息模块
 <code class="default">column-reverse</code>表现和column相同，但是置换了主轴起点和主轴终点。
 </p>
 </blockquote>
+
+<base-valine />

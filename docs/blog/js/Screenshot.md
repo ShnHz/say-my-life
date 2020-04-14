@@ -3,6 +3,14 @@ pageClass: blog-catalog
 ---
 
 ## 高质量前端快照方案：来自页面的「自拍」
+
+<p class="date">2020-04-02 10:54
+  <span id="/say-my-life/blog/js/Screenshot.html" class="leancloud_visitors">
+      <i class="shni shn-eye-fill" />
+      <i class="leancloud-visitors-count"></i>
+  </span>
+</p>
+
 ###### 原文 [掘金](https://juejin.im/post/5df2e8ab6fb9a0163770816d#)
 
 <el-backtop :visibility-height="0"></el-backtop>
@@ -718,3 +726,5 @@ function createBaseCanvas(scale) {
 <p>不同的导出格式，对于生成快照的文件体积存在较大的影响。
 通常对于没有透明度展示要求的图片素材，可以使用<code class="default">jpeg</code>格式的导出。在我们的相关实践中，<code class="default">jpeg</code>相比于<code class="default">png</code>甚至能够节约 80% 以上的文件体积。</p>
 <p>实际场景中的的图片导出格式，按业务需求选用即可。</p>
+
+<base-valine />

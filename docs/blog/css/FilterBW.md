@@ -3,7 +3,12 @@ pageClass: blog
 ---
 
 ## 整个网站网页变黑白的效果
-<p class="date">2020-04-04 14:36</p>
+<p class="date">2020-04-04 14:36
+  <span id="/say-my-life/blog/css/FilterBW.html" class="leancloud_visitors">
+      <i class="shni shn-eye-fill" />
+      <i class="leancloud-visitors-count"></i>
+  </span>
+</p>
 
 因为今天是对抗击新冠肺炎疫情斗争牺牲烈士和逝世通报的全国哀悼日，很多网站都把页面变成了黑白色
 
@@ -22,3 +27,4 @@ html {
 
 👩‍⚕️ 👨‍⚕️ 👩‍🏭 👨‍🏭 👮‍♀️ 👮‍♂️
 
+<base-valine />
