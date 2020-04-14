@@ -148,15 +148,12 @@ export default {
             .querySelectorAll('div.theme-container')[0]
             .setAttribute('class', 'theme-container no-sidebar index')
         }
-      },
-      immediate: true
+      }
     }
   },
-  created() {
+  mounted() {
     window.addEventListener('scroll', this.handleScroll)
     this.bannerBg = Math.floor(Math.random() * 3 + 1)
-  },
-  mounted() {
     this.loveTime()
     this.getInfo()
   },
