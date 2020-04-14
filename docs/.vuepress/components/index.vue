@@ -61,6 +61,9 @@
             <i @click="openAlipay" class="shni shn-alipay-circle-fill"></i>
             <i @click="openQQ" class="shni shn-QQ"></i>
             <i @click="openWechat" class="shni shn-wechat-fill"></i>
+            <a href="mailto:664652740@qq.com">
+              <i class="shni shn-mail-fill"></i>
+            </a>
           </div>
         </div>
 
@@ -74,7 +77,7 @@
         </div>
 
         <div class="card-wrap card-carousel">
-          <el-carousel :interval="10000" arrow="always" direction="vertical">
+          <el-carousel :interval="10000" arrow="always" direction="vertical" trigger="click">
             <el-carousel-item :key="item.title" v-for="item in carouselInfo">
               <div
                 :style="{'background-image':`url(${item.bg})`,
@@ -93,6 +96,22 @@
         </div>
       </aside>
     </main>
+
+    <footer>
+      <div
+        :style="{'background-image':`url(https://cdn.chenyingshuang.cn/index/bg${bannerBg}.jpg)`}"
+        class="bg"
+      ></div>
+      <div class="footer-wrap">
+        <div class="copyright">©2019 - 2020 By Shn</div>
+        <div class="framework-info">
+          <span>Power by</span>
+          <a href="https://vuepress.vuejs.org/zh/" rel="noopener" target="_blank">
+            <span>Vuepress</span>
+          </a>
+        </div>
+      </div>
+    </footer>
   </div>
 </template>
 <script>
@@ -244,7 +263,7 @@ export default {
       })
     },
     /**
-     * 打开支付宝
+     * 计算恋爱时间
      */
     loveTime() {
       let _this = this
@@ -371,13 +390,17 @@ export default {
           line-height: 2rem;
           text-align: center;
           font-size: 14px;
+          transition: all .3s ease;
           i {
             position: relative;
             top: 1px;
           }
+          &:hover {
+            background: #3eaf7c;
+          }
         }
         .social-info {
-          padding: 1rem 2rem;
+          padding: 1rem 1.5rem;
           i {
             cursor: pointer;
             transition: all 0.3s ease;
@@ -452,6 +475,32 @@ export default {
           }
         }
       }
+    }
+  }
+
+  footer {
+    position: relative;
+    margin-top: 1rem;
+    background: rgb(0, 0, 0);
+    .bg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-attachment: local;
+      background-position: bottom;
+      background-size: cover;
+      opacity: 0.3;
+    }
+    .footer-wrap {
+      position: relative;
+      padding: 4rem 1rem;
+      color: #eee;
+      text-align: center;
     }
   }
 }
