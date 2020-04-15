@@ -1,6 +1,5 @@
 <template>
   <div class="index-wrap">
-
     <div
       :style="{'background-image':`url(https://cdn.chenyingshuang.cn/index/bg${bannerBg}.jpg)`}"
       class="banner-wrap"
@@ -14,23 +13,25 @@
     </div>
     <main>
       <main v-loading="loading">
-        <div :key="item.title + item.date" class="card-wrap" v-for="item in showList">
-          <router-link :to="item.url" class="article-title">{{item.title}}</router-link>
+        <div>
+          <div :key="item.title + item.date" class="card-wrap" v-for="item in showList">
+            <router-link :to="item.url" class="article-title">{{item.title}}</router-link>
 
-          <p class="article-date">{{mixin_getDate(item.date,'MC dd,yyyy')}}</p>
+            <p class="article-date">{{mixin_getDate(item.date,'MC dd,yyyy')}}</p>
 
-          <p class="article-summary" v-if="item.summary">{{item.summary}}</p>
+            <p class="article-summary" v-if="item.summary">{{item.summary}}</p>
 
-          <p>
-            <el-tag
-              :key="'archives-tag-' + item.title + _index + _item.name"
-              :type="_item.type ? _item.type : ''"
-              disable-transitions
-              effect="dark"
-              size="mini"
-              v-for="(_item,_index) in item.tag"
-            >{{_item.name}}</el-tag>
-          </p>
+            <p>
+              <el-tag
+                :key="'archives-tag-' + item.title + _index + _item.name"
+                :type="_item.type ? _item.type : ''"
+                disable-transitions
+                effect="dark"
+                size="mini"
+                v-for="(_item,_index) in item.tag"
+              >{{_item.name}}</el-tag>
+            </p>
+          </div>
         </div>
       </main>
       <aside>

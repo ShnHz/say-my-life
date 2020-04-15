@@ -38,6 +38,10 @@ module.exports = {
                 link: '/journey/Journey'
             },
             {
+                text: '友链',
+                link: '/Friend'
+            },
+            {
                 text: 'GitHub',
                 items: [{
                         text: 'ShnHz',

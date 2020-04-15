@@ -1,0 +1,5 @@
+---
+pageClass: friend
+---
+
+<friend-friend />
