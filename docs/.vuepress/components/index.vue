@@ -1,5 +1,6 @@
 <template>
   <div class="index-wrap">
+
     <div
       :style="{'background-image':`url(https://cdn.chenyingshuang.cn/index/bg${bannerBg}.jpg)`}"
       class="banner-wrap"
@@ -12,9 +13,9 @@
       </div>
     </div>
     <main>
-      <main>
+      <main v-loading="loading">
         <div :key="item.title + item.date" class="card-wrap" v-for="item in showList">
-          <a :href="item.url" class="article-title">{{item.title}}</a>
+          <router-link :to="item.url" class="article-title">{{item.title}}</router-link>
 
           <p class="article-date">{{mixin_getDate(item.date,'MC dd,yyyy')}}</p>
 
@@ -41,7 +42,7 @@
             <p>野宁新之助</p>
           </div>
           <div class="data-info">
-            <div class="data-info-item">
+            <div @click="$router.push('/blog/Archives.html')" class="data-info-item">
               <p class="data-info-item-title">文章</p>
               <p class="data-info-item-data">{{blogList.length}}</p>
             </div>
@@ -118,6 +119,7 @@
 export default {
   data() {
     return {
+      loading: true,
       scrollTop: 0,
 
       blogList: [],
@@ -190,6 +192,7 @@ export default {
         document.body.scrollTop
     },
     getInfo() {
+      this.loading = true
       let _this = this
       this.$http({
         method: 'GET',
@@ -198,6 +201,7 @@ export default {
         .then(res => {
           _this.blogList = res.data
           _this.pageChange(1)
+          _this.loading = false
         })
         .catch(err => {
           console.log(err)
@@ -370,12 +374,23 @@ export default {
         .avatar-info {
           text-align: center;
           font-weight: 600;
+          img {
+            transform: none;
+            &:hover {
+              transform: rotate(666turn);
+              transition-delay: 1s;
+              transition-property: all;
+              transition-duration: 59s;
+              transition-timing-function: cubic-bezier(0.34, 0, 0.84, 1);
+            }
+          }
         }
         .data-info {
           display: flex;
           padding: 0.7rem 0;
           text-align: center;
           .data-info-item {
+            cursor: pointer;
             flex: 1;
             .data-info-item-data {
               font-size: 1rem;

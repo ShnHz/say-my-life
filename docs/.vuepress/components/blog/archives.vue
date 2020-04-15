@@ -7,7 +7,7 @@
       <el-timeline :reverse="false">
         <el-timeline-item>共计{{blogList.length}}篇文章</el-timeline-item>
         <el-timeline-item :key="index" :timestamp="item.date" v-for="(item, index) in showList">
-          <a :href="item.url">{{item.title}}</a>
+          <router-link :to="item.url">{{item.title}}</router-link>
           <el-tag
             :key="'archives-tag-' + item.title + _index + _item.name"
             :type="_item.type ? _item.type : ''"

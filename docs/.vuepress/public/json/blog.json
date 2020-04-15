@@ -1,22 +1,31 @@
 [{
+        "title": "VuePress主题继承",
+        "tag": [{
+            "name": "vue"
+        }],
+        "url": "/blog/vue/VuepressInheritanceTheme.html",
+        "date": "2020/04/15 16:00",
+        "summary": "想要在VuePress的默认主题上动动土，看这个就对了"
+    },
+    {
         "title": "使用CSS改变DOM顺序",
         "tag": [{
             "name": "css"
         }],
-        "url": "/say-my-life/blog/css/CssDomOrder.html",
+        "url": "/blog/css/CssDomOrder.html",
         "date": "2020/04/14 14:36"
     }, {
         "title": "整个网站网页变黑白的效果",
         "tag": [{
             "name": "css"
         }],
-        "url": "/say-my-life/blog/css/FilterBW.html",
+        "url": "/blog/css/FilterBW.html",
         "date": "2020/04/04 14:36",
         "summary": "因为今天是对抗击新冠肺炎疫情斗争牺牲烈士和逝世通报的全国哀悼日，很多网站都把页面变成了黑白色,那这个是怎么做的呢?"
     }, {
         "title": "如何科学上网",
         "tag": [],
-        "url": "/say-my-life/blog/other/Overthewall.html",
+        "url": "/blog/other/Overthewall.html",
         "date": "2020/04/03 16:00"
     }, {
         "title": "这15个Vue自定义指令，让你的项目开发爽到爆",
@@ -26,7 +35,7 @@
             "name": "转",
             "type": "info"
         }],
-        "url": "/say-my-life/blog/vue/VueDirective.html",
+        "url": "/blog/vue/VueDirective.html",
         "date": "2020/04/03 15:30",
         "summary": "留了一些我觉得派得上用场的自定义指令"
     }, {
@@ -34,7 +43,7 @@
         "tag": [{
             "name": "vue"
         }],
-        "url": "/say-my-life/blog/vue/VuepressIntractableDisease.html",
+        "url": "/blog/vue/VuepressIntractableDisease.html",
         "date": "2020/04/03 12:04",
         "summary": "如何搭建一个VuePress技术文档/博客？enhanceApp.js 怎么写？如何更改首页内容？如何打包并部署到github pages/gitee pages？"
     },
@@ -46,7 +55,7 @@
             "name": "转",
             "type": "info"
         }],
-        "url": "/say-my-life/blog/css/Bem.html",
+        "url": "/blog/css/Bem.html",
         "date": "2020/04/03 10:58",
         "summary": "Bem 是块（block）、元素（element）、修饰符（modifier）的简写，由 Yandex 团队提出的一种前端 CSS 命名方法论"
     },
@@ -58,7 +67,7 @@
             "name": "转",
             "type": "info"
         }],
-        "url": "/say-my-life/blog/js/Pdfjs.html",
+        "url": "/blog/js/Pdfjs.html",
         "date": "2020/04/02 10:58"
     },
     {
@@ -69,7 +78,7 @@
             "name": "转",
             "type": "info"
         }],
-        "url": "/say-my-life/blog/js/Screenshot.html",
+        "url": "/blog/js/Screenshot.html",
         "date": "2020/04/02 10:54",
         "summary": "将网页保存为图片（以下简称为快照），是用户记录和分享页面信息的有效手段，在各种兴趣测试和营销推广等形式的活动页面中尤为常见..."
     }
