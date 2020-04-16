@@ -30,7 +30,7 @@
       </template>
     </shn-el-demo-block>
 
-    <shn-el-demo-block :height="353" title="3D内嵌感" id="sharp-edge-curve">
+    <shn-el-demo-block :height="353" id="sharp-edge-curve" title="3D内嵌感">
       <template v-slot:demo>
         <div class="box box-4"></div>
         <div class="box box-5"></div>
@@ -38,15 +38,15 @@
       <template v-slot:code>
         <code class="css">
           .box{
-            border: 1px solid #8f9092;
-            box-shadow: 0 4px 3px 1px #fcfcfc, 0 6px 8px #d6d7d9, 0 -4px 4px #cecfd1,
-              0 -6px 4px #fefefe, inset 0 0 3px 0 #cecfd1;
-            background-image: linear-gradient(
-              to top,
-              #d8d9db 0%,
-              #fff 80%,
-              #fdfdfd 100%
-            );
+          border: 1px solid #8f9092;
+          box-shadow: 0 4px 3px 1px #fcfcfc, 0 6px 8px #d6d7d9, 0 -4px 4px #cecfd1,
+          0 -6px 4px #fefefe, inset 0 0 3px 0 #cecfd1;
+          background-image: linear-gradient(
+          to top,
+          #d8d9db 0%,
+          #fff 80%,
+          #fdfdfd 100%
+          );
           }
         </code>
       </template>
@@ -176,6 +176,8 @@ export default {
   .box {
     width: 350px;
     height: 150px;
+    border-radius: 5px;
+    background: #fff;
   }
   .box-1 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);

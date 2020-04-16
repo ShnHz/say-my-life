@@ -3,7 +3,9 @@
  */
 import VueHighlightJS from 'vue-highlightjs'
 import 'highlight.js/styles/atom-one-dark.css'
-import '../.vuepress/public/iconfont/iconfont.css'
+import '../.vuepress/public/iconfont/say-my-life/iconfont.css'
+import '../.vuepress/public/iconfont/shn-ui/iconfont.css'
+
 import vueWaterfallEasy from 'vue-waterfall-easy'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';

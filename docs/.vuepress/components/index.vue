@@ -1,9 +1,8 @@
 <template>
   <div class="index-wrap">
-    <div
-      :style="{'background-image':`url(https://cdn.chenyingshuang.cn/index/bg${bannerBg}.jpg)`}"
-      class="banner-wrap"
-    >
+    <div class="banner-wrap" :style="{'background-image':`url(https://cdn.chenyingshuang.cn/index/bg${bannerBg}.jpg)`}">
+      <!-- :style="{'background-image':`url(https://cdn1.zzzmh.cn/img/3a1a0cde1d0a.jpg!fullwp)`}" -->
+      <!-- :style="{'background-image':`url(https://cdn.chenyingshuang.cn/index/bg${bannerBg}.jpg)`}" -->
       <img alt src="../public/img/index-logo.gif" />
 
       <div>
@@ -125,7 +124,7 @@ export default {
 
       blogList: [],
       showList: [],
-      pageSize: 8,
+      pageSize: 20,
       bannerBg: 1,
 
       loveInfo: {

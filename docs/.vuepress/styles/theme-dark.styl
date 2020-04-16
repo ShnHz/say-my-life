@@ -1,0 +1,272 @@
+$theme--dark-color-1 = #171D20;
+$theme--dark-color-2 = #2f3133;
+$theme--dark-color-3 = #424242;
+
+.card-wrap, .home {
+    transition: all 0.5s ease !important;
+}
+
+.page {
+    transition: padding 0.5s ease !important;
+}
+
+.theme--dark {
+    /**
+     * 导航
+     */
+    .index-header-transparent {
+        header.navbar {
+            .home-link {
+                opacity: 1;
+            }
+        }
+    }
+
+    header.navbar {
+        background: $theme--dark-color-1;
+        border-bottom: none;
+        color: #fff;
+
+        .home-link {
+            img {
+                display: none;
+            }
+
+            .site-name {
+                color: #fff;
+            }
+        }
+
+        a, .dropdown-title>.title {
+            color: #fff;
+        }
+
+        .nav-dropdown {
+            background: $theme--dark-color-2;
+            border: none;
+        }
+    }
+
+    /**
+     * 侧边导航
+     */
+    .sidebar {
+        border-right: 1px solid $theme--dark-color-2;
+        background: $theme--dark-color-1;
+        color: #fff;
+
+        a, .sidebar-heading, .dropdown-title {
+            color: #fff;
+        }
+
+        .nav-links {
+            border-bottom: 1px solid $theme--dark-color-2;
+        }
+    }
+
+    /**
+     * 首页
+     */
+    .home {
+        background: $theme--dark-color-1 !important;
+
+        .index-wrap {
+            main {
+                .card-wrap {
+                    background: $theme--dark-color-2 !important;
+
+                    .article-title, .article-summary {
+                        color: #fff;
+                    }
+
+                    .article-date {
+                        color: hsla(0, 0%, 100%, 0.7);
+                    }
+                }
+            }
+
+            aside {
+                .avatar-info, .data-info, .card-love {
+                    color: #fff;
+                }
+
+                .social-info i {
+                    color: #fff !important;
+                }
+
+                .add-bookmark {
+                    background-color: #555 !important;
+                }
+            }
+        }
+    }
+
+    /**
+     * 页面通用
+     */
+    .page, .page-edit {
+        color: #fff;
+        background: $theme--dark-color-1 !important;
+        height: auto;
+        min-height: 100%;
+    }
+
+    .blog, .blog-catalog, .friend, .notes, .diary {
+        .page {
+            color: #fff;
+            padding-bottom: 0;
+            height: auto;
+            min-height: 100%;
+
+            .theme-default-content.content__default {
+                background: $theme--dark-color-1 !important;
+            }
+        }
+    }
+
+    /**
+     * 友链
+     */
+    .friend {
+        .rule-card, .friend-card>div, .valine-wrap {
+            background: $theme--dark-color-2 !important;
+            color: #fff !important;
+
+            div p {
+                color: #fff !important;
+            }
+        }
+    }
+
+    /**
+     * 博客
+     */
+    .blog, .blog-catalog {
+        .page {
+            padding-top: 100px;
+
+            .theme-default-content.content__default {
+                background: $theme--dark-color-2 !important;
+            }
+        }
+
+        blockquote {
+            color: #fff;
+            background: rgba(57, 57, 64, 0.8) !important;
+        }
+
+        code.default {
+            background: $theme--dark-color-3 !important;
+        }
+
+        a {
+            color: #aaa;
+        }
+
+        ul a {
+            color: #fff !important;
+        }
+    }
+
+    /**
+     * 笔记
+     */
+    .notes {
+        .particles {
+            background: transparent;
+        }
+    }
+
+    /**
+     * 旅程/日记
+     */
+    .diary {
+        .theme-default-content >p {
+            border-left: 1px solid $theme--dark-color-2;
+        }
+    }
+
+    .life {
+        .life {
+            img {
+                opacity: 0;
+            }
+        }
+    }
+
+    /**
+     * 其他小组件
+     */
+    .v * {
+        color: #ffffff !important;
+    }
+
+    .vpanel {
+        background: $theme--dark-color-3 !important;
+    }
+
+    .vbtn, .vsys {
+        color: $theme--dark-color-3 !important;
+    }
+
+    .el-timeline-item {
+        .el-timeline-item__node {
+            background-color: $theme--dark-color-3;
+        }
+
+        .el-timeline-item__tail {
+            border-left: 2px solid $theme--dark-color-3;
+        }
+
+        .el-timeline-item__content, a {
+            color: #fff;
+        }
+    }
+
+    .el-pagination {
+        button, li {
+            background: $theme--dark-color-1;
+            color: #C0C4CC;
+        }
+
+        button:disabled {
+            color: #303133;
+        }
+
+        li.active {
+            color: #3eaf7c;
+        }
+    }
+
+    .el-loading-mask {
+        background-color: rgba(47, 49, 51, 0.9);
+    }
+
+    .lock-box::after {
+        background: $theme--dark-color-1 !important;
+    }
+
+    .train-ticket {
+        color: #000;
+    }
+
+    /* 滚动条样式 */
+    div::-webkit-scrollbar, ul::-webkit-scrollbar, pre::-webkit-scrollbar, body::-webkit-scrollbar, html::-webkit-scrollbar, aside::-webkit-scrollbar {
+        width: 12px !important;
+        padding: 0 4px !important;
+    }
+
+    div::-webkit-scrollbar-thumb, ul::-webkit-scrollbar-thumb, pre::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb, html::-webkit-scrollbar-thumb, aside::-webkit-scrollbar-thumb {
+        /* 滚动条里面小方块 */
+        background-color: $theme--dark-color-2 !important;
+        border: 3px solid transparent !important;
+        border-radius: 6px !important;
+        background-clip: content-box !important;
+    }
+
+    div::-webkit-scrollbar-track, ul::-webkit-scrollbar-track, pre::-webkit-scrollbar-track, body::-webkit-scrollbar-track, html::-webkit-scrollbar-track, aside::-webkit-scrollbar-track {
+        /* 滚动条里面轨道 */
+        background: $theme--dark-color-1 !important;
+        border-radius: 0 4px 4px 0;
+    }
+}

@@ -142,7 +142,7 @@ export default {
           background-color: #fff;
           color: rgba(0, 0, 0, 0.87);
           padding: 12px;
-          transition: 0.5s all ease;
+          transition: 0.5s box-shadow ease;
           img {
             width: 60px;
             height: 60px;
