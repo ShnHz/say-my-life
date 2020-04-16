@@ -3,7 +3,7 @@ pageClass: blog
 ---
 
 ## VuePress主题继承
-<p class="date">2020-04-04 16:00 
+<p class="date">2020-04-15 16:00 
   <span id="/say-my-life/blog/vue/VuepressInheritanceTheme.html" class="leancloud_visitors">
       <i class="shni shn-eye-fill" />
       <i class="leancloud-visitors-count"></i>

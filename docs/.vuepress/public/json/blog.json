@@ -1,8 +1,19 @@
 [{
-        "title": "VuePress主题继承",
+        "title": "Vue打包抛出document/window报错",
         "tag": [{
             "name": "vue"
         }],
+        "url": "/blog/vue/VueDocumentWindowError.html",
+        "date": "2020/04/16 11:30"
+    }, {
+        "title": "VuePress主题继承",
+        "tag": [{
+                "name": "vue"
+            },
+            {
+                "name": "vuepress"
+            }
+        ],
         "url": "/blog/vue/VuepressInheritanceTheme.html",
         "date": "2020/04/15 16:00",
         "summary": "想要在VuePress的默认主题上动动土，看这个就对了"
@@ -41,8 +52,12 @@
     }, {
         "title": "VuePress的疑难杂症",
         "tag": [{
-            "name": "vue"
-        }],
+                "name": "vue"
+            },
+            {
+                "name": "vuepress"
+            }
+        ],
         "url": "/blog/vue/VuepressIntractableDisease.html",
         "date": "2020/04/03 12:04",
         "summary": "如何搭建一个VuePress技术文档/博客？enhanceApp.js 怎么写？如何更改首页内容？如何打包并部署到github pages/gitee pages？"
