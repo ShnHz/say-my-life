@@ -123,9 +123,9 @@ $navbar-horizontal-padding = 1.5rem;
 .navbar {
   padding: $navbar-vertical-padding $navbar-horizontal-padding;
   line-height: $navbarHeight - 1.4rem;
+  transition: all 0.5s ease;
 
   &.index {
-    transition: all 0.5s ease;
     border: none;
     border-bottom: 1px solid #eaecef;
   }

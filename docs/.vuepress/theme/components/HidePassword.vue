@@ -15,6 +15,8 @@
   </div>
 </template>
 <script>
+import md5 from 'js-md5'
+
 export default {
   data() {
     return {
@@ -30,7 +32,7 @@ export default {
       let _this = this
       this.error = false
       if (val.length === 4) {
-        if (val == '0620') {
+        if (md5(val) == '62429b8219194f0722dfea6509875729') {
           this.lock = false
           setTimeout(() => {
             _this.show = false
@@ -98,6 +100,7 @@ export default {
     unlock() {
       document.onkeydown = undefined
       this.inputBlur()
+      this.$emit('unLock')
     }
   }
 }

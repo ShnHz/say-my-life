@@ -194,6 +194,7 @@ module.exports = {
                         '/life/diary/2019-10',
                         '/life/diary/2019-11',
                         '/life/diary/2020-03',
+                        '/life/diary/2020-04',
                     ]
                 },
                 {

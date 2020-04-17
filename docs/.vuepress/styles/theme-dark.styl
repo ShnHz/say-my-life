@@ -11,14 +11,16 @@ $theme--dark-color-3 = #424242;
 }
 
 .theme--dark {
+    .theme-container {
+        background: $theme--dark-color-1;
+    }
+
     /**
      * 导航
      */
-    .index-header-transparent,.index {
-        header.navbar {
-            .home-link {
-                opacity: 1 !important;
-            }
+    .index-header-transparent, .index {
+        .home-link {
+            opacity: 1 !important;
         }
     }
 

@@ -17,11 +17,11 @@
     </Sidebar>
 
     <Lock v-if="haveLock()" />
-    <HidePassword v-if="haveLock()" />
+    <HidePassword @unLock="unLock" v-if="haveLock()" />
 
     <Home v-if="$page.frontmatter.home" />
 
-    <Page :sidebar-items="sidebarItems" v-else>
+    <Page :sidebar-items="sidebarItems" v-if="pageVisible">
       <slot #top name="page-top" />
       <slot #bottom name="page-bottom" />
     </Page>
@@ -44,7 +44,9 @@ export default {
   data() {
     return {
       isSidebarOpen: false,
-      loading: true
+      loading: true,
+
+      pageVisible: true
     }
   },
 
@@ -94,7 +96,22 @@ export default {
       ]
     }
   },
-
+  watch: {
+    $route: {
+      handler: function(to, from) {
+        if (this.$page.frontmatter.home) {
+          this.pageVisible = false
+        } else {
+          if (this.haveLock()) {
+            this.pageVisible = false
+          } else {
+            this.pageVisible = true
+          }
+        }
+      },
+      immediate: true
+    }
+  },
   mounted() {
     this.$router.afterEach(() => {
       this.isSidebarOpen = false
@@ -132,21 +149,29 @@ export default {
         }
       }
     },
-    haveLock() {
-      let haveLockPath = [
-        '/life/plan/2018.html',
-        '/life/plan/2019.html',
-        '/life/plan/2020.html',
-        '/life/diary/2019-03.html',
-        '/life/diary/2019-05.html',
-        '/life/diary/2019-09.html',
-        '/life/diary/2019-10.html',
-        '/life/diary/2019-11.html',
-        '/life/diary/2020-03.html'
-      ]
 
-      if (haveLockPath.indexOf(this.$route.path) > -1) {
-        return true
+    unLock() {
+      this.pageVisible = true
+    },
+    haveLock() {
+      if (this.$store.state.lock) {
+        let haveLockPath = [
+          '/life/plan/2018.html',
+          '/life/plan/2019.html',
+          '/life/plan/2020.html',
+          '/life/diary/2019-03.html',
+          '/life/diary/2019-05.html',
+          '/life/diary/2019-09.html',
+          '/life/diary/2019-10.html',
+          '/life/diary/2019-11.html',
+          '/life/diary/2020-03.html'
+        ]
+
+        if (haveLockPath.indexOf(this.$route.path) > -1) {
+          return true
+        } else {
+          return false
+        }
       } else {
         return false
       }
