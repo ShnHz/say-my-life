@@ -1,6 +1,6 @@
 ---
 home: true
-pageClass: index-header-transparent
+pageClass: index
 # heroImage: /img/index-logo.gif
 # features:
 # - title: 记录生活
@@ -12,6 +12,6 @@ pageClass: index-header-transparent
 # footer: Happy Life Copyright © 2019-present Sang Hang Ning
 ---
 
-<base-hide-password />
+
 
 <index />

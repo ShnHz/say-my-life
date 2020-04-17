@@ -14,10 +14,10 @@ $theme--dark-color-3 = #424242;
     /**
      * 导航
      */
-    .index-header-transparent {
+    .index-header-transparent,.index {
         header.navbar {
             .home-link {
-                opacity: 1;
+                opacity: 1 !important;
             }
         }
     }
@@ -244,6 +244,14 @@ $theme--dark-color-3 = #424242;
 
     .lock-box::after {
         background: $theme--dark-color-1 !important;
+    }
+
+    .el-checkbox__label {
+        color: #fff !important;
+    }
+
+    .lock-box {
+        color: #fff;
     }
 
     .train-ticket {

@@ -23,9 +23,13 @@
       } : {}"
       class="links"
     >
-      <div @click="selectMode" class="color-button">
+      <div @click="selectMode(currentMode == 'light' ? 'dark' : 'light')" class="color-button">
         <i class="say-my-life-i say-my-life-i-yueliang" v-if="currentMode == 'light'"></i>
-        <i class="say-my-life-i say-my-life-i-taiyang" v-if="currentMode == 'dark'" style="color:#fff"></i>
+        <i
+          class="say-my-life-i say-my-life-i-taiyang"
+          style="color:#fff"
+          v-if="currentMode == 'dark'"
+        ></i>
       </div>
       <AlgoliaSearchBox :options="algolia" v-if="isAlgoliaSearch" />
       <SearchBox
@@ -41,7 +45,6 @@ import AlgoliaSearchBox from '@AlgoliaSearchBox'
 import SearchBox from '@SearchBox'
 import SidebarButton from '@theme/components/SidebarButton.vue'
 import NavLinks from '@theme/components/NavLinks.vue'
-import modeOptions from '../../../../.vuepress/reco-theme/vuepress-theme-reco/components/Mode/modeOptions'
 
 export default {
   components: { SidebarButton, NavLinks, SearchBox, AlgoliaSearchBox },
@@ -71,8 +74,11 @@ export default {
     handleLinksWrapWidth()
     window.addEventListener('resize', handleLinksWrapWidth, false)
 
-    this.currentMode = localStorage.getItem('mode') || 'light'
-    this.selectMode()
+    this.currentMode =
+      localStorage.getItem('mode') != null
+        ? localStorage.getItem('mode')
+        : 'light'
+    this.selectMode(this.currentMode)
   },
 
   computed: {
@@ -87,13 +93,14 @@ export default {
     }
   },
   methods: {
-    selectMode() {
-      this.currentMode = this.currentMode == 'light' ? 'dark' : 'light'
+    selectMode(currentMode) {
+      this.currentMode = currentMode
+      localStorage.setItem('mode', currentMode)
 
-      localStorage.setItem('mode', this.currentMode)
-
-      if (this.currentMode == 'dark') {
-        document.querySelectorAll('#app')[0].setAttribute('class', 'theme--dark')
+      if (currentMode == 'dark') {
+        document
+          .querySelectorAll('#app')[0]
+          .setAttribute('class', 'theme--dark')
       } else {
         document.querySelectorAll('#app')[0].setAttribute('class', '')
       }
@@ -117,8 +124,37 @@ $navbar-horizontal-padding = 1.5rem;
   padding: $navbar-vertical-padding $navbar-horizontal-padding;
   line-height: $navbarHeight - 1.4rem;
 
+  &.index {
+    transition: all 0.5s ease;
+    border: none;
+    border-bottom: 1px solid #eaecef;
+  }
+
   a, span, img {
     display: inline-block;
+  }
+
+  &.index-header-transparent {
+    background: rgba(255, 255, 255, 0);
+    border: none;
+
+    .home-link {
+      opacity: 0;
+
+      .site-name {
+        color: #111;
+      }
+    }
+
+    .nav-item {
+      >.nav-link {
+        color: #fff;
+      }
+
+      .dropdown-title {
+        color: #fff;
+      }
+    }
   }
 
   .logo {

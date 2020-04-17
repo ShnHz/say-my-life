@@ -1,11 +1,5 @@
 // index
 .index {
-    header {
-        transition: all 0.5s ease;
-        border: none;
-        border-bottom: 1px solid #eaecef;
-    }
-
     .theme-default-content {
         width: 100%;
     }
@@ -18,7 +12,7 @@
     }
 
     .hero {
-        display: none;
+        display: none !important;
     }
 }
 
@@ -31,33 +25,6 @@
 
     .page-edit {
         display: none;
-    }
-}
-
-.theme-container.index-header-transparent {
-    @extend .index;
-
-    header {
-        background: rgba(255, 255, 255, 0);
-        border: none;
-
-        .home-link {
-            opacity: 0;
-
-            .site-name {
-                color: #111;
-            }
-        }
-
-        .nav-item {
-            >.nav-link {
-                color: #fff;
-            }
-
-            .dropdown-title {
-                color: #fff;
-            }
-        }
     }
 }
 

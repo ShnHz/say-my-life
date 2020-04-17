@@ -16,6 +16,9 @@
       <slot #bottom name="sidebar-bottom" />
     </Sidebar>
 
+    <Lock v-if="haveLock()" />
+    <HidePassword v-if="haveLock()" />
+
     <Home v-if="$page.frontmatter.home" />
 
     <Page :sidebar-items="sidebarItems" v-else>
@@ -32,9 +35,11 @@ import Page from '@theme/components/Page.vue'
 import Sidebar from '@theme/components/Sidebar.vue'
 import { resolveSidebarItems } from '../util'
 import LoadingPage from '../components/LoadingPage.vue'
+import Lock from '../components/Lock.vue'
+import HidePassword from '../components/HidePassword.vue'
 
 export default {
-  components: { Home, Page, Sidebar, Navbar, LoadingPage },
+  components: { Home, Page, Sidebar, Navbar, LoadingPage, Lock, HidePassword },
 
   data() {
     return {
@@ -125,6 +130,25 @@ export default {
         } else {
           this.toggleSidebar(false)
         }
+      }
+    },
+    haveLock() {
+      let haveLockPath = [
+        '/life/plan/2018.html',
+        '/life/plan/2019.html',
+        '/life/plan/2020.html',
+        '/life/diary/2019-03.html',
+        '/life/diary/2019-05.html',
+        '/life/diary/2019-09.html',
+        '/life/diary/2019-10.html',
+        '/life/diary/2019-11.html',
+        '/life/diary/2020-03.html'
+      ]
+
+      if (haveLockPath.indexOf(this.$route.path) > -1) {
+        return true
+      } else {
+        return false
       }
     }
   }

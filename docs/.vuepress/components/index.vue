@@ -159,15 +159,15 @@ export default {
       handler(newVal, oldVal) {
         if (newVal < 200) {
           document
-            .querySelectorAll('div.theme-container')[0]
+            .querySelectorAll('header.navbar')[0]
             .setAttribute(
               'class',
-              'theme-container no-sidebar index-header-transparent'
+              'navbar index-header-transparent'
             )
         } else {
           document
-            .querySelectorAll('div.theme-container')[0]
-            .setAttribute('class', 'theme-container no-sidebar index')
+            .querySelectorAll('header.navbar')[0]
+            .setAttribute('class', 'navbar index')
         }
       }
     }
