@@ -7,6 +7,8 @@ export default new Vuex.Store({
   state: {
     lock: true,
     pwboxVisible: false,
+
+    homeBottom: 0
   },
   mutations: {
     setLock(state, data) {
@@ -14,6 +16,9 @@ export default new Vuex.Store({
     },
     setPwboxVisible(state, data) {
       state.pwboxVisible = data
+    },
+    handleHomeBottom(state) {
+      state.homeBottom++
     }
   },
   actions: {

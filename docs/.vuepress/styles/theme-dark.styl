@@ -85,6 +85,10 @@ $theme--dark-color-3 = #424242;
                         color: hsla(0, 0%, 100%, 0.7);
                     }
                 }
+
+                .no-more {
+                    color: #aaa;
+                }
             }
 
             aside {
@@ -261,12 +265,12 @@ $theme--dark-color-3 = #424242;
     }
 
     /* 滚动条样式 */
-    div::-webkit-scrollbar, ul::-webkit-scrollbar, pre::-webkit-scrollbar, body::-webkit-scrollbar, html::-webkit-scrollbar, aside::-webkit-scrollbar {
+    div::-webkit-scrollbar, ul::-webkit-scrollbar, pre::-webkit-scrollbar, body::-webkit-scrollbar, html::-webkit-scrollbar, aside::-webkit-scrollbar, main::-webkit-scrollbar {
         width: 12px !important;
         padding: 0 4px !important;
     }
 
-    div::-webkit-scrollbar-thumb, ul::-webkit-scrollbar-thumb, pre::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb, html::-webkit-scrollbar-thumb, aside::-webkit-scrollbar-thumb {
+    div::-webkit-scrollbar-thumb, ul::-webkit-scrollbar-thumb, pre::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb, html::-webkit-scrollbar-thumb, aside::-webkit-scrollbar-thumb, main::-webkit-scrollbar-thumb {
         /* 滚动条里面小方块 */
         background-color: $theme--dark-color-2 !important;
         border: 3px solid transparent !important;
@@ -274,7 +278,7 @@ $theme--dark-color-3 = #424242;
         background-clip: content-box !important;
     }
 
-    div::-webkit-scrollbar-track, ul::-webkit-scrollbar-track, pre::-webkit-scrollbar-track, body::-webkit-scrollbar-track, html::-webkit-scrollbar-track, aside::-webkit-scrollbar-track {
+    div::-webkit-scrollbar-track, ul::-webkit-scrollbar-track, pre::-webkit-scrollbar-track, body::-webkit-scrollbar-track, html::-webkit-scrollbar-track, aside::-webkit-scrollbar-track, main::-webkit-scrollbar-track {
         /* 滚动条里面轨道 */
         background: $theme--dark-color-1 !important;
         border-radius: 0 4px 4px 0;

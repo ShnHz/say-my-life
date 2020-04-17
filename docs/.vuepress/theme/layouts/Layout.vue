@@ -19,7 +19,12 @@
     <Lock v-if="haveLock()" />
     <HidePassword @unLock="unLock" v-if="haveLock()" />
 
-    <Home v-if="$page.frontmatter.home" />
+    <Home
+      infinite-scroll-distance="200"
+      style="height:100%;overflow:auto"
+      v-if="$page.frontmatter.home"
+      v-infinite-scroll="handleBottom"
+    />
 
     <Page :sidebar-items="sidebarItems" v-if="pageVisible">
       <slot #top name="page-top" />
@@ -175,6 +180,9 @@ export default {
       } else {
         return false
       }
+    },
+    handleBottom() {
+      this.$store.commit('handleHomeBottom')
     }
   }
 }

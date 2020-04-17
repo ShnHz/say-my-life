@@ -1,6 +1,9 @@
 <template>
   <div class="index-wrap">
-    <div class="banner-wrap" :style="{'background-image':`url(https://cdn.chenyingshuang.cn/index/bg${bannerBg}.jpg)`}">
+    <div
+      :style="{'background-image':`url(https://cdn.chenyingshuang.cn/index/bg${bannerBg}.jpg)`}"
+      class="banner-wrap"
+    >
       <!-- :style="{'background-image':`url(https://cdn1.zzzmh.cn/img/3a1a0cde1d0a.jpg!fullwp)`}" -->
       <!-- :style="{'background-image':`url(https://cdn.chenyingshuang.cn/index/bg${bannerBg}.jpg)`}" -->
       <img alt src="../public/img/index-logo.gif" />
@@ -13,7 +16,11 @@
     <main>
       <main v-loading="loading">
         <div>
-          <div :key="item.title + item.date" class="card-wrap" v-for="item in showList">
+          <div
+            :key="item.title + item.date + index"
+            class="card-wrap"
+            v-for="(item,index) in showList"
+          >
             <router-link :to="item.url" class="article-title">{{item.title}}</router-link>
 
             <p class="article-date">{{mixin_getDate(item.date,'MC dd,yyyy')}}</p>
@@ -22,9 +29,9 @@
 
             <p>
               <el-tag
+                :class="`el-tag--${_item.type}`"
                 :key="'archives-tag-' + item.title + _index + _item.name"
                 :type="_item.type ? _item.type : ''"
-                :class="`el-tag--${_item.type}`"
                 disable-transitions
                 effect="dark"
                 size="mini"
@@ -33,6 +40,8 @@
             </p>
           </div>
         </div>
+
+        <p class="no-more" v-if="noMore">我也是有底线的~</p>
       </main>
       <aside>
         <div class="card-wrap card-info">
@@ -121,11 +130,13 @@ export default {
   data() {
     return {
       loading: true,
+      noMore: false,
       scrollTop: 0,
 
       blogList: [],
       showList: [],
-      pageSize: 20,
+      pageSize: 10,
+      currentPage: 1,
       bannerBg: 1,
 
       loveInfo: {
@@ -161,15 +172,17 @@ export default {
         if (newVal < 200) {
           document
             .querySelectorAll('header.navbar')[0]
-            .setAttribute(
-              'class',
-              'navbar index-header-transparent'
-            )
+            .setAttribute('class', 'navbar index-header-transparent')
         } else {
           document
             .querySelectorAll('header.navbar')[0]
             .setAttribute('class', 'navbar index')
         }
+      }
+    },
+    '$store.state.homeBottom': {
+      handler(newVal, oldVal) {
+        this.pageChange()
       }
     }
   },
@@ -201,20 +214,34 @@ export default {
       })
         .then(res => {
           _this.blogList = res.data
-          _this.pageChange(1)
+          _this.pageChange()
           _this.loading = false
         })
         .catch(err => {
           console.log(err)
         })
     },
-    pageChange(currentPage) {
+    pageChange() {
       let list = JSON.parse(JSON.stringify(this.blogList))
 
-      this.showList = list.slice(
-        (currentPage - 1) * this.pageSize,
-        currentPage * this.pageSize
+      this.showList.push.apply(
+        this.showList,
+        list.slice(
+          (this.currentPage - 1) * this.pageSize,
+          this.currentPage * this.pageSize
+        )
       )
+
+      if (
+        list.slice(
+          (this.currentPage - 1) * this.pageSize,
+          this.currentPage * this.pageSize
+        ).length < this.pageSize
+      ) {
+        this.noMore = true
+      }
+
+      this.currentPage++
     },
 
     /**
@@ -355,6 +382,13 @@ export default {
           line-height: 1.375rem;
           font-weight: 400;
         }
+      }
+
+      .no-more {
+        text-align: center;
+        font-size: 14px;
+        color: #555;
+        margin-top: 30px;
       }
     }
     aside {
