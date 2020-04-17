@@ -54,11 +54,11 @@
           <div class="data-info">
             <div @click="$router.push('/blog/Archives.html')" class="data-info-item">
               <p class="data-info-item-title">文章</p>
-              <p class="data-info-item-data">{{blogList.length}}</p>
+              <p class="data-info-item-data">{{blogInfo.blog.length}}</p>
             </div>
             <div class="data-info-item">
               <p class="data-info-item-title">标签</p>
-              <p class="data-info-item-data">3</p>
+              <p class="data-info-item-data">{{blogInfo.tag.length}}</p>
             </div>
           </div>
           <div @click="addBookMark" class="add-bookmark">
@@ -133,7 +133,10 @@ export default {
       noMore: false,
       scrollTop: 0,
 
-      blogList: [],
+      blogInfo: {
+        blog: [],
+        tag: []
+      },
       showList: [],
       pageSize: 10,
       currentPage: 1,
@@ -178,7 +181,8 @@ export default {
             .querySelectorAll('header.navbar')[0]
             .setAttribute('class', 'navbar index')
         }
-      }
+      },
+      immediate: true
     },
     '$store.state.homeBottom': {
       handler(newVal, oldVal) {
@@ -187,23 +191,24 @@ export default {
     }
   },
   mounted() {
-    window.addEventListener('scroll', this.handleScroll)
+    document
+      .getElementsByClassName('home')[0]
+      .addEventListener('scroll', this.handleScroll)
     this.bannerBg = Math.floor(Math.random() * 4 + 1)
     this.loveTime()
     this.getInfo()
   },
-  destroyed() {
-    window.removeEventListener('scroll', this.handleScroll)
+  beforeDestroy() {
+    document
+      .querySelectorAll('header.navbar')[0]
+      .setAttribute('class', 'navbar index')
   },
   methods: {
     /**
      * 监听滚动条
      */
     handleScroll() {
-      this.scrollTop =
-        window.pageYOffset ||
-        document.documentElement.scrollTop ||
-        document.body.scrollTop
+      this.scrollTop = document.getElementsByClassName('home')[0].scrollTop
     },
     getInfo() {
       this.loading = true
@@ -213,7 +218,7 @@ export default {
         url: `/say-my-life/json/blog.json`
       })
         .then(res => {
-          _this.blogList = res.data
+          _this.blogInfo = res.data
           _this.pageChange()
           _this.loading = false
         })
@@ -222,7 +227,7 @@ export default {
         })
     },
     pageChange() {
-      let list = JSON.parse(JSON.stringify(this.blogList))
+      let list = JSON.parse(JSON.stringify(this.blogInfo.blog))
 
       this.showList.push.apply(
         this.showList,

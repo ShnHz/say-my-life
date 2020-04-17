@@ -49,7 +49,7 @@ export default {
         url: `/say-my-life/json/blog.json`
       })
         .then(res => {
-          _this.blogList = res.data
+          _this.blogList = res.data.blog
           _this.pageChange(1)
         })
         .catch(err => {
