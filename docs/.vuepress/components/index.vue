@@ -181,8 +181,7 @@ export default {
             .querySelectorAll('header.navbar')[0]
             .setAttribute('class', 'navbar index')
         }
-      },
-      immediate: true
+      }
     },
     '$store.state.homeBottom': {
       handler(newVal, oldVal) {
@@ -194,11 +193,15 @@ export default {
     document
       .getElementsByClassName('home')[0]
       .addEventListener('scroll', this.handleScroll)
+    document
+      .querySelectorAll('header.navbar')[0]
+      .setAttribute('class', 'navbar index-header-transparent')
+
     this.bannerBg = Math.floor(Math.random() * 4 + 1)
     this.loveTime()
     this.getInfo()
   },
-  beforeDestroy() {
+  destroyed() {
     document
       .querySelectorAll('header.navbar')[0]
       .setAttribute('class', 'navbar index')
