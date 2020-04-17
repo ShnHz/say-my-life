@@ -30,7 +30,7 @@
             <div>
               <img :src="item.icon" alt />
               <div>
-                <a :href="item.href">{{item.name}}</a>
+                <a>{{item.name}}</a>
                 <p>{{item.description}}</p>
               </div>
             </div>

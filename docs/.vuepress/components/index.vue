@@ -24,6 +24,7 @@
               <el-tag
                 :key="'archives-tag-' + item.title + _index + _item.name"
                 :type="_item.type ? _item.type : ''"
+                :class="`el-tag--${_item.type}`"
                 disable-transitions
                 effect="dark"
                 size="mini"
