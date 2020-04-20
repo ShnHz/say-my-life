@@ -28,15 +28,12 @@
             <p class="article-summary" v-if="item.summary">{{item.summary}}</p>
 
             <p>
-              <el-tag
-                :class="`el-tag--${_item.type}`"
+              <base-tag :data="{name:'置顶',type: 'top',icon:'shni shn-pushpin-fill'}" v-if="item.top" />
+              <base-tag
+                :data="_item"
                 :key="'archives-tag-' + item.title + _index + _item.name"
-                :type="_item.type ? _item.type : ''"
-                disable-transitions
-                effect="dark"
-                size="mini"
                 v-for="(_item,_index) in item.tag"
-              >{{_item.name}}</el-tag>
+              />
             </p>
           </div>
         </div>
@@ -222,6 +219,20 @@ export default {
       })
         .then(res => {
           _this.blogInfo = res.data
+
+          let topBlog = []
+
+          topBlog = _this.$options.filters.mixin_filter(
+            this.blogInfo.blog.map((item, index) => {
+              if (item.top) {
+                _this.blogInfo.blog.splice(index, 1)
+                return item
+              }
+            })
+          )
+
+          _this.blogInfo.blog = [...topBlog, ..._this.blogInfo.blog]
+
           _this.pageChange()
           _this.loading = false
         })
@@ -232,13 +243,13 @@ export default {
     pageChange() {
       let list = JSON.parse(JSON.stringify(this.blogInfo.blog))
 
-      this.showList.push.apply(
-        this.showList,
-        list.slice(
+      this.showList = [
+        ...this.showList,
+        ...list.slice(
           (this.currentPage - 1) * this.pageSize,
           this.currentPage * this.pageSize
         )
-      )
+      ]
 
       if (
         list.slice(

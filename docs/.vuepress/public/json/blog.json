@@ -19,6 +19,14 @@
         }
     ],
     "blog": [{
+            "title": "Vue@click全部增加节流策略！",
+            "tag": [{
+                "name": "vue"
+            }],
+            "url": "/blog/vue/VueAllClickThrottle.html",
+            "date": "2020/04/20 11:40",
+            "summary": "所有的单击事件批量添加节流/防抖策略"
+        }, {
             "title": "shn-vue-ui：我造了一个轮子（Vue-UI库）",
             "tag": [{
                 "name": "vue"
@@ -33,7 +41,8 @@
                 "type": "applets"
             }],
             "url": "/blog/applets/AACalculator.html",
-            "date": "2020/04/17 15:00"
+            "date": "2020/04/17 15:00",
+            "top": true
         }, {
             "title": "Vue打包抛出document/window报错",
             "tag": [{
@@ -56,7 +65,7 @@
             "summary": "想要在VuePress的默认主题上动动土，看这个就对了"
         },
         {
-            "title": "使用CSS改变DOM顺序",
+            "title": "使用CSS改变DOM显示顺序",
             "tag": [{
                 "name": "css"
             }],
@@ -70,12 +79,8 @@
             "url": "/blog/css/FilterBW.html",
             "date": "2020/04/04 14:36",
             "summary": "因为今天是对抗击新冠肺炎疫情斗争牺牲烈士和逝世通报的全国哀悼日，很多网站都把页面变成了黑白色,那这个是怎么做的呢?"
-        }, {
-            "title": "如何优雅上网",
-            "tag": [],
-            "url": "/blog/other/Overthewall.html",
-            "date": "2020/04/03 16:00"
-        }, {
+        },
+        {
             "title": "这15个Vue自定义指令，让你的项目开发爽到爆",
             "tag": [{
                 "name": "vue"

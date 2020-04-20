@@ -8,14 +8,11 @@
         <el-timeline-item>共计{{blogList.length}}篇文章</el-timeline-item>
         <el-timeline-item :key="index" :timestamp="item.date" v-for="(item, index) in showList">
           <router-link :to="item.url">{{item.title}}</router-link>
-          <el-tag
+          <base-tag
+            :data="_item"
             :key="'archives-tag-' + item.title + _index + _item.name"
-            :type="_item.type ? _item.type : ''"
-            disable-transitions
-            effect="dark"
-            size="mini"
             v-for="(_item,_index) in item.tag"
-          >{{_item.name}}</el-tag>
+          />
         </el-timeline-item>
       </el-timeline>
       <el-pagination
