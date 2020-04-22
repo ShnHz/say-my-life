@@ -19,6 +19,13 @@
         }
     ],
     "blog": [{
+            "title": "Vue把页面导出为pdf文件",
+            "tag": [{
+                "name": "vue"
+            }],
+            "url": "/blog/vue/VueExportPdf.html",
+            "date": "2020/04/21 18:00"
+        }, {
             "title": "Vue@click全部增加节流策略！",
             "tag": [{
                 "name": "vue"

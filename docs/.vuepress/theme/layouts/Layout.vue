@@ -17,7 +17,7 @@
     </Sidebar>
 
     <Lock v-if="haveLock()" />
-    <HidePassword @unLock="unLock" v-if="haveLock()" />
+    <HidePassword @unLock="unLock" />
 
     <Home
       infinite-scroll-distance="200"
