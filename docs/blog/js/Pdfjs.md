@@ -5,7 +5,7 @@ pageClass: blog
 ## pdf.js使用和JS实现嵌套Iframe页面F11全屏效果
 
 <p class="date">2020-04-02 10:58
-  <span id="/say-my-life/blog/js/Pdfjs.html" class="leancloud_visitors">
+  <span id="/blog/js/Pdfjs.html" class="leancloud_visitors">
       <i class="shni shn-eye-fill" />
       <i class="leancloud-visitors-count"></i>
   </span>

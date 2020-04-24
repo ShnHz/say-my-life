@@ -4,7 +4,7 @@ pageClass: blog
 
 ## shn-vue-ui：我造了一个轮子（Vue-UI库）
 <p class="date">2020-04-17 16:00 
-  <span id="/say-my-life/blog/vue/ShnVueUi.html" class="leancloud_visitors">
+  <span id="/blog/vue/ShnVueUi.html" class="leancloud_visitors">
       <i class="shni shn-eye-fill" />
       <i class="leancloud-visitors-count"></i>
   </span>

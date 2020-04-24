@@ -43,7 +43,7 @@ export default {
       let _this = this
       this.$http({
         method: 'GET',
-        url: `/say-my-life/json/blog.json`
+        url: `/json/blog.json`
       })
         .then(res => {
           _this.blogList = res.data.blog

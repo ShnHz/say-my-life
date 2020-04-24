@@ -5,7 +5,7 @@ pageClass: blog
 ## CSS — BEM 命名规范
 
 <p class="date">2020-04-03 10:58
-  <span id="/say-my-life/blog/css/Bem.html" class="leancloud_visitors">
+  <span id="/blog/css/Bem.html" class="leancloud_visitors">
       <i class="shni shn-eye-fill" />
       <i class="leancloud-visitors-count"></i>
   </span>

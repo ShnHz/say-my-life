@@ -61,7 +61,7 @@ export default {
       let _this = this
       this.$http({
         method: 'GET',
-        url: `/say-my-life/json/friend.json`
+        url: `/json/friend.json`
       })
         .then(res => {
           _this.friendList = res.data

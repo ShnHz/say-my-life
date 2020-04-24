@@ -17,7 +17,7 @@ export default {
   methods: {
     strokeClick() {
       this.$cookies.set('strokeAddress', this.data)
-      window.location.href = '/say-my-life/journey/Stroke'
+      window.location.href = '/journey/Stroke'
     }
   }
 }

@@ -1,5 +1,4 @@
 module.exports = {
-    base: '/say-my-life/',
     title: '野宁新之助',
     description: '说说我的生活',
     head: [
@@ -22,7 +21,8 @@ module.exports = {
         nav: [{
                 text: '首页',
                 link: '/'
-            }, {
+            }, 
+            {
                 text: '归档',
                 link: '/blog/Archives'
             }, {

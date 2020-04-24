@@ -4,7 +4,7 @@ pageClass: blog
 
 ## Vue把页面导出为pdf文件
 <p class="date">2020-04-21 18:00 
-  <span id="/say-my-life/blog/vue/VueExportPdf.html" class="leancloud_visitors">
+  <span id="/blog/vue/VueExportPdf.html" class="leancloud_visitors">
       <i class="shni shn-eye-fill" />
       <i class="leancloud-visitors-count"></i>
   </span>

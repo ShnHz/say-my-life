@@ -5,7 +5,7 @@ pageClass: blog
 ## 这9个Vue自定义指令，让你的项目开发爽到爆
 
 <p class="date">2020-04-03 15:30
-  <span id="/say-my-life/blog/vue/VueDirective.html" class="leancloud_visitors">
+  <span id="/blog/vue/VueDirective.html" class="leancloud_visitors">
       <i class="shni shn-eye-fill" />
       <i class="leancloud-visitors-count"></i>
   </span>

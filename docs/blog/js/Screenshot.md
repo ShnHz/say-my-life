@@ -5,7 +5,7 @@ pageClass: blog-catalog
 ## 高质量前端快照方案：来自页面的「自拍」
 
 <p class="date">2020-04-02 10:54
-  <span id="/say-my-life/blog/js/Screenshot.html" class="leancloud_visitors">
+  <span id="/blog/js/Screenshot.html" class="leancloud_visitors">
       <i class="shni shn-eye-fill" />
       <i class="leancloud-visitors-count"></i>
   </span>

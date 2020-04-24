@@ -1,0 +1,5 @@
+---
+pageClass: blog
+---
+
+<blog-create />

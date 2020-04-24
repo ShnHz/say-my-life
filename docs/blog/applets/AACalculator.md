@@ -4,7 +4,7 @@ pageClass: blog
 
 ## 安利一个我自己写的小程序：AA计算器
 <p class="date">2020-04-17 15:00
-  <span id="/say-my-life/blog/applets/AACalculator.html" class="leancloud_visitors">
+  <span id="/blog/applets/AACalculator.html" class="leancloud_visitors">
       <i class="shni shn-eye-fill" />
       <i class="leancloud-visitors-count"></i>
   </span>

@@ -4,7 +4,7 @@ pageClass: blog
 
 ## 如何优雅上网
 <p class="date">2020-04-03 16:00
-  <span id="/say-my-life/blog/other/Overthewall.html" class="leancloud_visitors">
+  <span id="/blog/other/Overthewall.html" class="leancloud_visitors">
       <i class="shni shn-eye-fill" />
       <i class="leancloud-visitors-count"></i>
   </span>

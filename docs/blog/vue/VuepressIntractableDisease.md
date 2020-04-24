@@ -4,7 +4,7 @@ pageClass: blog
 
 ## VuePress的疑难杂症
 <p class="date">2020-04-03 12:04 
-  <span id="/say-my-life/blog/vue/VuepressIntractableDisease.html" class="leancloud_visitors">
+  <span id="/blog/vue/VuepressIntractableDisease.html" class="leancloud_visitors">
       <i class="shni shn-eye-fill" />
       <i class="leancloud-visitors-count"></i>
   </span>

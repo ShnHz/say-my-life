@@ -4,7 +4,7 @@ pageClass: blog
 
 ## Vue打包抛出document/window报错
 <p class="date">2020-04-16 11:30 
-  <span id="/say-my-life/blog/vue/VueDocumentWindowError.html" class="leancloud_visitors">
+  <span id="/blog/vue/VueDocumentWindowError.html" class="leancloud_visitors">
       <i class="shni shn-eye-fill" />
       <i class="leancloud-visitors-count"></i>
   </span>

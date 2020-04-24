@@ -4,7 +4,7 @@ pageClass: blog
 
 ## Vue@click全部增加节流策略！
 <p class="date">2020-04-20 11:40 
-  <span id="/say-my-life/blog/vue/VueAllClickThrottle.html" class="leancloud_visitors">
+  <span id="/blog/vue/VueAllClickThrottle.html" class="leancloud_visitors">
       <i class="shni shn-eye-fill" />
       <i class="leancloud-visitors-count"></i>
   </span>

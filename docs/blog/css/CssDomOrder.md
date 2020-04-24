@@ -5,7 +5,7 @@ pageClass: blog
 ## 使用CSS改变DOM顺序
 
 <p class="date">2020-04-14 14:36
-  <span id="/say-my-life/blog/css/CssDomOrder.html" class="leancloud_visitors">
+  <span id="/blog/css/CssDomOrder.html" class="leancloud_visitors">
       <i class="shni shn-eye-fill" />
       <i class="leancloud-visitors-count"></i>
   </span>

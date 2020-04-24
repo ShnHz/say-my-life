@@ -4,7 +4,7 @@ pageClass: blog
 
 ## 整个网站网页变黑白的效果
 <p class="date">2020-04-04 14:36
-  <span id="/say-my-life/blog/css/FilterBW.html" class="leancloud_visitors">
+  <span id="/blog/css/FilterBW.html" class="leancloud_visitors">
       <i class="shni shn-eye-fill" />
       <i class="leancloud-visitors-count"></i>
   </span>

@@ -19,6 +19,11 @@
         }
     ],
     "blog": [{
+            "title": "国内静态页面托管",
+            "tag": [],
+            "url": "/blog/other/StaticWebHost.html",
+            "date": "2020/04/24 16:00"
+        }, {
             "title": "Vue把页面导出为pdf文件",
             "tag": [{
                 "name": "vue"
