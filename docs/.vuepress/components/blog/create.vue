@@ -30,7 +30,7 @@
         </span>
       </p>
 
-      <div v-html="mdContent"></div>
+      <markdown-it-vue :content="form.content" class="md-it-vue-wrap" />
 
       <base-valine />
     </div>
@@ -38,7 +38,13 @@
 </template>
 
 <script>
+import MarkdownItVue from 'markdown-it-vue'
+import 'markdown-it-vue/dist/markdown-it-vue.css'
+
 export default {
+  components: {
+    MarkdownItVue
+  },
   data() {
     return {
       form: {
@@ -51,12 +57,10 @@ export default {
   },
   computed: {
     mdContent: function() {
-      return this.formatMarkdown(this.form.content)
+      // return this.formatMarkdown(this.form.content)
     }
   },
-  mounted(){
-    
-  }
+  mounted() {}
 }
 </script>
 

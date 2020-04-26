@@ -28,6 +28,7 @@
     "highlight.js": "^9.15.10",
     "js-md5": "^0.7.3",
     "leancloud-storage": "^4.5.3",
+    "markdown-it-vue": "^1.0.11",
     "particles.js": "^2.0.0",
     "valine": "^1.4.4",
     "vue-cookies": "^1.7.0",

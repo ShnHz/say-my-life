@@ -28,6 +28,6 @@ D支付C：175元。
 
 微信扫二维码就可以使用了哟
 
-<img src="https://cdn.chenyingshuang.cn/blog/applets/AACalculator/1.jpg" width="200"/>
+![avatar](https://cdn.chenyingshuang.cn/blog/applets/AACalculator/1.jpg?imageView2/1/w/200)
 
 <base-valine />

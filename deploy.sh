@@ -10,7 +10,7 @@
 cd docs/.vuepress/dist
 
 ### 如果是发布到自定义域名
-echo 'www.chenyingshuang.cn' > CNAME
+echo 'www.sanghangning.cn' > CNAME
 
 git init
 git add -A
