@@ -19,7 +19,7 @@
           <p>头像： https://cdn.chenyingshuang.cn/index/avatar.jpg</p>
         </div>
       </div>
-      <div v-loading="loading">
+      <div class="friend-card-wrap-box" v-loading="loading">
         <div class="friend-card-wrap">
           <div
             :key="item.href + item.icon"
@@ -110,13 +110,19 @@ export default {
         border: 1px dashed #bbb;
       }
     }
+    .friend-card-wrap-box {
+      min-height: 100px;
+      border-radius: 5px;
+      overflow: hidden;
+      margin: 12px 0;
+    }
     .friend-card-wrap {
       display: flex;
       flex-wrap: wrap;
       flex: 1 1 auto;
       margin-right: -12px;
       margin-left: -12px;
-      margin-bottom: 12px;
+      margin-top: -12px;
       .friend-card {
         cursor: pointer;
         flex: 0 0 50%;

@@ -126,7 +126,7 @@ export default {
 
     setTimeout(() => {
       _this.loading = false
-    }, 2000)
+    }, 2000) 
   },
 
   methods: {

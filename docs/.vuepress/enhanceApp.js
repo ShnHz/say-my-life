@@ -22,10 +22,13 @@ export default ({
     // ...做一些其他的应用级别的优化
     Vue.use(VueHighlightJS)
     Vue.use(ElementUI)
-    Vue.component('vue-waterfall-easy', vueWaterfallEasy)
+
     Vue.use(VueParticles)
     Vue.use(VueCookies)
     Vue.mixin(Mixins);
+
+
+    Vue.component('vue-waterfall-easy', vueWaterfallEasy)
 
     Vue.prototype.$store = store
     Vue.prototype.$http = axios

@@ -16,9 +16,31 @@
         {
             "name": "转",
             "type": "info"
+        },
+        {
+            "name": "music",
+            "type": "music"
         }
     ],
     "blog": [{
+            "title": "超级喜欢这些LIVE 赶紧安利",
+            "tag": [{
+                "name": "music",
+                "type": "music",
+                "icon": "say-my-life-i say-my-life-i-musicnote"
+            }],
+            "url": "/blog/music/Live.html",
+            "date": "2020/04/26 17:40"
+        }, {
+            "title": "蜜蜂 - 万岁爺",
+            "tag": [{
+                "name": "music",
+                "type": "music",
+                "icon": "say-my-life-i say-my-life-i-musicnote"
+            }],
+            "url": "/blog/music/Mifeng.html",
+            "date": "2020/04/26 17:30"
+        }, {
             "title": "国内静态页面托管",
             "tag": [],
             "url": "/blog/other/StaticWebHost.html",
