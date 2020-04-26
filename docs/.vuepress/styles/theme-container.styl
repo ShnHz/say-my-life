@@ -236,7 +236,7 @@
             }
         }
 
-        table {
+        >table {
             display: inline-block !important;
             font-size: 14px;
             width: auto;
@@ -262,6 +262,20 @@
     }
 }
 
+// 创建blog页面
+.blog-create {
+    @extend .blog;
+    height: auto !important;
+    background: #F4F4F4;
+
+    .theme-default-content {
+        position: relative;
+        max-width: 1620px !important;
+        width: 1620px !important;
+    }
+}
+
+// blog 带目录
 .blog-catalog {
     @extend .blog;
 

@@ -8,7 +8,6 @@ import '../.vuepress/public/iconfont/shn-ui/iconfont.css'
 
 import vueWaterfallEasy from 'vue-waterfall-easy'
 import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
 import '../.vuepress/public/css/element-variables.scss'
 import VueParticles from 'vue-particles'
 import VueCookies from 'vue-cookies'

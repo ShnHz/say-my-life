@@ -36,6 +36,7 @@ $--font-path: '~element-ui/lib/theme-chalk/fonts';
 .el-notification.main-them-notify {
     background: #3eaf7c;
     border: none;
+
     .el-notification__content {
         margin-top: 0px;
         color: #fff;
@@ -48,4 +49,8 @@ $--font-path: '~element-ui/lib/theme-chalk/fonts';
 
 .el-notification.ercode-notify {
     width: auto;
+}
+
+.el-date-table td {
+    width: 44px;
 }
