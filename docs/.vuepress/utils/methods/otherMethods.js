@@ -2,10 +2,36 @@
  * @Author: sanghangning 
  * @Date: 2019-12-11 11:23:58 
  * @Last Modified by: sanghangning
- * @Last Modified time: 2020-03-23 14:53:01
+ * @Last Modified time: 2020-04-27 16:29:43
  */
 
 export default {
+    /**
+     * 节流
+     */
+    mixin_throttle(fn, interval = 300) {
+        let canRun = true;
+        return function () {
+            if (!canRun) return;
+            canRun = false;
+            setTimeout(() => {
+                fn.apply(this, arguments);
+                canRun = true;
+            }, interval);
+        };
+    },
+    /**
+     * 防抖
+     */
+    mixin_debounce(fn, interval = 300) {
+        let timeout = null;
+        return function () {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+                fn.apply(this, arguments);
+            }, interval);
+        };
+    },
     /**
      * 粘贴至剪剪贴板
      * 

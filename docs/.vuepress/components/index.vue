@@ -184,19 +184,33 @@ export default {
             .setAttribute('class', 'navbar index')
         }
       }
-    },
-    '$store.state.homeBottom': {
-      handler(newVal, oldVal) {
-        if (this.blogInfo.blog.length != 0) {
-          this.pageChange()
-        }
-      }
     }
   },
   mounted() {
-    document
-      .getElementsByClassName('home')[0]
-      .addEventListener('scroll', this.handleScroll)
+    let _this = this
+    window.addEventListener(
+      'scroll',
+      this.mixin_throttle(function() {
+        var scrollTop =
+          document.documentElement.scrollTop || document.body.scrollTop
+        //变量windowHeight是可视区的高度
+        var windowHeight =
+          document.documentElement.clientHeight || document.body.clientHeight
+        //变量scrollHeight是滚动条的总高度
+        var scrollHeight =
+          document.documentElement.scrollHeight || document.body.scrollHeight
+        //滚动条到底部的条件
+        var thresold = scrollHeight - scrollTop - windowHeight
+
+        _this.scrollTop = scrollTop
+
+        if (thresold > -50 && thresold <= 100) {
+          if (_this.blogInfo.blog.length != 0) {
+            _this.pageChange()
+          }
+        }
+      })
+    )
     document
       .querySelectorAll('header.navbar')[0]
       .setAttribute('class', 'navbar index-header-transparent')
@@ -211,12 +225,6 @@ export default {
       .setAttribute('class', 'navbar index')
   },
   methods: {
-    /**
-     * 监听滚动条
-     */
-    handleScroll() {
-      this.scrollTop = document.getElementsByClassName('home')[0].scrollTop
-    },
     getInfo() {
       this.loading = true
       let _this = this
