@@ -30,6 +30,10 @@
       <slot #top name="page-top" />
       <slot #bottom name="page-bottom" />
     </Page>
+
+    <div class="record-wrap" v-if="pageVisible">
+      <a href="http://beian.miit.gov.cn/">浙ICP备18029315号-2</a>
+    </div>
   </div>
 </template>
 
@@ -126,7 +130,7 @@ export default {
 
     setTimeout(() => {
       _this.loading = false
-    }, 2000) 
+    }, 2000)
   },
 
   methods: {
@@ -187,3 +191,19 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+.record-wrap {
+  z-index: 9998;
+  position: relative;
+  text-align: center;
+  padding: 5px 0;
+  background: #171D20;
+  font-size: 12px;
+  a{
+    color: #fff;
+    font-weight: 400;
+  }
+  // position: absolute;
+  // bottom: 0;
+}
+</style>

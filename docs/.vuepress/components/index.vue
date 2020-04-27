@@ -28,7 +28,10 @@
             <p class="article-summary" v-if="item.summary">{{item.summary}}</p>
 
             <p>
-              <base-tag :data="{name:'置顶',type: 'top',icon:'shni shn-pushpin-fill'}" v-if="item.top" />
+              <base-tag
+                :data="{name:'置顶',type: 'top',icon:'shni shn-pushpin-fill'}"
+                v-if="item.top"
+              />
               <base-tag
                 :data="_item"
                 :key="'archives-tag-' + item.title + _index + _item.name"
@@ -117,6 +120,8 @@
           <a href="https://vuepress.vuejs.org/zh/" rel="noopener" target="_blank">
             <span>Vuepress</span>
           </a>
+          &
+          <a href="http://beian.miit.gov.cn/" style="font-size:14px">浙ICP备18029315号-2</a>
         </div>
       </div>
     </footer>

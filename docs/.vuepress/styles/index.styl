@@ -71,7 +71,12 @@ div::-webkit-scrollbar-track, ul::-webkit-scrollbar-track, pre::-webkit-scrollba
 }
 
 #app, .theme-container, .page {
-    height: 100%;
+    min-height: 100vh;
+    height: auto;
+}
+
+.page {
+    padding-bottom: 0 !important;
 }
 
 .theme-default-content {
