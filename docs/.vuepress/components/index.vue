@@ -187,7 +187,9 @@ export default {
     },
     '$store.state.homeBottom': {
       handler(newVal, oldVal) {
-        this.pageChange()
+        if (this.blogInfo.blog.length != 0) {
+          this.pageChange()
+        }
       }
     }
   },
@@ -246,26 +248,28 @@ export default {
         })
     },
     pageChange() {
-      let list = JSON.parse(JSON.stringify(this.blogInfo.blog))
+      if (!this.noMore) {
+        let list = JSON.parse(JSON.stringify(this.blogInfo.blog))
 
-      this.showList = [
-        ...this.showList,
-        ...list.slice(
-          (this.currentPage - 1) * this.pageSize,
-          this.currentPage * this.pageSize
-        )
-      ]
+        this.showList = [
+          ...this.showList,
+          ...list.slice(
+            (this.currentPage - 1) * this.pageSize,
+            this.currentPage * this.pageSize
+          )
+        ]
 
-      if (
-        list.slice(
-          (this.currentPage - 1) * this.pageSize,
-          this.currentPage * this.pageSize
-        ).length < this.pageSize
-      ) {
-        this.noMore = true
+        if (
+          list.slice(
+            (this.currentPage - 1) * this.pageSize,
+            this.currentPage * this.pageSize
+          ).length < this.pageSize
+        ) {
+          this.noMore = true
+        }
+
+        this.currentPage++
       }
-
-      this.currentPage++
     },
 
     /**

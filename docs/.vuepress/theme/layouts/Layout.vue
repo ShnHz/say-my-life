@@ -20,7 +20,7 @@
     <HidePassword @unLock="unLock" />
 
     <Home
-      infinite-scroll-distance="200"
+      infinite-scroll-distance="0"
       style="height:100%;overflow:auto"
       v-if="$page.frontmatter.home"
       v-infinite-scroll="handleBottom"
