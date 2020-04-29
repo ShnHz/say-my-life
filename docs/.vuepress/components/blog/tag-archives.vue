@@ -1,5 +1,5 @@
 <template>
-  <div class="archives-wrap">
+  <div class="tag-archives-wrap">
     <el-backtop :visibility-height="0"></el-backtop>
 
     <main>
@@ -170,7 +170,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.archives-wrap {
+.tag-archives-wrap {
   > main {
     width: 740px;
     min-height: 1000px;
@@ -212,7 +212,7 @@ export default {
   }
 }
 @media (max-width: 419px) {
-  .archives-wrap {
+  .tag-archives-wrap {
     width: auto;
   }
   .img-wrap {

@@ -8,7 +8,7 @@ $theme--dark-color-3 = #424242;
 
 .theme--dark {
     .record-wrap {
-        background $theme--dark-color-2
+        background: $theme--dark-color-2;
     }
 
     .theme-container {
@@ -138,6 +138,23 @@ $theme--dark-color-3 = #424242;
 
             div p {
                 color: #fff !important;
+            }
+        }
+    }
+
+    /**
+     * 标签
+     */
+    .friend {
+        .card-wrap {
+            background: $theme--dark-color-2 !important;
+
+            .article-title, .article-summary {
+                color: #fff !important;
+            }
+
+            .article-date {
+                color: hsla(0, 0%, 100%, 0.7) !important;
             }
         }
     }
