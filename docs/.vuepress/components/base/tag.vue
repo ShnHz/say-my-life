@@ -2,8 +2,8 @@
   <el-tag
     :class="`el-tag--${data.type}`"
     :closable="data.closable"
-    :effect="data.effect ? data.effect : 'dark'"
-    :size="data.size ? data.size : 'mini'"
+    :effect="effect ? effect : 'dark'"
+    :size="size ? size : 'mini'"
     :type="data.type ? data.type : ''"
     @click="$emit('click')"
     @close="$emit('close')"
@@ -24,6 +24,12 @@ export default {
       default: {
         name: 'tag'
       }
+    },
+    size: {
+      type: String
+    },
+    effect: {
+      type: String
     }
   }
 }

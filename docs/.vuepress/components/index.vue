@@ -30,6 +30,7 @@
             <p>
               <base-tag
                 :data="{name:'置顶',type: 'top',icon:'shni shn-pushpin-fill'}"
+                style="margin-right:2px"
                 v-if="item.top"
               />
               <base-tag
@@ -104,6 +105,16 @@
               </div>
             </el-carousel-item>
           </el-carousel>
+        </div>
+
+        <div class="card-wrap card-tag">
+          <base-tag
+            :data="item"
+            :key="'tag-' + index + item.name"
+            @click="tagClick(item.name)"
+            style="margin-right:10px;margin-top:10px;cursor: pointer;"
+            v-for="(item,index) in blogInfo.tag"
+          />
         </div>
       </aside>
     </main>
@@ -280,6 +291,17 @@ export default {
       }
     },
 
+    /**
+     * 跳转标签页
+     */
+    tagClick(name) {
+      this.$router.push({
+        path: 'blog/Tag.html',
+        query: {
+          tag: name
+        }
+      })
+    },
     /**
      * 添加书签
      */

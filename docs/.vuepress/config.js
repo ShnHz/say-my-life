@@ -21,10 +21,13 @@ module.exports = {
         nav: [{
                 text: '首页',
                 link: '/'
-            }, 
+            },
             {
                 text: '归档',
                 link: '/blog/Archives'
+            }, {
+                text: '标签',
+                link: '/blog/Tag'
             }, {
                 text: '笔记',
                 link: '/notes/Notes'

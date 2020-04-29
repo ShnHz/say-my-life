@@ -127,7 +127,7 @@ $navbar-horizontal-padding = 1.5rem;
 
   &.index {
     border: none;
-    border-bottom: 1px solid #eaecef;
+    // border-bottom: 1px solid #eaecef;
   }
 
   a, span, img {

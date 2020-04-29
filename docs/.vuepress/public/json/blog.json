@@ -20,9 +20,24 @@
         {
             "name": "music",
             "type": "music"
+        },
+        {
+            "name": "奇闻异事",
+            "type": "anecdote"
         }
     ],
     "blog": [{
+            "title": "地底爬虫人访谈 - 勒斯塔檔案",
+            "tag": [{
+                "name": "奇闻异事",
+                "type": "anecdote"
+            }, {
+                "name": "转",
+                "type": "info"
+            }],
+            "url": "/blog/anecdote/LacertaFiles.html",
+            "date": "2020/04/29 15:00"
+        }, {
             "title": "超级喜欢这些LIVE 赶紧安利",
             "tag": [{
                 "name": "music",
