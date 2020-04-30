@@ -15,44 +15,19 @@ pageClass: blog-catalog
 
 <el-backtop :visibility-height="0"></el-backtop>
 
-* [1\. 背景](#_1-%E8%83%8C%E6%99%AF)
-  * [2\. 适用场景](#_2-%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF)
-  * [3\. 原理解析](#_3-%E5%8E%9F%E7%90%86%E8%A7%A3%E6%9E%90)
-    * [3\.1 方案选型](#_3-1-%E6%96%B9%E6%A1%88%E9%80%89%E5%9E%8B)
-    * [3\.2 基本原理](#_3-2-%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86)
-    * [3\.3 原生示例](#_3-3-%E5%8E%9F%E7%94%9F%E7%A4%BA%E4%BE%8B)
-  * [4\. 基础方案](#_4-%E5%9F%BA%E7%A1%80%E6%96%B9%E6%A1%88)
-    * [4\.1 html2canvas](#_4-1-html2canvas)
-    * [4\.2 canvas2image](#_4-2-canvas2image)
-    * [4\.3 组合技](#_4-3-%E7%BB%84%E5%90%88%E6%8A%80)
-  * [5\. 进阶优化](#_5-%E8%BF%9B%E9%98%B6%E4%BC%98%E5%8C%96)
-    * [5\.1 内容完整性](#_5-1-%E5%86%85%E5%AE%B9%E5%AE%8C%E6%95%B4%E6%80%A7)
-      * [5\.1\.1 跨域问题](#_5-1-1-%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98)
-      * [5\.1\.2 资源加载](#_5-1-2-%E8%B5%84%E6%BA%90%E5%8A%A0%E8%BD%BD)
-      * [5\.1\.3 滚动问题](#_5-1-3-滚动问题)
-    * [5\.2](#_52)
-      * [5\.2\.1 使用px单位](#_5-2-1-%E4%BD%BF%E7%94%A8px%E5%8D%95%E4%BD%8D)
-      * [5\.2\.2 优先使用 img 标签展示图片](#_5-2-2-%E4%BC%98%E5%85%88%E4%BD%BF%E7%94%A8-img-%E6%A0%87%E7%AD%BE%E5%B1%95%E7%A4%BA%E5%9B%BE%E7%89%87)
-      * [5\.2\.3 配置高倍的 canvas 画布](#_5-2-3-%E9%85%8D%E7%BD%AE%E9%AB%98%E5%80%8D%E7%9A%84-canvas-%E7%94%BB%E5%B8%83)
-      * [5\.2\.4 关闭抗锯齿](#_5-2-4-%E5%85%B3%E9%97%AD%E6%8A%97%E9%94%AF%E9%BD%BF)
-      * [5\.2\.5 锐化特定元素](#_5-2-5-%E9%94%90%E5%8C%96%E7%89%B9%E5%AE%9A%E5%85%83%E7%B4%A0)
-    * [5\.3 转换效率](#_5-3-%E8%BD%AC%E6%8D%A2%E6%95%88%E7%8E%87)
-      * [5\.3\.1 传入阶段](#_5-3-1-%E4%BC%A0%E5%85%A5%E9%98%B6%E6%AE%B5)
-      * [5\.3\.2 导出优化](#_5-3-2-%E5%AF%BC%E5%87%BA%E4%BC%98%E5%8C%96)
-
-### 1. 背景
+### 1.背景
 将网页保存为图片（以下简称为快照），是用户记录和分享页面信息的有效手段，在各种兴趣测试和营销推广等形式的活动页面中尤为常见。
 
 快照环节通常处于页面交互流程的末端，汇总了用户最终的参与结果，直接影响到用户对于活动的完整体验。因此，生成高质量的页面快照，对于活动的传播和品牌的转化具有十分重要的意义。
 
-### 2. 适用场景
+### 2.适用场景
 <ul>
     <li>适用于将页面转为图片，特别是对实时性要求较高的场景。</li>
     <li>希望在快照中展示跨域图片资源的场景。</li>
     <li>针对生成图片内容不完整、模糊或者转换过程缓慢等问题，寻求有效解决方案的场景。</li>
 </ul>
 
-### 3. 原理解析
+### 3.原理解析
 #### 3.1 方案选型
 
 依据图片是否由设备<strong>本地生成</strong>，快照可分为前端处理和后端处理两种方式。
@@ -114,7 +89,7 @@ target.onload = () => {
 
 其中，<code class="default">drawImage</code>是 canvas 上下文对象的实例方法，提供<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D/drawImage" target="_blank">多种方式</a>将 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasImageSource" target="_blank">CanvasImageSource</a> 源绘制到 canvas 画布上。<code class="default">exportNewImage</code>用于将 canvas 中的视图信息导出为包含图片展示的 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs" target="_blank">data URI</a>。
 
-### 4. 基础方案
+### 4.基础方案
 
 在上一部分中，我们可以看到基于 canvas 提供的相关基础 API，为前端侧的页面快照处理提供了可能。
 
@@ -243,7 +218,7 @@ function convertToImage(container, options = {}) {
 }
 ```
 
-### 5. 进阶优化
+### 5.进阶优化
 
 <p>通过上一节的实例，我们基于<code class="default">html2canvas</code>和<code class="default">canvas2image</code>，实现了相比原生方案<strong>通用性</strong>更佳的基础页面快照方案。然而面对实际复杂的应用场景，以上基础方案生成的快照效果往往不尽如人意。</p>
 

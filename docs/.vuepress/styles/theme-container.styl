@@ -260,9 +260,19 @@
             }
         }
 
-        >iframe.bilibili{
+        >iframe.bilibili {
             width: 100%;
-            height 400px
+            height: 400px;
+        }
+
+        .code-height600 {
+            pre, .line-numbers-wrapper {
+                max-height: 600px;
+            }
+
+            .line-numbers-wrapper {
+                overflow: auto;
+            }
         }
     }
 }
@@ -284,33 +294,17 @@
 .blog-catalog {
     @extend .blog;
 
-    .theme-default-content >ul:first-of-type {
-        position: absolute;
-        left: -280px;
-        top: 150px;
-        width: 240px;
+    .page {
+        display: flex;
+        justify-content: center;
+        padding-left: 300px !important;
 
-        li {
-            line-height: 2;
+        .theme-default-content {
+            margin: 0 !important;
         }
+    }
 
-        a {
-            color: #555;
-            width: 160px;
-            display: block;
-            overflow: hidden;
-            word-break: keep-all;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            border-bottom: none;
-        }
-
-        >li>a {
-            font-weight: 600;
-        }
-
-        >ul>li>a {
-            font-weight: 600;
-        }
+    .page-edit {
+        display: none;
     }
 }

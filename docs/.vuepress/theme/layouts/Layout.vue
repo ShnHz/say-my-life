@@ -5,7 +5,7 @@
     @touchstart="onTouchStart"
     class="theme-container"
   >
-    <LoadingPage :show="loading" />
+    <!-- <LoadingPage :show="loading" /> -->
 
     <Navbar @toggle-sidebar="toggleSidebar" v-if="shouldShowNavbar" />
 

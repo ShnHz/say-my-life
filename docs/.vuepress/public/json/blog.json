@@ -27,6 +27,25 @@
         }
     ],
     "blog": [{
+            "title": "记得 - 林俊杰",
+            "tag": [{
+                "name": "music",
+                "type": "music",
+                "icon": "say-my-life-i say-my-life-i-musicnote"
+            }],
+            "url": "/blog/music/Jide.html",
+            "date": "2020/04/30 10:30"
+        }, {
+            "title": "一份关于vue-cli3项目常用项配置",
+            "tag": [{
+                "name": "vue"
+            }, {
+                "name": "转",
+                "type": "info"
+            }],
+            "url": "/blog/vue/VueCli3Config.html",
+            "date": "2020/04/30 10:30"
+        }, {
             "title": "地底爬虫人访谈 - 勒斯塔檔案",
             "tag": [{
                 "name": "奇闻异事",
