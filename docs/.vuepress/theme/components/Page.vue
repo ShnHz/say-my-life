@@ -27,10 +27,28 @@ export default {
       blogDirectoryVisible: false
     }
   },
+  watch: {
+    $route: {
+      handler: function(val, oldVal) {
+        this.getBlogDirectoryVisible()
+      },
+      // 深度观察监听
+      deep: true
+    }
+  },
   mounted() {
-    let pageClass = document.getElementsByClassName('theme-container')[0]
-      .className
-    if (pageClass.indexOf('blog-catalog') > -1) this.blogDirectoryVisible = true
+    this.getBlogDirectoryVisible()
+  },
+  methods: {
+    getBlogDirectoryVisible() {
+      let pageClass = document.getElementsByClassName('theme-container')[0]
+        .className
+      if (pageClass.indexOf('blog-catalog') > -1) {
+        this.blogDirectoryVisible = true
+      } else {
+        this.blogDirectoryVisible = false
+      }
+    }
   }
 }
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="blog-directory">
+  <div class="blog-directory" v-loading="loading">
     <header>目录</header>
     <div class="directory-wrap">
       <!-- h3 -->
@@ -39,11 +39,16 @@
 export default {
   data() {
     return {
+      loading: true,
       directory: []
     }
   },
   mounted() {
-    this.getDomList()
+    let _this = this
+    setTimeout(() => {
+      _this.getDomList()
+      _this.loading = false
+    }, 500)
   },
   methods: {
     getDomList() {
