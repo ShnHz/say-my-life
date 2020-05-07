@@ -334,7 +334,7 @@ devServer: {
 }
 ```
 
-如果还没懂，请客官移步<a href="https://www.vipbic.com/thread.html?id=88">在vscode中使用别名@按住ctrl也能跳转对应路径</a>
+如果还没懂，请客官移步<a href="https://www.vipbic.com/thread.html?id=88" target="_blank">在vscode中使用别名@按住ctrl也能跳转对应路径</a>
 
 ### 配置环境变量开发模式、测试模式、生产模式
 

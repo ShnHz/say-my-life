@@ -37,6 +37,6 @@ pageClass: blog
 
 #### 测试
 
-可以去<a href="https://tool.chinaz.com/speedtest">网站测速工具 - 站长工具</a>这边测试网页打开速度~
+可以去<a href="https://tool.chinaz.com/speedtest" target="_blank">网站测速工具 - 站长工具</a>这边测试网页打开速度~
 
 <base-valine />

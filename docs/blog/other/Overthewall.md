@@ -14,7 +14,7 @@ pageClass: blog
 
 这边推荐一个网站，国内也可以登录，支持支付宝付款。
 
-<a href="https://justmysocks2.net/">Just My Socks</a>
+<a href="https://justmysocks2.net/" target="_blank">Just My Socks</a>
 
 <blockquote>
 <p>登录 -> 菜单栏服务 -> 订购新服务 -> 如果没有什么特殊要求选5.88$的就足够用了</p>
@@ -24,7 +24,7 @@ pageClass: blog
 
 推荐下载<code class="default">Potatso Lite</code>
 
-iOS国区apple id是没有的，得切换到美区账号下载，美区账号这边有<a href="https://github.com/v2net/Apple">共享账号</a>，如果失效的话可以自己去百度一下
+iOS国区apple id是没有的，得切换到美区账号下载，美区账号这边有<a href="https://github.com/v2net/Apple" target="_blank">共享账号</a>，如果失效的话可以自己去百度一下
 
 ### 3.接下来就是科学了。
 
@@ -32,7 +32,7 @@ iOS国区apple id是没有的，得切换到美区账号下载，美区账号这
 
 点右上角加号，选择二维码
 
-打开 <a href="https://justmysocks2.net/">Just My Socks</a>
+打开 <a href="https://justmysocks2.net/" target="_blank">Just My Socks</a>
 
 用app扫订单上的各种二维码就行啦
 

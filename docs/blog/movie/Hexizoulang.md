@@ -4,7 +4,7 @@ pageClass: blog
 
 ## 纪录片 - 河西走廊
 <p class="date">2020-05-07 14:00 
-  <span id="/blog/movie/Hexizoulang.html" class="leancloud_visitors">
+  <span id="/blog/movie/HeXiZouLang.html" class="leancloud_visitors">
       <i class="shni shn-eye-fill" />
       <i class="leancloud-visitors-count"></i>
   </span>

@@ -15,7 +15,7 @@ pageClass: blog
 
 ### 1. 如何搭建一个VuePress技术文档/博客？
 
-推荐看这篇文章<a href="https://juejin.im/post/5b8e526051882542a82baba6">VuePress 手摸手教你搭建一个类Vue文档风格的技术文档/博客</a>
+推荐看这篇文章<a href="https://juejin.im/post/5b8e526051882542a82baba6" target="_blank">VuePress 手摸手教你搭建一个类Vue文档风格的技术文档/博客</a>
 
 可以参考我的网站目录结构：
 

@@ -14,7 +14,7 @@ pageClass: blog
 <el-backtop :visibility-height="0"></el-backtop>
 
 
-<a href="https://vuepress.vuejs.org/zh/theme/inheritance.html">官方文档</a>
+<a href="https://vuepress.vuejs.org/zh/theme/inheritance.html" target="_blank">官方文档</a>
 
 想要在VuePress的默认主题上动动土，却不想把默认主题都copy到自己的项目内，这就可以使用到主题继承了
 

@@ -31,13 +31,20 @@
         }
     ],
     "blog": [{
+            "title": "逐行级别的 Vue 源码分析",
+            "tag": [{
+                "name": "vue"
+            }],
+            "url": "/blog/vue/VueDesign.html",
+            "date": "2020/05/07 17:00"
+        }, {
             "title": "记录片 - 河西走廊",
             "tag": [{
                 "name": "movie",
                 "type": "movie",
                 "icon": "shni shn-video-fill"
             }],
-            "url": "/blog/movie/Hexizoulang.html",
+            "url": "/blog/movie/HeXiZouLang.html",
             "date": "2020/05/07 14:00"
         }, {
             "title": "记录片 - 行星",
