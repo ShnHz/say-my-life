@@ -22,6 +22,7 @@ ColorPick Eyedropper <br>
 Page Ruler <br>
 Imagus(页面放大图片查看) <br>
 project-naptha(图片提取文字) <br>
+Octotree(在线资源管理器的方式阅读GitHub仓库的代码) <br>
 
 ### 调试动画
 ```
