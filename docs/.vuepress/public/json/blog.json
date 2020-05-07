@@ -24,9 +24,31 @@
         {
             "name": "奇闻异事",
             "type": "anecdote"
+        },
+        {
+            "name": "movie",
+            "type": "movie"
         }
     ],
     "blog": [{
+            "title": "记录片 - 河西走廊",
+            "tag": [{
+                "name": "movie",
+                "type": "movie",
+                "icon": "shni shn-video-fill"
+            }],
+            "url": "/blog/movie/Hexizoulang.html",
+            "date": "2020/05/07 14:00"
+        }, {
+            "title": "记录片 - 行星",
+            "tag": [{
+                "name": "movie",
+                "type": "movie",
+                "icon": "shni shn-video-fill"
+            }],
+            "url": "/blog/movie/ThePlanets.html",
+            "date": "2020/05/07 14:00"
+        }, {
             "title": "记得 - 林俊杰",
             "tag": [{
                 "name": "music",

@@ -214,6 +214,9 @@ export default {
 @media (max-width: 419px) {
   .tag-archives-wrap {
     width: auto;
+    main{
+      width: 100%;
+    }
   }
   .img-wrap {
     display: none;
