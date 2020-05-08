@@ -36,6 +36,9 @@ export default {
 </script>
 <style lang="scss">
 .el-tag {
+  // display: inline-flex;
+  // align-items: center;
+  // line-height: 0;
   i {
     font-size: 12px;
   }

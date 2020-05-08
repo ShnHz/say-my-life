@@ -28,9 +28,21 @@
         {
             "name": "movie",
             "type": "movie"
+        },
+        {
+            "name": "git",
+            "type": "git"
         }
     ],
     "blog": [{
+            "title": "git 忽略已提交文件的修改",
+            "tag": [{
+                "name": "git",
+                "type": "git"
+            }],
+            "url": "/blog/git/UpdateIndex.html",
+            "date": "2020-05-08 15:05"
+        }, {
             "title": "逐行级别的 Vue 源码分析",
             "tag": [{
                 "name": "vue"
