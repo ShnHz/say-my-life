@@ -2,4 +2,4 @@
 pageClass: blog-create
 ---
 
-<!-- <blog-create /> -->
+<blog-create />
