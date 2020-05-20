@@ -39,7 +39,7 @@
           </span>
         </p>
 
-        <markdown-it-vue :content="form.content" class="md-it-vue-wrap" />
+        <!-- <markdown-it-vue :content="form.content" class="md-it-vue-wrap" /> -->
 
         <base-valine />
       </div>
@@ -52,13 +52,13 @@
 </template>
 
 <script>
-import MarkdownItVue from 'markdown-it-vue'
-import 'markdown-it-vue/dist/markdown-it-vue.css'
+// import MarkdownItVue from 'markdown-it-vue'
+// import 'markdown-it-vue/dist/markdown-it-vue.css'
 
 export default {
-  components: {
-    MarkdownItVue
-  },
+  // components: {
+  //   MarkdownItVue
+  // },
   data() {
     return {
       form: {
@@ -108,6 +108,8 @@ export default {
         url: this.form.id,
         date: this.form.date
       }
+
+      console.log(blog)
 
       this.$confirm(`打开console，确认blog对象是否正确`, '提示', {
         confirmButtonText: '确定',

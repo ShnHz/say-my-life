@@ -168,7 +168,9 @@ export default {
           '/life/diary/2019-09.html',
           '/life/diary/2019-10.html',
           '/life/diary/2019-11.html',
-          '/life/diary/2020-03.html'
+          '/life/diary/2020-03.html',
+          '/life/diary/2020-04.html',
+          '/life/diary/2020-05.html'
         ]
 
         if (haveLockPath.indexOf(this.$route.path) > -1) {
