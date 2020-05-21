@@ -65,7 +65,7 @@ export default {
         id: '/blog/applets/AACalculator.html',
         title: '安利一个我自己写的小程序：AA计算器',
         tag: ['vue'],
-        date: this.mixin_getToday('yyyy-MM-dd hh:mm:ss'),
+        date: this.mixin_getToday('yyyy/MM/dd hh:mm:ss'),
         content: ''
       },
 
