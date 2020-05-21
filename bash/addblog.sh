@@ -5,6 +5,7 @@
 
 ### 生成静态文件
 # npm run build
+cd ../
 
 git init
 git add -A

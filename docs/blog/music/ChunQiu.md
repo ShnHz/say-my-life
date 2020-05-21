@@ -12,10 +12,9 @@ pageClass: blog
 
 动人像友情深了,我没权终止见面
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=28830561&auto=1&height=66"></iframe>
-
-建议听<a href="https://music.163.com/#/song?id=188325" target="_blank">原唱</a>,原唱有版权问题没法外链
-
+<audio controls="controls" playsinline="" webkit-playsinline="">
+    <source src="http://music.163.com/song/media/outer/url?id=188325.mp3" type="audio/mpeg">
+</audio>
 
 ```
 作曲 : Edmond Tsang
