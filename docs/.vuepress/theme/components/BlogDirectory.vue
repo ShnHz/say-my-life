@@ -67,7 +67,7 @@ export default {
           tagH4Num = 0
         }
 
-        if (tagName == 'H4') {
+        if (tagName == 'H4' && this.directory[tagH3Num - 1]) {
           this.directory[tagH3Num - 1].child.push(
             this.setDomObjectFormat(items[i])
           )

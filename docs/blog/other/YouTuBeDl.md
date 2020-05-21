@@ -1,0 +1,1241 @@
+---
+pageClass: blog-catalog
+---
+
+## 视频下载工具 - youtube-dl
+<p class="date">2020-05-21 16:15:06 
+<span id="/blog/other/YouTuBeDl.html" class="leancloud_visitors">
+    <i class="shni shn-eye-fill" />
+    <i class="leancloud-visitors-count"></i>
+</span>
+</p>
+
+#### 一个强大的命令行下载视频工具
+
+详细使用指南可见Github地址 <a href="https://github.com/ytdl-org/youtube-dl" target="_blank">youtube-dl</a> 。
+
+看名字以为是不是专门下载youtube网站视频的工具，其实不然，它支持超过全世界好几百个网站的视频下载，或许可能是国内有墙的因素，<code class="default">youtube-dl</code>对墙外的那些不存在的网站支持的会相对好一些。
+
+::: tip
+这个工具需要有一定电脑能力的人才可以使用
+:::
+
+### 安装方法
+
+<code class="default">Windows</code>用户<a href="https://yt-dl.org/latest/youtube-dl.exe" rel="nofollow">点击下载</a>并将其放置在其PATH上除％SYSTEMROOT％\ System32之外的任何位置（例如，不要放在C:\Windows\System32中）
+
+你还可以直接使用pip：
+```
+sudo -H pip install --upgrade youtube-dl
+```
+如果您已经安装了youtube-dl，那么他的命令将对其进行更新。
+
+<code class="default">macOS</code>用户可以使用<code class="default">Homebrew</code>安装
+```
+brew install youtube-dl
+```
+或者使用<code class="default">MacPorts</code>
+```
+sudo port install youtube-dl
+```
+
+### 使用方法
+
+命令模式输入
+
+#### 下载
+```
+youtube-dl [url] //程序自动选择一个最清晰的格式下载
+```
+
+#### 查看视频所有类型,只看不下载
+```
+youtube-dl -F [url]
+```
+
+#### 下载指定类型视频,id = -F显示的列表编号
+```
+youtube-dl -f [id] [url]
+```
+
+#### 下载全部格式视频
+```
+youtube-dl --all-formats [url]
+```
+
+#### 下载youtube字幕及视频
+有的youtube视频是有字幕的可供下载的，但不是全部。<code class="default">–write-sub</code>：加入字幕文件，<code class="default">–all-subs</code>：如果有字幕存在则全部下载
+```
+youtube-dl --write-sub --all-subs [url]
+
+youtubd-dl --write-sub [url] //这样会下载一个vtt格式的英文字幕和mkv格式的1080p视频下来
+
+youtube-dl --write-sub --skip-download [url]//下载单独的vtt字幕文件,而不会下载视频
+
+youtube-dl --list-subs [url] //列出所有可用字幕
+```
+
+### 支持下载的网站
+
+可以在这个网址查看<a href="https://ytdl-org.github.io/youtube-dl/supportedsites.html" target="_blank">https://ytdl-org.github.io/youtube-dl/supportedsites.html</a>
+
+<ul>
+	<li><b>1tv</b>: Первый канал</li>
+	<li><b>1up.com</b></li>
+	<li><b>20min</b></li>
+	<li><b>220.ro</b></li>
+	<li><b>23video</b></li>
+	<li><b>24video</b></li>
+	<li><b>3qsdn</b>: 3Q SDN</li>
+	<li><b>3sat</b></li>
+	<li><b>4tube</b></li>
+	<li><b>56.com</b></li>
+	<li><b>5min</b></li>
+	<li><b>6play</b></li>
+	<li><b>7plus</b></li>
+	<li><b>8tracks</b></li>
+	<li><b>91porn</b></li>
+	<li><b>9c9media</b></li>
+	<li><b>9gag</b></li>
+	<li><b>9now.com.au</b></li>
+	<li><b>abc.net.au</b></li>
+	<li><b>abc.net.au:iview</b></li>
+	<li><b>abcnews</b></li>
+	<li><b>abcnews:video</b></li>
+	<li><b>abcotvs</b>: ABC Owned Television Stations</li>
+	<li><b>abcotvs:clips</b></li>
+	<li><b>AcademicEarth:Course</b></li>
+	<li><b>acast</b></li>
+	<li><b>acast:channel</b></li>
+	<li><b>ADN</b>: Anime Digital Network</li>
+	<li><b>AdobeConnect</b></li>
+	<li><b>adobetv</b></li>
+	<li><b>adobetv:channel</b></li>
+	<li><b>adobetv:embed</b></li>
+	<li><b>adobetv:show</b></li>
+	<li><b>adobetv:video</b></li>
+	<li><b>AdultSwim</b></li>
+	<li><b>aenetworks</b>: A+E Networks: A&amp;E, Lifetime, History.com, FYI Network and History Vault</li>
+	<li><b>afreecatv</b>: afreecatv.com</li>
+	<li><b>AirMozilla</b></li>
+	<li><b>AliExpressLive</b></li>
+	<li><b>AlJazeera</b></li>
+	<li><b>Allocine</b></li>
+	<li><b>AlphaPorno</b></li>
+	<li><b>AMCNetworks</b></li>
+	<li><b>AmericasTestKitchen</b></li>
+	<li><b>anderetijden</b>: npo.nl, ntr.nl, omroepwnl.nl, zapp.nl and npo3.nl</li>
+	<li><b>AnimeOnDemand</b></li>
+	<li><b>Anvato</b></li>
+	<li><b>aol.com</b></li>
+	<li><b>APA</b></li>
+	<li><b>Aparat</b></li>
+	<li><b>AppleConnect</b></li>
+	<li><b>AppleDaily</b>: 臺灣蘋果日報</li>
+	<li><b>appletrailers</b></li>
+	<li><b>appletrailers:section</b></li>
+	<li><b>archive.org</b>: archive.org videos</li>
+	<li><b>ARD</b></li>
+	<li><b>ARD:mediathek</b></li>
+	<li><b>ARDBetaMediathek</b></li>
+	<li><b>Arkena</b></li>
+	<li><b>arte.tv:+7</b></li>
+	<li><b>arte.tv:embed</b></li>
+	<li><b>arte.tv:playlist</b></li>
+	<li><b>AsianCrush</b></li>
+	<li><b>AsianCrushPlaylist</b></li>
+	<li><b>AtresPlayer</b></li>
+	<li><b>ATTTechChannel</b></li>
+	<li><b>ATVAt</b></li>
+	<li><b>AudiMedia</b></li>
+	<li><b>AudioBoom</b></li>
+	<li><b>audiomack</b></li>
+	<li><b>audiomack:album</b></li>
+	<li><b>AWAAN</b></li>
+	<li><b>awaan:live</b></li>
+	<li><b>awaan:season</b></li>
+	<li><b>awaan:video</b></li>
+	<li><b>AZMedien</b>: AZ Medien videos</li>
+	<li><b>BaiduVideo</b>: 百度视频</li>
+	<li><b>Bandcamp</b></li>
+	<li><b>Bandcamp:album</b></li>
+	<li><b>Bandcamp:weekly</b></li>
+	<li><b>bangumi.bilibili.com</b>: BiliBili番剧</li>
+	<li><b>bbc</b>: BBC</li>
+	<li><b>bbc.co.uk</b>: BBC iPlayer</li>
+	<li><b>bbc.co.uk:article</b>: BBC articles</li>
+	<li><b>bbc.co.uk:iplayer:playlist</b></li>
+	<li><b>bbc.co.uk:playlist</b></li>
+	<li><b>BBVTV</b></li>
+	<li><b>Beatport</b></li>
+	<li><b>Beeg</b></li>
+	<li><b>BehindKink</b></li>
+	<li><b>Bellator</b></li>
+	<li><b>BellMedia</b></li>
+	<li><b>Bet</b></li>
+	<li><b>bfi:player</b></li>
+	<li><b>Bigflix</b></li>
+	<li><b>Bild</b>: Bild.de</li>
+	<li><b>BiliBili</b></li>
+	<li><b>BilibiliAudio</b></li>
+	<li><b>BilibiliAudioAlbum</b></li>
+	<li><b>BiliBiliPlayer</b></li>
+	<li><b>BioBioChileTV</b></li>
+	<li><b>BIQLE</b></li>
+	<li><b>BitChute</b></li>
+	<li><b>BitChuteChannel</b></li>
+	<li><b>BleacherReport</b></li>
+	<li><b>BleacherReportCMS</b></li>
+	<li><b>blinkx</b></li>
+	<li><b>Bloomberg</b></li>
+	<li><b>BokeCC</b></li>
+	<li><b>BostonGlobe</b></li>
+	<li><b>Bpb</b>: Bundeszentrale für politische Bildung</li>
+	<li><b>BR</b>: Bayerischer Rundfunk</li>
+	<li><b>BravoTV</b></li>
+	<li><b>Break</b></li>
+	<li><b>brightcove:legacy</b></li>
+	<li><b>brightcove:new</b></li>
+	<li><b>BRMediathek</b>: Bayerischer Rundfunk Mediathek</li>
+	<li><b>bt:article</b>: Bergens Tidende Articles</li>
+	<li><b>bt:vestlendingen</b>: Bergens Tidende - Vestlendingen</li>
+	<li><b>BusinessInsider</b></li>
+	<li><b>BuzzFeed</b></li>
+	<li><b>BYUtv</b></li>
+	<li><b>Camdemy</b></li>
+	<li><b>CamdemyFolder</b></li>
+	<li><b>CamModels</b></li>
+	<li><b>CamTube</b></li>
+	<li><b>CamWithHer</b></li>
+	<li><b>canalc2.tv</b></li>
+	<li><b>Canalplus</b>: mycanal.fr and piwiplus.fr</li>
+	<li><b>Canvas</b></li>
+	<li><b>CanvasEen</b>: canvas.be and een.be</li>
+	<li><b>CarambaTV</b></li>
+	<li><b>CarambaTVPage</b></li>
+	<li><b>CartoonNetwork</b></li>
+	<li><b>cbc.ca</b></li>
+	<li><b>cbc.ca:olympics</b></li>
+	<li><b>cbc.ca:player</b></li>
+	<li><b>cbc.ca:watch</b></li>
+	<li><b>cbc.ca:watch:video</b></li>
+	<li><b>CBS</b></li>
+	<li><b>CBSInteractive</b></li>
+	<li><b>CBSLocal</b></li>
+	<li><b>cbsnews</b>: CBS News</li>
+	<li><b>cbsnews:embed</b></li>
+	<li><b>cbsnews:livevideo</b>: CBS News Live Videos</li>
+	<li><b>CBSSports</b></li>
+	<li><b>CCMA</b></li>
+	<li><b>CCTV</b>: 央视网</li>
+	<li><b>CDA</b></li>
+	<li><b>CeskaTelevize</b></li>
+	<li><b>CeskaTelevizePorady</b></li>
+	<li><b>channel9</b>: Channel 9</li>
+	<li><b>CharlieRose</b></li>
+	<li><b>Chaturbate</b></li>
+	<li><b>Chilloutzone</b></li>
+	<li><b>chirbit</b></li>
+	<li><b>chirbit:profile</b></li>
+	<li><b>Cinchcast</b></li>
+	<li><b>Cinemax</b></li>
+	<li><b>CiscoLiveSearch</b></li>
+	<li><b>CiscoLiveSession</b></li>
+	<li><b>CJSW</b></li>
+	<li><b>cliphunter</b></li>
+	<li><b>Clippit</b></li>
+	<li><b>ClipRs</b></li>
+	<li><b>Clipsyndicate</b></li>
+	<li><b>CloserToTruth</b></li>
+	<li><b>CloudflareStream</b></li>
+	<li><b>Cloudy</b></li>
+	<li><b>Clubic</b></li>
+	<li><b>Clyp</b></li>
+	<li><b>cmt.com</b></li>
+	<li><b>CNBC</b></li>
+	<li><b>CNBCVideo</b></li>
+	<li><b>CNN</b></li>
+	<li><b>CNNArticle</b></li>
+	<li><b>CNNBlogs</b></li>
+	<li><b>ComedyCentral</b></li>
+	<li><b>ComedyCentralFullEpisodes</b></li>
+	<li><b>ComedyCentralShortname</b></li>
+	<li><b>ComedyCentralTV</b></li>
+	<li><b>CondeNast</b>: Condé Nast media group: Allure, Architectural Digest, Ars Technica, Bon Appétit, Brides, Condé Nast, Condé Nast Traveler, Details, Epicurious, GQ, Glamour, Golf Digest, SELF, Teen Vogue, The New Yorker, Vanity Fair, Vogue, W Magazine, WIRED</li>
+	<li><b>CONtv</b></li>
+	<li><b>Corus</b></li>
+	<li><b>Coub</b></li>
+	<li><b>Cracked</b></li>
+	<li><b>Crackle</b></li>
+	<li><b>CrooksAndLiars</b></li>
+	<li><b>crunchyroll</b></li>
+	<li><b>crunchyroll:playlist</b></li>
+	<li><b>CSNNE</b></li>
+	<li><b>CSpan</b>: C-SPAN</li>
+	<li><b>CtsNews</b>: 華視新聞</li>
+	<li><b>CTVNews</b></li>
+	<li><b>cu.ntv.co.jp</b>: Nippon Television Network</li>
+	<li><b>Culturebox</b></li>
+	<li><b>CultureUnplugged</b></li>
+	<li><b>curiositystream</b></li>
+	<li><b>curiositystream:collection</b></li>
+	<li><b>CWTV</b></li>
+	<li><b>DailyMail</b></li>
+	<li><b>dailymotion</b></li>
+	<li><b>dailymotion:playlist</b></li>
+	<li><b>dailymotion:user</b></li>
+	<li><b>daum.net</b></li>
+	<li><b>daum.net:clip</b></li>
+	<li><b>daum.net:playlist</b></li>
+	<li><b>daum.net:user</b></li>
+	<li><b>DBTV</b></li>
+	<li><b>DctpTv</b></li>
+	<li><b>DeezerPlaylist</b></li>
+	<li><b>defense.gouv.fr</b></li>
+	<li><b>democracynow</b></li>
+	<li><b>DHM</b>: Filmarchiv - Deutsches Historisches Museum</li>
+	<li><b>Digg</b></li>
+	<li><b>DigitallySpeaking</b></li>
+	<li><b>Digiteka</b></li>
+	<li><b>Discovery</b></li>
+	<li><b>DiscoveryGo</b></li>
+	<li><b>DiscoveryGoPlaylist</b></li>
+	<li><b>DiscoveryNetworksDe</b></li>
+	<li><b>DiscoveryVR</b></li>
+	<li><b>Disney</b></li>
+	<li><b>dlive:stream</b></li>
+	<li><b>dlive:vod</b></li>
+	<li><b>Dotsub</b></li>
+	<li><b>DouyuShow</b></li>
+	<li><b>DouyuTV</b>: 斗鱼</li>
+	<li><b>DPlay</b></li>
+	<li><b>DRBonanza</b></li>
+	<li><b>Dropbox</b></li>
+	<li><b>DrTuber</b></li>
+	<li><b>drtv</b></li>
+	<li><b>drtv:live</b></li>
+	<li><b>DTube</b></li>
+	<li><b>Dumpert</b></li>
+	<li><b>dvtv</b>: http://video.aktualne.cz/</li>
+	<li><b>dw</b></li>
+	<li><b>dw:article</b></li>
+	<li><b>EaglePlatform</b></li>
+	<li><b>EbaumsWorld</b></li>
+	<li><b>EchoMsk</b></li>
+	<li><b>egghead:course</b>: egghead.io course</li>
+	<li><b>egghead:lesson</b>: egghead.io lesson</li>
+	<li><b>ehftv</b></li>
+	<li><b>eHow</b></li>
+	<li><b>EinsUndEinsTV</b></li>
+	<li><b>Einthusan</b></li>
+	<li><b>eitb.tv</b></li>
+	<li><b>EllenTube</b></li>
+	<li><b>EllenTubePlaylist</b></li>
+	<li><b>EllenTubeVideo</b></li>
+	<li><b>ElPais</b>: El País</li>
+	<li><b>Embedly</b></li>
+	<li><b>EMPFlix</b></li>
+	<li><b>Engadget</b></li>
+	<li><b>Eporner</b></li>
+	<li><b>EroProfile</b></li>
+	<li><b>Escapist</b></li>
+	<li><b>ESPN</b></li>
+	<li><b>ESPNArticle</b></li>
+	<li><b>EsriVideo</b></li>
+	<li><b>Europa</b></li>
+	<li><b>EveryonesMixtape</b></li>
+	<li><b>EWETV</b></li>
+	<li><b>ExpoTV</b></li>
+	<li><b>Expressen</b></li>
+	<li><b>ExtremeTube</b></li>
+	<li><b>EyedoTV</b></li>
+	<li><b>facebook</b></li>
+	<li><b>FacebookPluginsVideo</b></li>
+	<li><b>faz.net</b></li>
+	<li><b>fc2</b></li>
+	<li><b>fc2:embed</b></li>
+	<li><b>Fczenit</b></li>
+	<li><b>filmon</b></li>
+	<li><b>filmon:channel</b></li>
+	<li><b>Filmweb</b></li>
+	<li><b>FiveThirtyEight</b></li>
+	<li><b>FiveTV</b></li>
+	<li><b>Flickr</b></li>
+	<li><b>Folketinget</b>: Folketinget (ft.dk; Danish parliament)</li>
+	<li><b>FootyRoom</b></li>
+	<li><b>Formula1</b></li>
+	<li><b>FOX</b></li>
+	<li><b>FOX9</b></li>
+	<li><b>FOX9News</b></li>
+	<li><b>Foxgay</b></li>
+	<li><b>foxnews</b>: Fox News and Fox Business Video</li>
+	<li><b>foxnews:article</b></li>
+	<li><b>FoxSports</b></li>
+	<li><b>france2.fr:generation-what</b></li>
+	<li><b>FranceCulture</b></li>
+	<li><b>FranceInter</b></li>
+	<li><b>FranceTV</b></li>
+	<li><b>FranceTVEmbed</b></li>
+	<li><b>francetvinfo.fr</b></li>
+	<li><b>FranceTVJeunesse</b></li>
+	<li><b>FranceTVSite</b></li>
+	<li><b>Freesound</b></li>
+	<li><b>freespeech.org</b></li>
+	<li><b>FreshLive</b></li>
+	<li><b>FrontendMasters</b></li>
+	<li><b>FrontendMastersCourse</b></li>
+	<li><b>FrontendMastersLesson</b></li>
+	<li><b>Funimation</b></li>
+	<li><b>Funk</b></li>
+	<li><b>Fusion</b></li>
+	<li><b>Fux</b></li>
+	<li><b>FXNetworks</b></li>
+	<li><b>Gaia</b></li>
+	<li><b>GameInformer</b></li>
+	<li><b>GameSpot</b></li>
+	<li><b>GameStar</b></li>
+	<li><b>Gaskrank</b></li>
+	<li><b>Gazeta</b></li>
+	<li><b>GDCVault</b></li>
+	<li><b>generic</b>: Generic downloader that works on some sites</li>
+	<li><b>Gfycat</b></li>
+	<li><b>GiantBomb</b></li>
+	<li><b>Giga</b></li>
+	<li><b>GlattvisionTV</b></li>
+	<li><b>Glide</b>: Glide mobile video messages (glide.me)</li>
+	<li><b>Globo</b></li>
+	<li><b>GloboArticle</b></li>
+	<li><b>Go</b></li>
+	<li><b>GodTube</b></li>
+	<li><b>Golem</b></li>
+	<li><b>GoogleDrive</b></li>
+	<li><b>Goshgay</b></li>
+	<li><b>GPUTechConf</b></li>
+	<li><b>Groupon</b></li>
+	<li><b>hbo</b></li>
+	<li><b>HearThisAt</b></li>
+	<li><b>Heise</b></li>
+	<li><b>HellPorno</b></li>
+	<li><b>Helsinki</b>: helsinki.fi</li>
+	<li><b>HentaiStigma</b></li>
+	<li><b>hetklokhuis</b></li>
+	<li><b>hgtv.com:show</b></li>
+	<li><b>HiDive</b></li>
+	<li><b>HistoricFilms</b></li>
+	<li><b>history:topic</b>: History.com Topic</li>
+	<li><b>hitbox</b></li>
+	<li><b>hitbox:live</b></li>
+	<li><b>HitRecord</b></li>
+	<li><b>hketv</b>: 香港教育局教育電視 (HKETV) Educational Television, Hong Kong Educational Bureau</li>
+	<li><b>HornBunny</b></li>
+	<li><b>HotNewHipHop</b></li>
+	<li><b>hotstar</b></li>
+	<li><b>hotstar:playlist</b></li>
+	<li><b>Howcast</b></li>
+	<li><b>HowStuffWorks</b></li>
+	<li><b>HRTi</b></li>
+	<li><b>HRTiPlaylist</b></li>
+	<li><b>Huajiao</b>: 花椒直播</li>
+	<li><b>HuffPost</b>: Huffington Post</li>
+	<li><b>Hungama</b></li>
+	<li><b>HungamaSong</b></li>
+	<li><b>Hypem</b></li>
+	<li><b>ign.com</b></li>
+	<li><b>imdb</b>: Internet Movie Database trailers</li>
+	<li><b>imdb:list</b>: Internet Movie Database lists</li>
+	<li><b>Imgur</b></li>
+	<li><b>imgur:album</b></li>
+	<li><b>imgur:gallery</b></li>
+	<li><b>Ina</b></li>
+	<li><b>Inc</b></li>
+	<li><b>IndavideoEmbed</b></li>
+	<li><b>InfoQ</b></li>
+	<li><b>Instagram</b></li>
+	<li><b>instagram:tag</b>: Instagram hashtag search</li>
+	<li><b>instagram:user</b>: Instagram user profile</li>
+	<li><b>Internazionale</b></li>
+	<li><b>InternetVideoArchive</b></li>
+	<li><b>IPrima</b></li>
+	<li><b>iqiyi</b>: 爱奇艺</li>
+	<li><b>Ir90Tv</b></li>
+	<li><b>ITTF</b></li>
+	<li><b>ITV</b></li>
+	<li><b>ITVBTCC</b></li>
+	<li><b>ivi</b>: ivi.ru</li>
+	<li><b>ivi:compilation</b>: ivi.ru compilations</li>
+	<li><b>ivideon</b>: Ivideon TV</li>
+	<li><b>Iwara</b></li>
+	<li><b>Izlesene</b></li>
+	<li><b>Jamendo</b></li>
+	<li><b>JamendoAlbum</b></li>
+	<li><b>JeuxVideo</b></li>
+	<li><b>Joj</b></li>
+	<li><b>Jove</b></li>
+	<li><b>JWPlatform</b></li>
+	<li><b>Kakao</b></li>
+	<li><b>Kaltura</b></li>
+	<li><b>KanalPlay</b>: Kanal 5/9/11 Play</li>
+	<li><b>Kankan</b></li>
+	<li><b>Karaoketv</b></li>
+	<li><b>KarriereVideos</b></li>
+	<li><b>Katsomo</b></li>
+	<li><b>KeezMovies</b></li>
+	<li><b>Ketnet</b></li>
+	<li><b>KhanAcademy</b></li>
+	<li><b>KickStarter</b></li>
+	<li><b>KinjaEmbed</b></li>
+	<li><b>KinoPoisk</b></li>
+	<li><b>KonserthusetPlay</b></li>
+	<li><b>KrasView</b>: Красвью</li>
+	<li><b>Ku6</b></li>
+	<li><b>KUSI</b></li>
+	<li><b>kuwo:album</b>: 酷我音乐 - 专辑</li>
+	<li><b>kuwo:category</b>: 酷我音乐 - 分类</li>
+	<li><b>kuwo:chart</b>: 酷我音乐 - 排行榜</li>
+	<li><b>kuwo:mv</b>: 酷我音乐 - MV</li>
+	<li><b>kuwo:singer</b>: 酷我音乐 - 歌手</li>
+	<li><b>kuwo:song</b>: 酷我音乐</li>
+	<li><b>la7.it</b></li>
+	<li><b>laola1tv</b></li>
+	<li><b>laola1tv:embed</b></li>
+	<li><b>LCI</b></li>
+	<li><b>Lcp</b></li>
+	<li><b>LcpPlay</b></li>
+	<li><b>Le</b>: 乐视网</li>
+	<li><b>Lecture2Go</b></li>
+	<li><b>Lecturio</b></li>
+	<li><b>LecturioCourse</b></li>
+	<li><b>LecturioDeCourse</b></li>
+	<li><b>LEGO</b></li>
+	<li><b>Lemonde</b></li>
+	<li><b>Lenta</b></li>
+	<li><b>LePlaylist</b></li>
+	<li><b>LetvCloud</b>: 乐视云</li>
+	<li><b>Libsyn</b></li>
+	<li><b>life</b>: Life.ru</li>
+	<li><b>life:embed</b></li>
+	<li><b>limelight</b></li>
+	<li><b>limelight:channel</b></li>
+	<li><b>limelight:channel_list</b></li>
+	<li><b>LineTV</b></li>
+	<li><b>linkedin:learning</b></li>
+	<li><b>linkedin:learning:course</b></li>
+	<li><b>LinuxAcademy</b></li>
+	<li><b>LiTV</b></li>
+	<li><b>LiveJournal</b></li>
+	<li><b>LiveLeak</b></li>
+	<li><b>LiveLeakEmbed</b></li>
+	<li><b>livestream</b></li>
+	<li><b>livestream:original</b></li>
+	<li><b>LnkGo</b></li>
+	<li><b>loc</b>: Library of Congress</li>
+	<li><b>LocalNews8</b></li>
+	<li><b>LoveHomePorn</b></li>
+	<li><b>lrt.lt</b></li>
+	<li><b>lynda</b>: lynda.com videos</li>
+	<li><b>lynda:course</b>: lynda.com online courses</li>
+	<li><b>m6</b></li>
+	<li><b>mailru</b>: Видео@Mail.Ru</li>
+	<li><b>mailru:music</b>: Музыка@Mail.Ru</li>
+	<li><b>mailru:music:search</b>: Музыка@Mail.Ru</li>
+	<li><b>MallTV</b></li>
+	<li><b>mangomolo:live</b></li>
+	<li><b>mangomolo:video</b></li>
+	<li><b>ManyVids</b></li>
+	<li><b>Markiza</b></li>
+	<li><b>MarkizaPage</b></li>
+	<li><b>massengeschmack.tv</b></li>
+	<li><b>MatchTV</b></li>
+	<li><b>MDR</b>: MDR.DE and KiKA</li>
+	<li><b>media.ccc.de</b></li>
+	<li><b>media.ccc.de:lists</b></li>
+	<li><b>Medialaan</b></li>
+	<li><b>Mediaset</b></li>
+	<li><b>Mediasite</b></li>
+	<li><b>MediasiteCatalog</b></li>
+	<li><b>MediasiteNamedCatalog</b></li>
+	<li><b>Medici</b></li>
+	<li><b>megaphone.fm</b>: megaphone.fm embedded players</li>
+	<li><b>Meipai</b>: 美拍</li>
+	<li><b>MelonVOD</b></li>
+	<li><b>META</b></li>
+	<li><b>metacafe</b></li>
+	<li><b>Metacritic</b></li>
+	<li><b>Mgoon</b></li>
+	<li><b>MGTV</b>: 芒果TV</li>
+	<li><b>MiaoPai</b></li>
+	<li><b>MinistryGrid</b></li>
+	<li><b>Minoto</b></li>
+	<li><b>miomio.tv</b></li>
+	<li><b>MiTele</b>: mitele.es</li>
+	<li><b>mixcloud</b></li>
+	<li><b>mixcloud:playlist</b></li>
+	<li><b>mixcloud:user</b></li>
+	<li><b>Mixer:live</b></li>
+	<li><b>Mixer:vod</b></li>
+	<li><b>MLB</b></li>
+	<li><b>Mnet</b></li>
+	<li><b>MNetTV</b></li>
+	<li><b>MoeVideo</b>: LetitBit video services: moevideo.net, playreplay.net and videochart.net</li>
+	<li><b>Mofosex</b></li>
+	<li><b>MofosexEmbed</b></li>
+	<li><b>Mojvideo</b></li>
+	<li><b>Morningstar</b>: morningstar.com</li>
+	<li><b>Motherless</b></li>
+	<li><b>MotherlessGroup</b></li>
+	<li><b>Motorsport</b>: motorsport.com</li>
+	<li><b>MovieClips</b></li>
+	<li><b>MovieFap</b></li>
+	<li><b>Moviezine</b></li>
+	<li><b>MovingImage</b></li>
+	<li><b>MSN</b></li>
+	<li><b>mtg</b>: MTG services</li>
+	<li><b>mtv</b></li>
+	<li><b>mtv.de</b></li>
+	<li><b>mtv:video</b></li>
+	<li><b>mtvjapan</b></li>
+	<li><b>mtvservices:embedded</b></li>
+	<li><b>MuenchenTV</b>: münchen.tv</li>
+	<li><b>mva</b>: Microsoft Virtual Academy videos</li>
+	<li><b>mva:course</b>: Microsoft Virtual Academy courses</li>
+	<li><b>Mwave</b></li>
+	<li><b>MwaveMeetGreet</b></li>
+	<li><b>MyChannels</b></li>
+	<li><b>MySpace</b></li>
+	<li><b>MySpace:album</b></li>
+	<li><b>MySpass</b></li>
+	<li><b>Myvi</b></li>
+	<li><b>MyVidster</b></li>
+	<li><b>MyviEmbed</b></li>
+	<li><b>MyVisionTV</b></li>
+	<li><b>n-tv.de</b></li>
+	<li><b>natgeo:video</b></li>
+	<li><b>NationalGeographicTV</b></li>
+	<li><b>Naver</b></li>
+	<li><b>NBA</b></li>
+	<li><b>NBC</b></li>
+	<li><b>NBCNews</b></li>
+	<li><b>nbcolympics</b></li>
+	<li><b>nbcolympics:stream</b></li>
+	<li><b>NBCSports</b></li>
+	<li><b>NBCSportsStream</b></li>
+	<li><b>NBCSportsVPlayer</b></li>
+	<li><b>ndr</b>: NDR.de - Norddeutscher Rundfunk</li>
+	<li><b>ndr:embed</b></li>
+	<li><b>ndr:embed:base</b></li>
+	<li><b>NDTV</b></li>
+	<li><b>NerdCubedFeed</b></li>
+	<li><b>netease:album</b>: 网易云音乐 - 专辑</li>
+	<li><b>netease:djradio</b>: 网易云音乐 - 电台</li>
+	<li><b>netease:mv</b>: 网易云音乐 - MV</li>
+	<li><b>netease:playlist</b>: 网易云音乐 - 歌单</li>
+	<li><b>netease:program</b>: 网易云音乐 - 电台节目</li>
+	<li><b>netease:singer</b>: 网易云音乐 - 歌手</li>
+	<li><b>netease:song</b>: 网易云音乐</li>
+	<li><b>NetPlus</b></li>
+	<li><b>Netzkino</b></li>
+	<li><b>Newgrounds</b></li>
+	<li><b>NewgroundsPlaylist</b></li>
+	<li><b>Newstube</b></li>
+	<li><b>NextMedia</b>: 蘋果日報</li>
+	<li><b>NextMediaActionNews</b>: 蘋果日報 - 動新聞</li>
+	<li><b>NextTV</b>: 壹電視</li>
+	<li><b>Nexx</b></li>
+	<li><b>NexxEmbed</b></li>
+	<li><b>nfl.com</b></li>
+	<li><b>NhkVod</b></li>
+	<li><b>nhl.com</b></li>
+	<li><b>nick.com</b></li>
+	<li><b>nick.de</b></li>
+	<li><b>nickelodeon:br</b></li>
+	<li><b>nickelodeonru</b></li>
+	<li><b>nicknight</b></li>
+	<li><b>niconico</b>: ニコニコ動画</li>
+	<li><b>NiconicoPlaylist</b></li>
+	<li><b>Nintendo</b></li>
+	<li><b>njoy</b>: N-JOY</li>
+	<li><b>njoy:embed</b></li>
+	<li><b>NJPWWorld</b>: 新日本プロレスワールド</li>
+	<li><b>NobelPrize</b></li>
+	<li><b>Noco</b></li>
+	<li><b>NonkTube</b></li>
+	<li><b>Noovo</b></li>
+	<li><b>Normalboots</b></li>
+	<li><b>NosVideo</b></li>
+	<li><b>Nova</b>: TN.cz, Prásk.tv, Nova.cz, Novaplus.cz, FANDA.tv, Krásná.cz and Doma.cz</li>
+	<li><b>NovaEmbed</b></li>
+	<li><b>nowness</b></li>
+	<li><b>nowness:playlist</b></li>
+	<li><b>nowness:series</b></li>
+	<li><b>Noz</b></li>
+	<li><b>npo</b>: npo.nl, ntr.nl, omroepwnl.nl, zapp.nl and npo3.nl</li>
+	<li><b>npo.nl:live</b></li>
+	<li><b>npo.nl:radio</b></li>
+	<li><b>npo.nl:radio:fragment</b></li>
+	<li><b>Npr</b></li>
+	<li><b>NRK</b></li>
+	<li><b>NRKPlaylist</b></li>
+	<li><b>NRKSkole</b>: NRK Skole</li>
+	<li><b>NRKTV</b>: NRK TV and NRK Radio</li>
+	<li><b>NRKTVDirekte</b>: NRK TV Direkte and NRK Radio Direkte</li>
+	<li><b>NRKTVEpisode</b></li>
+	<li><b>NRKTVEpisodes</b></li>
+	<li><b>NRKTVSeason</b></li>
+	<li><b>NRKTVSeries</b></li>
+	<li><b>NRLTV</b></li>
+	<li><b>ntv.ru</b></li>
+	<li><b>Nuvid</b></li>
+	<li><b>NYTimes</b></li>
+	<li><b>NYTimesArticle</b></li>
+	<li><b>NZZ</b></li>
+	<li><b>ocw.mit.edu</b></li>
+	<li><b>OdaTV</b></li>
+	<li><b>Odnoklassniki</b></li>
+	<li><b>OktoberfestTV</b></li>
+	<li><b>OnDemandKorea</b></li>
+	<li><b>onet.pl</b></li>
+	<li><b>onet.tv</b></li>
+	<li><b>onet.tv:channel</b></li>
+	<li><b>OnetMVP</b></li>
+	<li><b>OnionStudios</b></li>
+	<li><b>Ooyala</b></li>
+	<li><b>OoyalaExternal</b></li>
+	<li><b>OraTV</b></li>
+	<li><b>orf:burgenland</b>: Radio Burgenland</li>
+	<li><b>orf:fm4</b>: radio FM4</li>
+	<li><b>orf:fm4:story</b>: fm4.orf.at stories</li>
+	<li><b>orf:iptv</b>: iptv.ORF.at</li>
+	<li><b>orf:kaernten</b>: Radio Kärnten</li>
+	<li><b>orf:noe</b>: Radio Niederösterreich</li>
+	<li><b>orf:oberoesterreich</b>: Radio Oberösterreich</li>
+	<li><b>orf:oe1</b>: Radio Österreich 1</li>
+	<li><b>orf:oe3</b>: Radio Österreich 3</li>
+	<li><b>orf:salzburg</b>: Radio Salzburg</li>
+	<li><b>orf:steiermark</b>: Radio Steiermark</li>
+	<li><b>orf:tirol</b>: Radio Tirol</li>
+	<li><b>orf:tvthek</b>: ORF TVthek</li>
+	<li><b>orf:vorarlberg</b>: Radio Vorarlberg</li>
+	<li><b>orf:wien</b>: Radio Wien</li>
+	<li><b>OsnatelTV</b></li>
+	<li><b>OutsideTV</b></li>
+	<li><b>PacktPub</b></li>
+	<li><b>PacktPubCourse</b></li>
+	<li><b>pandora.tv</b>: 판도라TV</li>
+	<li><b>ParamountNetwork</b></li>
+	<li><b>parliamentlive.tv</b>: UK parliament videos</li>
+	<li><b>Patreon</b></li>
+	<li><b>pbs</b>: Public Broadcasting Service (PBS) and member stations: PBS: Public Broadcasting Service, APT - Alabama Public Television (WBIQ), GPB/Georgia Public Broadcasting (WGTV), Mississippi Public Broadcasting (WMPN), Nashville Public Television (WNPT), WFSU-TV (WFSU), WSRE (WSRE), WTCI (WTCI), WPBA/Channel 30 (WPBA), Alaska Public Media (KAKM), Arizona PBS (KAET), KNME-TV/Channel 5 (KNME), Vegas PBS (KLVX), AETN/ARKANSAS ETV NETWORK (KETS), KET (WKLE), WKNO/Channel 10 (WKNO), LPB/LOUISIANA PUBLIC BROADCASTING (WLPB), OETA (KETA), Ozarks Public Television (KOZK), WSIU Public Broadcasting (WSIU), KEET TV (KEET), KIXE/Channel 9 (KIXE), KPBS San Diego (KPBS), KQED (KQED), KVIE Public Television (KVIE), PBS SoCal/KOCE (KOCE), ValleyPBS (KVPT), CONNECTICUT PUBLIC TELEVISION (WEDH), KNPB Channel 5 (KNPB), SOPTV (KSYS), Rocky Mountain PBS (KRMA), KENW-TV3 (KENW), KUED Channel 7 (KUED), Wyoming PBS (KCWC), Colorado Public Television / KBDI 12 (KBDI), KBYU-TV (KBYU), Thirteen/WNET New York (WNET), WGBH/Channel 2 (WGBH), WGBY (WGBY), NJTV Public Media NJ (WNJT), WLIW21 (WLIW), mpt/Maryland Public Television (WMPB), WETA Television and Radio (WETA), WHYY (WHYY), PBS 39 (WLVT), WVPT - Your Source for PBS and More! (WVPT), Howard University Television (WHUT), WEDU PBS (WEDU), WGCU Public Media (WGCU), WPBT2 (WPBT), WUCF TV (WUCF), WUFT/Channel 5 (WUFT), WXEL/Channel 42 (WXEL), WLRN/Channel 17 (WLRN), WUSF Public Broadcasting (WUSF), ETV (WRLK), UNC-TV (WUNC), PBS Hawaii - Oceanic Cable Channel 10 (KHET), Idaho Public Television (KAID), KSPS (KSPS), OPB (KOPB), KWSU/Channel 10 &amp; KTNW/Channel 31 (KWSU), WILL-TV (WILL), Network Knowledge - WSEC/Springfield (WSEC), WTTW11 (WTTW), Iowa Public Television/IPTV (KDIN), Nine Network (KETC), PBS39 Fort Wayne (WFWA), WFYI Indianapolis (WFYI), Milwaukee Public Television (WMVS), WNIN (WNIN), WNIT Public Television (WNIT), WPT (WPNE), WVUT/Channel 22 (WVUT), WEIU/Channel 51 (WEIU), WQPT-TV (WQPT), WYCC PBS Chicago (WYCC), WIPB-TV (WIPB), WTIU (WTIU), CET  (WCET), ThinkTVNetwork (WPTD), WBGU-TV (WBGU), WGVU TV (WGVU), NET1 (KUON), Pioneer Public Television (KWCM), SDPB Television (KUSD), TPT (KTCA), KSMQ (KSMQ), KPTS/Channel 8 (KPTS), KTWU/Channel 11 (KTWU), East Tennessee PBS (WSJK), WCTE-TV (WCTE), WLJT, Channel 11 (WLJT), WOSU TV (WOSU), WOUB/WOUC (WOUB), WVPB (WVPB), WKYU-PBS (WKYU), KERA 13 (KERA), MPBN (WCBB), Mountain Lake PBS (WCFE), NHPTV (WENH), Vermont PBS (WETK), witf (WITF), WQED Multimedia (WQED), WMHT Educational Telecommunications (WMHT), Q-TV (WDCQ), WTVS Detroit Public TV (WTVS), CMU Public Television (WCMU), WKAR-TV (WKAR), WNMU-TV Public TV 13 (WNMU), WDSE - WRPT (WDSE), WGTE TV (WGTE), Lakeland Public Television (KAWE), KMOS-TV - Channels 6.1, 6.2 and 6.3 (KMOS), MontanaPBS (KUSM), KRWG/Channel 22 (KRWG), KACV (KACV), KCOS/Channel 13 (KCOS), WCNY/Channel 24 (WCNY), WNED (WNED), WPBS (WPBS), WSKG Public TV (WSKG), WXXI (WXXI), WPSU (WPSU), WVIA Public Media Studios (WVIA), WTVI (WTVI), Western Reserve PBS (WNEO), WVIZ/PBS ideastream (WVIZ), KCTS 9 (KCTS), Basin PBS (KPBT), KUHT / Channel 8 (KUHT), KLRN (KLRN), KLRU (KLRU), WTJX Channel 12 (WTJX), WCVE PBS (WCVE), KBTC Public Television (KBTC)</li>
+	<li><b>pcmag</b></li>
+	<li><b>PearVideo</b></li>
+	<li><b>PeerTube</b></li>
+	<li><b>People</b></li>
+	<li><b>PerformGroup</b></li>
+	<li><b>periscope</b>: Periscope</li>
+	<li><b>periscope:user</b>: Periscope user videos</li>
+	<li><b>PhilharmonieDeParis</b>: Philharmonie de Paris</li>
+	<li><b>phoenix.de</b></li>
+	<li><b>Photobucket</b></li>
+	<li><b>Picarto</b></li>
+	<li><b>PicartoVod</b></li>
+	<li><b>Piksel</b></li>
+	<li><b>Pinkbike</b></li>
+	<li><b>Pladform</b></li>
+	<li><b>Platzi</b></li>
+	<li><b>PlatziCourse</b></li>
+	<li><b>play.fm</b></li>
+	<li><b>PlayPlusTV</b></li>
+	<li><b>PlaysTV</b></li>
+	<li><b>Playtvak</b>: Playtvak.cz, iDNES.cz and Lidovky.cz</li>
+	<li><b>Playvid</b></li>
+	<li><b>Playwire</b></li>
+	<li><b>pluralsight</b></li>
+	<li><b>pluralsight:course</b></li>
+	<li><b>plus.google</b>: Google Plus</li>
+	<li><b>podomatic</b></li>
+	<li><b>Pokemon</b></li>
+	<li><b>PolskieRadio</b></li>
+	<li><b>PolskieRadioCategory</b></li>
+	<li><b>Popcorntimes</b></li>
+	<li><b>PopcornTV</b></li>
+	<li><b>PornCom</b></li>
+	<li><b>PornerBros</b></li>
+	<li><b>PornHd</b></li>
+	<li><b>PornHub</b>: PornHub and Thumbzilla</li>
+	<li><b>PornHubPagedVideoList</b></li>
+	<li><b>PornHubUser</b></li>
+	<li><b>PornHubUserVideosUpload</b></li>
+	<li><b>Pornotube</b></li>
+	<li><b>PornoVoisines</b></li>
+	<li><b>PornoXO</b></li>
+	<li><b>PornTube</b></li>
+	<li><b>PressTV</b></li>
+	<li><b>prosiebensat1</b>: ProSiebenSat.1 Digital</li>
+	<li><b>puhutv</b></li>
+	<li><b>puhutv:serie</b></li>
+	<li><b>Puls4</b></li>
+	<li><b>Pyvideo</b></li>
+	<li><b>qqmusic</b>: QQ音乐</li>
+	<li><b>qqmusic:album</b>: QQ音乐 - 专辑</li>
+	<li><b>qqmusic:playlist</b>: QQ音乐 - 歌单</li>
+	<li><b>qqmusic:singer</b>: QQ音乐 - 歌手</li>
+	<li><b>qqmusic:toplist</b>: QQ音乐 - 排行榜</li>
+	<li><b>QuantumTV</b></li>
+	<li><b>Quickline</b></li>
+	<li><b>QuicklineLive</b></li>
+	<li><b>R7</b></li>
+	<li><b>R7Article</b></li>
+	<li><b>radio.de</b></li>
+	<li><b>radiobremen</b></li>
+	<li><b>radiocanada</b></li>
+	<li><b>radiocanada:audiovideo</b></li>
+	<li><b>radiofrance</b></li>
+	<li><b>RadioJavan</b></li>
+	<li><b>Rai</b></li>
+	<li><b>RaiPlay</b></li>
+	<li><b>RaiPlayLive</b></li>
+	<li><b>RaiPlayPlaylist</b></li>
+	<li><b>RayWenderlich</b></li>
+	<li><b>RayWenderlichCourse</b></li>
+	<li><b>RBMARadio</b></li>
+	<li><b>RDS</b>: RDS.ca</li>
+	<li><b>RedBullTV</b></li>
+	<li><b>RedBullTVRrnContent</b></li>
+	<li><b>Reddit</b></li>
+	<li><b>RedditR</b></li>
+	<li><b>RedTube</b></li>
+	<li><b>RegioTV</b></li>
+	<li><b>RENTV</b></li>
+	<li><b>RENTVArticle</b></li>
+	<li><b>Restudy</b></li>
+	<li><b>Reuters</b></li>
+	<li><b>ReverbNation</b></li>
+	<li><b>RICE</b></li>
+	<li><b>RMCDecouverte</b></li>
+	<li><b>RockstarGames</b></li>
+	<li><b>RoosterTeeth</b></li>
+	<li><b>RottenTomatoes</b></li>
+	<li><b>Roxwel</b></li>
+	<li><b>Rozhlas</b></li>
+	<li><b>RTBF</b></li>
+	<li><b>rte</b>: Raidió Teilifís Éireann TV</li>
+	<li><b>rte:radio</b>: Raidió Teilifís Éireann radio</li>
+	<li><b>rtl.nl</b>: rtl.nl and rtlxl.nl</li>
+	<li><b>rtl2</b></li>
+	<li><b>rtl2:you</b></li>
+	<li><b>rtl2:you:series</b></li>
+	<li><b>RTP</b></li>
+	<li><b>RTS</b>: RTS.ch</li>
+	<li><b>rtve.es:alacarta</b>: RTVE a la carta</li>
+	<li><b>rtve.es:infantil</b>: RTVE infantil</li>
+	<li><b>rtve.es:live</b>: RTVE.es live streams</li>
+	<li><b>rtve.es:television</b></li>
+	<li><b>RTVNH</b></li>
+	<li><b>RTVS</b></li>
+	<li><b>RUHD</b></li>
+	<li><b>rutube</b>: Rutube videos</li>
+	<li><b>rutube:channel</b>: Rutube channels</li>
+	<li><b>rutube:embed</b>: Rutube embedded videos</li>
+	<li><b>rutube:movie</b>: Rutube movies</li>
+	<li><b>rutube:person</b>: Rutube person videos</li>
+	<li><b>rutube:playlist</b>: Rutube playlists</li>
+	<li><b>RUTV</b>: RUTV.RU</li>
+	<li><b>Ruutu</b></li>
+	<li><b>Ruv</b></li>
+	<li><b>safari</b>: safaribooksonline.com online video</li>
+	<li><b>safari:api</b></li>
+	<li><b>safari:course</b>: safaribooksonline.com online courses</li>
+	<li><b>SAKTV</b></li>
+	<li><b>SaltTV</b></li>
+	<li><b>Sapo</b>: SAPO Vídeos</li>
+	<li><b>savefrom.net</b></li>
+	<li><b>SBS</b>: sbs.com.au</li>
+	<li><b>schooltv</b></li>
+	<li><b>screen.yahoo:search</b>: Yahoo screen search</li>
+	<li><b>Screencast</b></li>
+	<li><b>ScreencastOMatic</b></li>
+	<li><b>ScrippsNetworks</b></li>
+	<li><b>scrippsnetworks:watch</b></li>
+	<li><b>SCTE</b></li>
+	<li><b>SCTECourse</b></li>
+	<li><b>Seeker</b></li>
+	<li><b>SenateISVP</b></li>
+	<li><b>SendtoNews</b></li>
+	<li><b>Servus</b></li>
+	<li><b>Sexu</b></li>
+	<li><b>SeznamZpravy</b></li>
+	<li><b>SeznamZpravyArticle</b></li>
+	<li><b>Shahid</b></li>
+	<li><b>ShahidShow</b></li>
+	<li><b>Shared</b>: shared.sx</li>
+	<li><b>ShowRoomLive</b></li>
+	<li><b>Sina</b></li>
+	<li><b>SkylineWebcams</b></li>
+	<li><b>SkyNews</b></li>
+	<li><b>skynewsarabia:article</b></li>
+	<li><b>skynewsarabia:video</b></li>
+	<li><b>SkySports</b></li>
+	<li><b>Slideshare</b></li>
+	<li><b>SlidesLive</b></li>
+	<li><b>Slutload</b></li>
+	<li><b>smotri</b>: Smotri.com</li>
+	<li><b>smotri:broadcast</b>: Smotri.com broadcasts</li>
+	<li><b>smotri:community</b>: Smotri.com community videos</li>
+	<li><b>smotri:user</b>: Smotri.com user videos</li>
+	<li><b>Snotr</b></li>
+	<li><b>Sohu</b></li>
+	<li><b>SonyLIV</b></li>
+	<li><b>soundcloud</b></li>
+	<li><b>soundcloud:playlist</b></li>
+	<li><b>soundcloud:search</b>: Soundcloud search</li>
+	<li><b>soundcloud:set</b></li>
+	<li><b>soundcloud:trackstation</b></li>
+	<li><b>soundcloud:user</b></li>
+	<li><b>SoundcloudEmbed</b></li>
+	<li><b>soundgasm</b></li>
+	<li><b>soundgasm:profile</b></li>
+	<li><b>southpark.cc.com</b></li>
+	<li><b>southpark.cc.com:español</b></li>
+	<li><b>southpark.de</b></li>
+	<li><b>southpark.nl</b></li>
+	<li><b>southparkstudios.dk</b></li>
+	<li><b>SpankBang</b></li>
+	<li><b>SpankBangPlaylist</b></li>
+	<li><b>Spankwire</b></li>
+	<li><b>Spiegel</b></li>
+	<li><b>Spiegel:Article</b>: Articles on spiegel.de</li>
+	<li><b>Spiegeltv</b></li>
+	<li><b>sport.francetvinfo.fr</b></li>
+	<li><b>Sport5</b></li>
+	<li><b>SportBox</b></li>
+	<li><b>SportDeutschland</b></li>
+	<li><b>SpringboardPlatform</b></li>
+	<li><b>Sprout</b></li>
+	<li><b>sr:mediathek</b>: Saarländischer Rundfunk</li>
+	<li><b>SRGSSR</b></li>
+	<li><b>SRGSSRPlay</b>: srf.ch, rts.ch, rsi.ch, rtr.ch and swissinfo.ch play sites</li>
+	<li><b>stanfordoc</b>: Stanford Open ClassRoom</li>
+	<li><b>Steam</b></li>
+	<li><b>Stitcher</b></li>
+	<li><b>Streamable</b></li>
+	<li><b>streamcloud.eu</b></li>
+	<li><b>StreamCZ</b></li>
+	<li><b>StreetVoice</b></li>
+	<li><b>StretchInternet</b></li>
+	<li><b>stv:player</b></li>
+	<li><b>SunPorno</b></li>
+	<li><b>sverigesradio:episode</b></li>
+	<li><b>sverigesradio:publication</b></li>
+	<li><b>SVT</b></li>
+	<li><b>SVTPage</b></li>
+	<li><b>SVTPlay</b>: SVT Play and Öppet arkiv</li>
+	<li><b>SVTSeries</b></li>
+	<li><b>SWRMediathek</b></li>
+	<li><b>Syfy</b></li>
+	<li><b>SztvHu</b></li>
+	<li><b>t-online.de</b></li>
+	<li><b>Tagesschau</b></li>
+	<li><b>tagesschau:player</b></li>
+	<li><b>Tass</b></li>
+	<li><b>TastyTrade</b></li>
+	<li><b>TBS</b></li>
+	<li><b>TDSLifeway</b></li>
+	<li><b>Teachable</b></li>
+	<li><b>TeachableCourse</b></li>
+	<li><b>teachertube</b>: teachertube.com videos</li>
+	<li><b>teachertube:user:collection</b>: teachertube.com user and collection videos</li>
+	<li><b>TeachingChannel</b></li>
+	<li><b>Teamcoco</b></li>
+	<li><b>TeamTreeHouse</b></li>
+	<li><b>TechTalks</b></li>
+	<li><b>techtv.mit.edu</b></li>
+	<li><b>ted</b></li>
+	<li><b>Tele13</b></li>
+	<li><b>Tele5</b></li>
+	<li><b>TeleBruxelles</b></li>
+	<li><b>Telecinco</b>: telecinco.es, cuatro.com and mediaset.es</li>
+	<li><b>Telegraaf</b></li>
+	<li><b>TeleMB</b></li>
+	<li><b>TeleQuebec</b></li>
+	<li><b>TeleQuebecEmission</b></li>
+	<li><b>TeleQuebecLive</b></li>
+	<li><b>TeleQuebecSquat</b></li>
+	<li><b>TeleTask</b></li>
+	<li><b>Telewebion</b></li>
+	<li><b>TennisTV</b></li>
+	<li><b>TenPlay</b></li>
+	<li><b>TF1</b></li>
+	<li><b>TFO</b></li>
+	<li><b>TheIntercept</b></li>
+	<li><b>ThePlatform</b></li>
+	<li><b>ThePlatformFeed</b></li>
+	<li><b>TheScene</b></li>
+	<li><b>TheStar</b></li>
+	<li><b>TheSun</b></li>
+	<li><b>TheWeatherChannel</b></li>
+	<li><b>ThisAmericanLife</b></li>
+	<li><b>ThisAV</b></li>
+	<li><b>ThisOldHouse</b></li>
+	<li><b>TikTok</b></li>
+	<li><b>TikTokUser</b></li>
+	<li><b>tinypic</b>: tinypic.com videos</li>
+	<li><b>TMZ</b></li>
+	<li><b>TMZArticle</b></li>
+	<li><b>TNAFlix</b></li>
+	<li><b>TNAFlixNetworkEmbed</b></li>
+	<li><b>toggle</b></li>
+	<li><b>ToonGoggles</b></li>
+	<li><b>Tosh</b>: Tosh.0</li>
+	<li><b>tou.tv</b></li>
+	<li><b>Toypics</b>: Toypics video</li>
+	<li><b>ToypicsUser</b>: Toypics user profile</li>
+	<li><b>TrailerAddict</b> (Currently broken)</li>
+	<li><b>Trilulilu</b></li>
+	<li><b>TruNews</b></li>
+	<li><b>TruTV</b></li>
+	<li><b>Tube8</b></li>
+	<li><b>TubiTv</b></li>
+	<li><b>Tumblr</b></li>
+	<li><b>tunein:clip</b></li>
+	<li><b>tunein:program</b></li>
+	<li><b>tunein:station</b></li>
+	<li><b>tunein:topic</b></li>
+	<li><b>TunePk</b></li>
+	<li><b>Turbo</b></li>
+	<li><b>tv.dfb.de</b></li>
+	<li><b>TV2</b></li>
+	<li><b>tv2.hu</b></li>
+	<li><b>TV2Article</b></li>
+	<li><b>TV2DK</b></li>
+	<li><b>TV2DKBornholmPlay</b></li>
+	<li><b>TV4</b>: tv4.se and tv4play.se</li>
+	<li><b>TV5MondePlus</b>: TV5MONDE+</li>
+	<li><b>TVA</b></li>
+	<li><b>TVANouvelles</b></li>
+	<li><b>TVANouvellesArticle</b></li>
+	<li><b>TVC</b></li>
+	<li><b>TVCArticle</b></li>
+	<li><b>tvigle</b>: Интернет-телевидение Tvigle.ru</li>
+	<li><b>tvland.com</b></li>
+	<li><b>TVN24</b></li>
+	<li><b>TVNet</b></li>
+	<li><b>TVNoe</b></li>
+	<li><b>TVNow</b></li>
+	<li><b>TVNowAnnual</b></li>
+	<li><b>TVNowNew</b></li>
+	<li><b>TVNowSeason</b></li>
+	<li><b>TVNowShow</b></li>
+	<li><b>tvp</b>: Telewizja Polska</li>
+	<li><b>tvp:embed</b>: Telewizja Polska</li>
+	<li><b>tvp:series</b></li>
+	<li><b>TVPlayer</b></li>
+	<li><b>TVPlayHome</b></li>
+	<li><b>Tweakers</b></li>
+	<li><b>TwitCasting</b></li>
+	<li><b>twitch:chapter</b></li>
+	<li><b>twitch:clips</b></li>
+	<li><b>twitch:profile</b></li>
+	<li><b>twitch:stream</b></li>
+	<li><b>twitch:video</b></li>
+	<li><b>twitch:videos:all</b></li>
+	<li><b>twitch:videos:highlights</b></li>
+	<li><b>twitch:videos:past-broadcasts</b></li>
+	<li><b>twitch:videos:uploads</b></li>
+	<li><b>twitch:vod</b></li>
+	<li><b>twitter</b></li>
+	<li><b>twitter:amplify</b></li>
+	<li><b>twitter:broadcast</b></li>
+	<li><b>twitter:card</b></li>
+	<li><b>udemy</b></li>
+	<li><b>udemy:course</b></li>
+	<li><b>UDNEmbed</b>: 聯合影音</li>
+	<li><b>UFCArabia</b></li>
+	<li><b>UFCTV</b></li>
+	<li><b>UKTVPlay</b></li>
+	<li><b>umg:de</b>: Universal Music Deutschland</li>
+	<li><b>Unistra</b></li>
+	<li><b>Unity</b></li>
+	<li><b>uol.com.br</b></li>
+	<li><b>uplynk</b></li>
+	<li><b>uplynk:preplay</b></li>
+	<li><b>Urort</b>: NRK P3 Urørt</li>
+	<li><b>URPlay</b></li>
+	<li><b>USANetwork</b></li>
+	<li><b>USAToday</b></li>
+	<li><b>ustream</b></li>
+	<li><b>ustream:channel</b></li>
+	<li><b>ustudio</b></li>
+	<li><b>ustudio:embed</b></li>
+	<li><b>Varzesh3</b></li>
+	<li><b>Vbox7</b></li>
+	<li><b>VeeHD</b></li>
+	<li><b>Veoh</b></li>
+	<li><b>Vesti</b>: Вести.Ru</li>
+	<li><b>Vevo</b></li>
+	<li><b>VevoPlaylist</b></li>
+	<li><b>VGTV</b>: VGTV, BTTV, FTV, Aftenposten and Aftonbladet</li>
+	<li><b>vh1.com</b></li>
+	<li><b>vhx:embed</b></li>
+	<li><b>Viafree</b></li>
+	<li><b>vice</b></li>
+	<li><b>vice:article</b></li>
+	<li><b>vice:show</b></li>
+	<li><b>Vidbit</b></li>
+	<li><b>Viddler</b></li>
+	<li><b>Videa</b></li>
+	<li><b>video.google:search</b>: Google Video search</li>
+	<li><b>VideoDetective</b></li>
+	<li><b>videofy.me</b></li>
+	<li><b>videomore</b></li>
+	<li><b>videomore:season</b></li>
+	<li><b>videomore:video</b></li>
+	<li><b>VideoPress</b></li>
+	<li><b>Vidio</b></li>
+	<li><b>VidLii</b></li>
+	<li><b>vidme</b></li>
+	<li><b>vidme:user</b></li>
+	<li><b>vidme:user:likes</b></li>
+	<li><b>Vidzi</b></li>
+	<li><b>vier</b>: vier.be and vijf.be</li>
+	<li><b>vier:videos</b></li>
+	<li><b>viewlift</b></li>
+	<li><b>viewlift:embed</b></li>
+	<li><b>Viidea</b></li>
+	<li><b>viki</b></li>
+	<li><b>viki:channel</b></li>
+	<li><b>vimeo</b></li>
+	<li><b>vimeo:album</b></li>
+	<li><b>vimeo:channel</b></li>
+	<li><b>vimeo:group</b></li>
+	<li><b>vimeo:likes</b>: Vimeo user likes</li>
+	<li><b>vimeo:ondemand</b></li>
+	<li><b>vimeo:review</b>: Review pages on vimeo</li>
+	<li><b>vimeo:user</b></li>
+	<li><b>vimeo:watchlater</b>: Vimeo watch later list, "vimeowatchlater" keyword (requires authentication)</li>
+	<li><b>Vimple</b>: Vimple - one-click video hosting</li>
+	<li><b>Vine</b></li>
+	<li><b>vine:user</b></li>
+	<li><b>Viqeo</b></li>
+	<li><b>Viu</b></li>
+	<li><b>viu:ott</b></li>
+	<li><b>viu:playlist</b></li>
+	<li><b>Vivo</b>: vivo.sx</li>
+	<li><b>vk</b>: VK</li>
+	<li><b>vk:uservideos</b>: VK - User's Videos</li>
+	<li><b>vk:wallpost</b></li>
+	<li><b>vlive</b></li>
+	<li><b>vlive:channel</b></li>
+	<li><b>vlive:playlist</b></li>
+	<li><b>Vodlocker</b></li>
+	<li><b>VODPl</b></li>
+	<li><b>VODPlatform</b></li>
+	<li><b>VoiceRepublic</b></li>
+	<li><b>Voot</b></li>
+	<li><b>VoxMedia</b></li>
+	<li><b>VoxMediaVolume</b></li>
+	<li><b>vpro</b>: npo.nl, ntr.nl, omroepwnl.nl, zapp.nl and npo3.nl</li>
+	<li><b>Vrak</b></li>
+	<li><b>VRT</b>: VRT NWS, Flanders News, Flandern Info and Sporza</li>
+	<li><b>VrtNU</b>: VrtNU.be</li>
+	<li><b>vrv</b></li>
+	<li><b>vrv:series</b></li>
+	<li><b>VShare</b></li>
+	<li><b>VTXTV</b></li>
+	<li><b>vube</b>: Vube.com</li>
+	<li><b>VuClip</b></li>
+	<li><b>VVVVID</b></li>
+	<li><b>VyboryMos</b></li>
+	<li><b>Vzaar</b></li>
+	<li><b>Wakanim</b></li>
+	<li><b>Walla</b></li>
+	<li><b>WalyTV</b></li>
+	<li><b>washingtonpost</b></li>
+	<li><b>washingtonpost:article</b></li>
+	<li><b>wat.tv</b></li>
+	<li><b>WatchBox</b></li>
+	<li><b>WatchIndianPorn</b>: Watch Indian Porn</li>
+	<li><b>WDR</b></li>
+	<li><b>wdr:mobile</b></li>
+	<li><b>WDRElefant</b></li>
+	<li><b>WDRPage</b></li>
+	<li><b>Webcaster</b></li>
+	<li><b>WebcasterFeed</b></li>
+	<li><b>WebOfStories</b></li>
+	<li><b>WebOfStoriesPlaylist</b></li>
+	<li><b>Weibo</b></li>
+	<li><b>WeiboMobile</b></li>
+	<li><b>WeiqiTV</b>: WQTV</li>
+	<li><b>Wistia</b></li>
+	<li><b>wnl</b>: npo.nl, ntr.nl, omroepwnl.nl, zapp.nl and npo3.nl</li>
+	<li><b>WorldStarHipHop</b></li>
+	<li><b>WSJ</b>: Wall Street Journal</li>
+	<li><b>WSJArticle</b></li>
+	<li><b>WWE</b></li>
+	<li><b>XBef</b></li>
+	<li><b>XboxClips</b></li>
+	<li><b>XFileShare</b>: XFileShare based sites: ClipWatching, GoUnlimited, GoVid, HolaVid, Streamty, TheVideoBee, Uqload, VidBom, vidlo, VidLocker, VidShare, VUp, XVideoSharing</li>
+	<li><b>XHamster</b></li>
+	<li><b>XHamsterEmbed</b></li>
+	<li><b>XHamsterUser</b></li>
+	<li><b>xiami:album</b>: 虾米音乐 - 专辑</li>
+	<li><b>xiami:artist</b>: 虾米音乐 - 歌手</li>
+	<li><b>xiami:collection</b>: 虾米音乐 - 精选集</li>
+	<li><b>xiami:song</b>: 虾米音乐</li>
+	<li><b>ximalaya</b>: 喜马拉雅FM</li>
+	<li><b>ximalaya:album</b>: 喜马拉雅FM 专辑</li>
+	<li><b>XMinus</b></li>
+	<li><b>XNXX</b></li>
+	<li><b>Xstream</b></li>
+	<li><b>XTube</b></li>
+	<li><b>XTubeUser</b>: XTube user profile</li>
+	<li><b>Xuite</b>: 隨意窩Xuite影音</li>
+	<li><b>XVideos</b></li>
+	<li><b>XXXYMovies</b></li>
+	<li><b>Yahoo</b>: Yahoo screen and movies</li>
+	<li><b>yahoo:gyao</b></li>
+	<li><b>yahoo:gyao:player</b></li>
+	<li><b>yahoo:japannews</b>: Yahoo! Japan News</li>
+	<li><b>YandexDisk</b></li>
+	<li><b>yandexmusic:album</b>: Яндекс.Музыка - Альбом</li>
+	<li><b>yandexmusic:playlist</b>: Яндекс.Музыка - Плейлист</li>
+	<li><b>yandexmusic:track</b>: Яндекс.Музыка - Трек</li>
+	<li><b>YandexVideo</b></li>
+	<li><b>YapFiles</b></li>
+	<li><b>YesJapan</b></li>
+	<li><b>yinyuetai:video</b>: 音悦Tai</li>
+	<li><b>Ynet</b></li>
+	<li><b>YouJizz</b></li>
+	<li><b>youku</b>: 优酷</li>
+	<li><b>youku:show</b></li>
+	<li><b>YouNowChannel</b></li>
+	<li><b>YouNowLive</b></li>
+	<li><b>YouNowMoment</b></li>
+	<li><b>YouPorn</b></li>
+	<li><b>YourPorn</b></li>
+	<li><b>YourUpload</b></li>
+	<li><b>youtube</b>: YouTube.com</li>
+	<li><b>youtube:channel</b>: YouTube.com channels</li>
+	<li><b>youtube:favorites</b>: YouTube.com favourite videos, ":ytfav" for short (requires authentication)</li>
+	<li><b>youtube:history</b>: Youtube watch history, ":ythistory" for short (requires authentication)</li>
+	<li><b>youtube:live</b>: YouTube.com live streams</li>
+	<li><b>youtube:playlist</b>: YouTube.com playlists</li>
+	<li><b>youtube:playlists</b>: YouTube.com user/channel playlists</li>
+	<li><b>youtube:recommended</b>: YouTube.com recommended videos, ":ytrec" for short (requires authentication)</li>
+	<li><b>youtube:search</b>: YouTube.com searches</li>
+	<li><b>youtube:search:date</b>: YouTube.com searches, newest videos first</li>
+	<li><b>youtube:search_url</b>: YouTube.com search URLs</li>
+	<li><b>youtube:show</b>: YouTube.com (multi-season) shows</li>
+	<li><b>youtube:subscriptions</b>: YouTube.com subscriptions feed, "ytsubs" keyword (requires authentication)</li>
+	<li><b>youtube:user</b>: YouTube.com user videos (URL or "ytuser" keyword)</li>
+	<li><b>youtube:watchlater</b>: Youtube watch later list, ":ytwatchlater" for short (requires authentication)</li>
+	<li><b>Zapiks</b></li>
+	<li><b>Zaq1</b></li>
+	<li><b>Zattoo</b></li>
+	<li><b>ZattooLive</b></li>
+	<li><b>ZDF</b></li>
+	<li><b>ZDFChannel</b></li>
+	<li><b>zingmp3</b>: mp3.zing.vn</li>
+	<li><b>Zype</b></li>
+</ul>
+
+<base-valine />
+<el-backtop :visibility-height="0"></el-backtop>
