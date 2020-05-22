@@ -9,7 +9,7 @@
           class="directory-h3-li"
           v-for="(item,index) in directory"
         >
-          <a :href="item.href">{{item.name}}</a>
+          <a @click="scrollTo(item.href)">{{item.name}}</a>
           <!-- h4 -->
           <ul class="directory-h4-ul">
             <li
@@ -17,7 +17,7 @@
               class="directory-h4-li"
               v-for="(_item,_index) in item.child"
             >
-              <a :href="_item.href">{{_item.name}}</a>
+              <a @click="scrollTo(_item.href)">{{_item.name}}</a>
               <!-- h5 -->
               <ul class="directory-h5-ul">
                 <li
@@ -25,7 +25,7 @@
                   class="directory-h5-li"
                   v-for="(__item,__index) in _item.child"
                 >
-                  <a :href="__item.href">{{__item.name}}</a>
+                  <a @click="scrollTo(__item.href)">{{__item.name}}</a>
                 </li>
               </ul>
             </li>
@@ -95,6 +95,17 @@ export default {
       }
 
       return dirObj
+    },
+    scrollTo(href) {
+      window.history.pushState({}, 0, window.location.href.split('#')[0] + href)
+
+      href = href.split('#')[1]
+      window.scrollTo({
+        // 通过offsetYop获取元素位置
+        // -100是为了避免它直接滑动到屏幕顶部，怪丑的
+        top: document.getElementById(href).offsetTop - 100,
+        behavior: 'smooth' // 平滑滚动
+      })
     }
   }
 }

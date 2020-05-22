@@ -6,6 +6,9 @@
         "name": "css",
         "type": "css"
     }, {
+        "name": "javascript",
+        "type": ""
+    }, {
         "name": "小程序",
         "type": "applets"
     }, {
@@ -33,6 +36,17 @@
         "type": "git"
     }],
     "blog": [{
+        "title": "使用JS实现平滑滚动至锚点",
+        "tag": [{
+            "name": "vue",
+            "type": "vue"
+        }, {
+            "name": "javascript",
+            "type": ""
+        }],
+        "url": "/blog/js/SmoothScrollAnchor.html",
+        "date": "2020/05/22 14:34:28"
+    }, {
         "title": "视频下载工具 - youtube-dl",
         "tag": [{
             "name": "movie",

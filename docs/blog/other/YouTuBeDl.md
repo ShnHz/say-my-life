@@ -48,14 +48,14 @@ sudo port install youtube-dl
 youtube-dl [url] //程序自动选择一个最清晰的格式下载
 ```
 
-#### 查看视频所有类型,只看不下载
+#### 查看视频所有类型只看不下载
 ```
 youtube-dl -F [url]
 ```
 
-#### 下载指定类型视频,id = -F显示的列表编号
+#### 下载指定类型视频
 ```
-youtube-dl -f [id] [url]
+youtube-dl -f [id] [url] //id = -F 显示的列表编号
 ```
 
 #### 下载全部格式视频
