@@ -29,7 +29,29 @@ app.post('/addblog', bodyParser.json(), (req, res) => {
     let mdFilePath = urlSpd[0] + '.md'
     let mdFile = urlSpx.join('/')
 
-    let mdContent = 
+    let mdContent = ''
+
+    if(req.body.addblog.dir){
+        mdContent = 
+`---
+pageClass: blog-catalog
+---
+
+## ${req.body.addblog.title}
+<p class="date">${req.body.addblog.date} 
+<span id="${req.body.addblog.url}" class="leancloud_visitors">
+    <i class="shni shn-eye-fill" />
+    <i class="leancloud-visitors-count"></i>
+</span>
+</p>
+
+内容
+
+<base-valine />
+<el-backtop :visibility-height="0"></el-backtop>
+`
+}else{
+    mdContent = 
 `---
 pageClass: blog
 ---
@@ -47,6 +69,8 @@ pageClass: blog
 <base-valine />
 <el-backtop :visibility-height="0"></el-backtop>
 `
+}
+
 
     async function createMd() {
         await dirExists('./docs/' + mdFile);
@@ -79,7 +103,7 @@ pageClass: blog
     })
 })
 
-app.listen(3000, () => console.log('Server is running...'))
+app.listen(3000, () => console.log('服务启动成功,http://localhost:3000/'))
 
 /**
  * 读取路径信息

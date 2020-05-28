@@ -36,6 +36,16 @@
         "type": "git"
     }],
     "blog": [{
+        "title": "安利一个我自己写的一个小插件：vue-touch-box",
+        "tag": [{
+            "name": "vue",
+            "type": "vue"
+        }],
+        "url": "/blog/vue/VueTouchBox.html",
+        "date": "2020/05/28 15:41:20",
+        "dir": false,
+        "top": true
+    }, {
         "title": "使用JS实现平滑滚动至锚点",
         "tag": [{
             "name": "vue",

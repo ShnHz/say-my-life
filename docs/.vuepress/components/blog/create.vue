@@ -20,6 +20,10 @@
             v-for="item in tagList"
           ></el-option>
         </el-select>
+        <el-select placeholder="是否启用目录" style="margin-top:10px;width:100%" v-model="form.dir">
+          <el-option :value="false" label="不启用目录"></el-option>
+          <el-option :value="true" label="启用目录"></el-option>
+        </el-select>
         <el-input
           :autosize="{minRows: 50}"
           :rows="2"
@@ -66,7 +70,8 @@ export default {
         title: '安利一个我自己写的小程序：AA计算器',
         tag: ['vue'],
         date: this.mixin_getToday('yyyy/MM/dd hh:mm:ss'),
-        content: ''
+        content: '',
+        dir: false
       },
 
       blogInfo: {},
@@ -106,10 +111,9 @@ export default {
         title: this.form.title,
         tag: tag,
         url: this.form.id,
-        date: this.form.date
+        date: this.form.date,
+        dir: this.form.dir
       }
-
-      console.log(blog)
 
       this.$confirm(`打开console，确认blog对象是否正确`, '提示', {
         confirmButtonText: '确定',

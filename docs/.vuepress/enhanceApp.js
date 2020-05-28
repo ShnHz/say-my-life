@@ -8,6 +8,7 @@ import '../.vuepress/public/iconfont/shn-ui/iconfont.css'
 
 import vueWaterfallEasy from 'vue-waterfall-easy'
 import ElementUI from 'element-ui';
+import VueTouchBox from 'vue-touch-box';
 import '../.vuepress/public/css/element-variables.scss'
 import VueParticles from 'vue-particles'
 import VueCookies from 'vue-cookies'
@@ -23,6 +24,7 @@ export default ({
     Vue.use(VueHighlightJS)
     Vue.use(ElementUI)
 
+    Vue.use(VueTouchBox)
     Vue.use(VueParticles)
     Vue.use(VueCookies)
     Vue.mixin(Mixins);

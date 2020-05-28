@@ -7793,7 +7793,7 @@ sass-graph@^2.2.4:
     scss-tokenizer "^0.2.3"
     yargs "^7.0.0"
 
-sass-loader@^8.0.0:
+sass-loader@^8.0.0, sass-loader@^8.0.2:
   version "8.0.2"
   resolved "https://registry.npm.taobao.org/sass-loader/download/sass-loader-8.0.2.tgz?cache=0&sync_timestamp=1578921816923&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fsass-loader%2Fdownload%2Fsass-loader-8.0.2.tgz#debecd8c3ce243c76454f2e8290482150380090d"
   integrity sha1-3r7NjDziQ8dkVPLoKQSCFQOACQ0=
@@ -9237,12 +9237,20 @@ vue-template-es2015-compiler@^1.9.0:
   resolved "https://registry.npm.taobao.org/vue-template-es2015-compiler/download/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha1-HuO8mhbsv1EYvjNLsV+cRvgvWCU=
 
+vue-touch-box@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npm.taobao.org/vue-touch-box/download/vue-touch-box-1.0.0.tgz#d475713891ba5a906b93640a04953995d37d8fb5"
+  integrity sha1-1HVxOJG6WpBrk2QKBJU5ldN9j7U=
+  dependencies:
+    sass-loader "^8.0.2"
+    vue "^2.6.11"
+
 vue-waterfall-easy@^2.4.4:
   version "2.4.4"
   resolved "https://registry.npm.taobao.org/vue-waterfall-easy/download/vue-waterfall-easy-2.4.4.tgz#a990ef3f7f7eb88dedc5ef40e064c4e68908e84c"
   integrity sha1-qZDvP39+uI3txe9A4GTE5okI6Ew=
 
-vue@^2.2.6, vue@^2.6.10, vue@^2.6.6:
+vue@^2.2.6, vue@^2.6.10, vue@^2.6.11, vue@^2.6.6:
   version "2.6.11"
   resolved "https://registry.npm.taobao.org/vue/download/vue-2.6.11.tgz#76594d877d4b12234406e84e35275c6d514125c5"
   integrity sha1-dllNh31LEiNEBuhONSdcbVFBJcU=
