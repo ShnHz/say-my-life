@@ -24,6 +24,10 @@
           <el-option :value="false" label="不启用目录"></el-option>
           <el-option :value="true" label="启用目录"></el-option>
         </el-select>
+        <el-select placeholder="是否置顶" style="margin-top:10px;width:100%" v-model="form.top">
+          <el-option :value="false" label="不置顶"></el-option>
+          <el-option :value="true" label="置顶"></el-option>
+        </el-select>
         <el-input
           :autosize="{minRows: 50}"
           :rows="2"
@@ -71,7 +75,8 @@ export default {
         tag: ['vue'],
         date: this.mixin_getToday('yyyy/MM/dd hh:mm:ss'),
         content: '',
-        dir: false
+        dir: false,
+        top:false
       },
 
       blogInfo: {},
@@ -112,7 +117,8 @@ export default {
         tag: tag,
         url: this.form.id,
         date: this.form.date,
-        dir: this.form.dir
+        dir: this.form.dir,
+        top:this.form.top
       }
 
       this.$confirm(`打开console，确认blog对象是否正确`, '提示', {

@@ -31,9 +31,9 @@ app.post('/addblog', bodyParser.json(), (req, res) => {
 
     let mdContent = ''
 
-    if(req.body.addblog.dir){
-        mdContent = 
-`---
+    if (req.body.addblog.dir) {
+        mdContent =
+            `---
 pageClass: blog-catalog
 ---
 
@@ -50,9 +50,9 @@ pageClass: blog-catalog
 <base-valine />
 <el-backtop :visibility-height="0"></el-backtop>
 `
-}else{
-    mdContent = 
-`---
+    } else {
+        mdContent =
+            `---
 pageClass: blog
 ---
 
@@ -69,8 +69,7 @@ pageClass: blog
 <base-valine />
 <el-backtop :visibility-height="0"></el-backtop>
 `
-}
-
+    }
 
     async function createMd() {
         await dirExists('./docs/' + mdFile);
