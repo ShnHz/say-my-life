@@ -17,13 +17,13 @@ pageClass: blog
 
 第一个.将页面html转换成图片
 
-```js
+```bash
 npm install --save html2canvas
 ```
 
 第二个.将图片生成pdf
 
-```js
+```bash
 npm install jspdf --save
 ```
 

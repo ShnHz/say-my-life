@@ -10,51 +10,44 @@ pageClass: blog
 </span>
 </p>
 
-# vue-touch-box
-
 [![Vue 2.x](https://img.shields.io/badge/Vue-2.x-brightgreen.svg)](https://vuejs.org/v2/guide/)
 [![npm](https://img.shields.io/npm/v/vue-touch-box.svg)](https://www.npmjs.com/package/vue-touch-box)
 [![npm-downloads](https://img.shields.io/npm/dm/vue-touch-box.svg)](https://www.npmjs.com/package/vue-touch-box)
 [![Github](https://img.shields.io/github/stars/ShnHz/vue-touch-box.svg?style=social&label=Star&maxAge=2592000)](https://github.com/ShnHz/vue-touch-box)
 
+[English Doc](https://github.com/ShnHz/vue-touch-box)
+
 PC touch to elements was never this easy!
 
 This is for `vue 2.x`
 
-## Demo
-
+## DEMO
 <div style="width: 100%;height: 500px;overflow: scroll;margin-top:20px" v-touch-box>
-    <h4 style="margin-bottom:20px">touch this</h4>
     <ul>
     <li :key="index" v-for="index in 100">
-        <span v-for="index in 100" :key="index">{{index}}</span>
+        <span v-for="index in 100" :key="index">touch{{index}}!</span>
     </li>
     </ul>
 </div>
 
-## Installing
+## 安装
 
-This package is available on npm.
+该插件可以通过npm安装。
 
-<p class="warning">
-    If you used this package before, please ensure you are using the right one, since it has been renamed from `vue-touch-box` to `vue-touch-box`
-</p>
-
-Using npm:
+npm:
 ```bash
 npm install --save vue-touch-box
 ```
 
-Using yarn:
+yarn:
 ```bash
 yarn add vue-touch-box
 ```
 
-## Usage
+## 使用方法
 
-vue-touch-box can be used as a vue directive.
+vue-touch-box 可用作 vue 指令.
 
-### As a vue directive
 JS
 ```js
 import VueTouchBox from 'vue-touch-box';
@@ -71,7 +64,11 @@ HTML
 
 ## Options
 
-#### v1.0.0 none
+|  参数  | 说明 | 默认值 |
+|  :----  | :----  | :----: |
+| speed  | 拖动速度 | 1 |
+| mobile  | 是否开启移动端 | false |
+| inertia  | 是否开启滚动惯性 | true |
 
 <base-valine />
 <el-backtop :visibility-height="0"></el-backtop>

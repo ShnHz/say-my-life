@@ -124,7 +124,7 @@ footer: Happy Life Copyright © 2019-present Sang Hang Ning
 
 写一个脚本<code class="default">deploy.sh</code>文件,Git Bash 执行一下就可以了
 
-```js
+```bash
 ###!/usr/bin/env sh
 
 ### 确保脚本抛出遇到的错误

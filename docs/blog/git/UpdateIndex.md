@@ -21,14 +21,14 @@ git仓库中有某个必要的配置文件，这个文件应该存在，但是�
 
 该命令的作用是，让git在搜索文件列表时，忽略某个文件，这样该文件即使有修改，git也不会关心。
 
-```js
+```bash
 #例子：
 git update-index --skip-worktree filepath
 ```
 
 使用这个命令，时间久了，可能会忘记自己忽略过哪些文件，这时候可以使用<code class="default">git ls-files -v . | grep "^S"</code> / <code class="default">git ls-files -v . | findstr "^S"</code>命令找出来忽略过的文件。
 
-```js
+```bash
 #例子：Linux
 git ls-files -v . | grep "^S" 
  
@@ -40,7 +40,7 @@ git ls-files -v . | findstr "^S"
 
 不想继续忽略该文件时，使用<code class="default">git update-index --no-skip-worktree</code>命令，来让git不再忽略该文件。
 
-```js
+```bash
 #例子：
 git update-index --no-skip-worktree web/main.dart
 ```

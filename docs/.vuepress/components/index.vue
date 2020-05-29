@@ -81,9 +81,9 @@
 
         <div class="card-wrap card-love">
           <div class="avatar-info">
-            <img alt src="https://cdn.chenyingshuang.cn/index/shn_avatar.jpg" />
+            <img alt src="https://cdn.chenyingshuang.cn/life/diary/2020-05-20-1.jpg" />
             <i class="shni shn-heart-fill"></i>
-            <img alt src="https://cdn.chenyingshuang.cn/index/cys_avatar.jpg" />
+            <img alt src="https://cdn.chenyingshuang.cn/life/diary/2020-05-20-2.jpg" />
           </div>
           <p>{{loveInfo.daysNum}} 天 {{loveInfo.hoursNum}} 时 {{loveInfo.minutesNum}} 分 {{loveInfo.secondsNum}} 秒</p>
         </div>

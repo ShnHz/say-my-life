@@ -25,17 +25,17 @@ pageClass: blog-catalog
 <code class="default">Windows</code>用户<a href="https://yt-dl.org/latest/youtube-dl.exe" rel="nofollow">点击下载</a>并将其放置在其PATH上除％SYSTEMROOT％\ System32之外的任何位置（例如，不要放在C:\Windows\System32中）
 
 你还可以直接使用pip：
-```
+```bash
 sudo -H pip install --upgrade youtube-dl
 ```
 如果您已经安装了youtube-dl，那么他的命令将对其进行更新。
 
 <code class="default">macOS</code>用户可以使用<code class="default">Homebrew</code>安装
-```
+```bash
 brew install youtube-dl
 ```
 或者使用<code class="default">MacPorts</code>
-```
+```bash
 sudo port install youtube-dl
 ```
 
@@ -44,28 +44,28 @@ sudo port install youtube-dl
 命令模式输入
 
 #### 下载
-```
+```bash
 youtube-dl [url] //程序自动选择一个最清晰的格式下载
 ```
 
 #### 查看视频所有类型只看不下载
-```
+```bash
 youtube-dl -F [url]
 ```
 
 #### 下载指定类型视频
-```
+```bash
 youtube-dl -f [id] [url] //id = -F 显示的列表编号
 ```
 
 #### 下载全部格式视频
-```
+```bash
 youtube-dl --all-formats [url]
 ```
 
 #### 下载youtube字幕及视频
 有的youtube视频是有字幕的可供下载的，但不是全部。<code class="default">–write-sub</code>：加入字幕文件，<code class="default">–all-subs</code>：如果有字幕存在则全部下载
-```
+```bash
 youtube-dl --write-sub --all-subs [url]
 
 youtubd-dl --write-sub [url] //这样会下载一个vtt格式的英文字幕和mkv格式的1080p视频下来

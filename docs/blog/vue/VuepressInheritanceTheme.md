@@ -23,7 +23,7 @@ pageClass: blog
 
 命令行里输入
 
-```js
+```bash
 vuepress eject
 ```
 
