@@ -156,7 +156,7 @@ export default {
       bannerBg: 1,
 
       loveInfo: {
-        deadline: '2019/06/21',
+        deadline: '2019/06/29',
         daysNum: '∞',
         hoursNum: '∞',
         minutesNum: '∞',
