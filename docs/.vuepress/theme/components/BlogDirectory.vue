@@ -99,7 +99,9 @@ export default {
     scrollTo(href) {
       window.history.pushState({}, 0, window.location.href.split('#')[0] + href)
 
-      href = href.split('#')[1]
+      console.log(href)
+
+      href = href.split('#')[1].toLowerCase()
       window.scrollTo({
         // 通过offsetYop获取元素位置
         // -100是为了避免它直接滑动到屏幕顶部，怪丑的
