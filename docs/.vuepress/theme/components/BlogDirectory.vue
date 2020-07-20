@@ -146,14 +146,39 @@ export default {
       word-wrap: normal;
       white-space: nowrap;
       text-overflow: ellipsis;
+      > a {
+        font-weight: 600;
+      }
       .directory-h4-ul {
         line-height: 2;
         .directory-h4-li {
-          padding-left: 20px;
+          position: relative;
+          padding-left: 15px;
+          &::before {
+            content: '';
+            width: 4px;
+            height: 4px;
+            position: absolute;
+            left: 4px;
+            top: 12px;
+            border-radius: 50%;
+            background: #000;
+          }
           .directory-h5-ul {
             line-height: 2;
             .directory-h5-li {
-              padding-left: 20px;
+              position: relative;
+              padding-left: 15px;
+              &::before {
+                content: '';
+                width: 4px;
+                height: 4px;
+                position: absolute;
+                left: 4px;
+                top: 12px;
+                border-radius: 50%;
+                background: #000;
+              }
             }
           }
         }
