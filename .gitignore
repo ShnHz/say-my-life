@@ -2,6 +2,10 @@
 node_modules
 docs/.vuepress/dist
 .vuepress/*
+docs/.vuepress/config.js
+docs/journey
+docs/life
+
 
 # local env files
 .env.local
