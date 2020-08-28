@@ -1,4 +1,0 @@
----
-pageClass: journey
----
-<map-stroke/>
