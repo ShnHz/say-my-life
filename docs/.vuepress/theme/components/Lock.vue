@@ -1,6 +1,6 @@
 <template>
   <div :class="{'hide':!$store.state.lock}" class="lock-box flex">
-    <div @click="showPwbox">
+    <div @click="showPwbox" class="lock-box-content">
       <i class="shni shn-lock"></i>
       <p>该内容已被锁定，输入密码后解锁</p>
       <p class="annotation">Ctrl + Enter 快捷键唤起输入面板</p>

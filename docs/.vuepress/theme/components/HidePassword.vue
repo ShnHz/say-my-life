@@ -1,34 +1,72 @@
 <template>
-  <div :class="{'show':show,'unlock':!lock}" class="hide-password">
+  <div
+    v-clickoutside="clickoutside"
+    :class="{'show':show,'unlock':!lock}"
+    class="hide-password"
+  >
     <i
       :class="{'center':lock,'left':!lock,'error':error,'shake-slow shake-constant shake-constant--hover':shake && error}"
       class="shni shn-lock"
     ></i>
-    <i :class="{'center':!lock,'right':lock}" class="shni shn-unlock"></i>
-    <div :class="{'hide':!lock}" @click="inputFocus" class="code-input-main">
+    <i
+      :class="{'center':!lock,'right':lock}"
+      class="shni shn-unlock"
+    ></i>
+    <div
+      :class="{'hide':!lock}"
+      @click="inputFocus"
+      class="code-input-main"
+    >
       <div class="code-input-main-item">{{code[0] ? '*' : ''}}</div>
       <div class="code-input-main-item">{{code[1] ? '*' : ''}}</div>
       <div class="code-input-main-item">{{code[2] ? '*' : ''}}</div>
       <div class="code-input-main-item">{{code[3] ? '*' : ''}}</div>
     </div>
-    <input maxlength="4" ref="input" type="tel" v-model="code" />
+    <input
+      maxlength="4"
+      ref="input"
+      type="tel"
+      v-model="code"
+    />
   </div>
 </template>
 <script>
 import md5 from 'js-md5'
 
 export default {
+  directives: {
+    clickoutside: {
+      bind(el, binding, vnode) {
+        function clickHandler(e) {
+          if (el.contains(e.target)) {
+            return false
+          }
+          if (binding.expression) {
+            binding.value(e)
+          }
+        }
+        el.__vueClickOutside__ = clickHandler
+
+        document.addEventListener('click', clickHandler)
+      },
+      unbind(el, binding) {
+        document.removeEventListener('click', el.__vueClickOutside__)
+
+        delete el.__vueClickOutside__
+      },
+    },
+  },
   data() {
     return {
       show: false,
       code: '',
       lock: true,
       error: false,
-      shake: false
+      shake: false,
     }
   },
   watch: {
-    code: function(val) {
+    code: function (val) {
       let _this = this
       this.error = false
       if (val.length === 4) {
@@ -53,27 +91,27 @@ export default {
         this.lock = true
       }
     },
-    lock: function(val) {
+    lock: function (val) {
       this.$store.commit('setLock', val)
     },
-    getVisible: function(val) {
+    getVisible: function (val) {
       if (!this.show && val) {
         this.show = true
         this.inputFocus()
       }
-    }
+    },
   },
   computed: {
     getVisible() {
       return this.$store.state.pwboxVisible
-    }
+    },
   },
   created() {
     this.lock = this.$store.state.lock
   },
   mounted() {
     let _this = this
-    document.onkeydown = function(e) {
+    document.onkeydown = function (e) {
       var event = e || event
       if (event.keyCode == 13 && event.ctrlKey) {
         _this.$refs.input.focus()
@@ -97,12 +135,23 @@ export default {
     handleClose() {
       this.show = false
     },
+    clickoutside(e) {
+      let t = true
+      e.path.forEach((item) => {
+        if (item.className && item.className.includes('lock-box-content')) {
+          t = false
+        }
+      })
+      if (t) {
+        this.show = false
+      }
+    },
     unlock() {
       document.onkeydown = undefined
       this.inputBlur()
       this.$emit('unLock')
-    }
-  }
+    },
+  },
 }
 </script>
 <style lang="scss" scoped>
@@ -110,7 +159,7 @@ export default {
   z-index: 9999;
   width: 200px;
   height: 160px;
-  position: fixed;
+  position: fixed !important;
   top: -230px;
   left: 50%;
   padding: 50px 20px 20px;
