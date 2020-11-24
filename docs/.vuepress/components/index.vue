@@ -23,7 +23,7 @@
           >
             <router-link :to="item.url" class="article-title">{{item.title}}</router-link>
 
-            <p class="article-date">{{mixin_getDate(item.date,'MC dd,yyyy')}}</p>
+            <p class="article-date">{{mixin_getDate(item.date,'MM dd,yyyy')}}</p>
 
             <p class="article-summary" v-if="item.summary">{{item.summary}}</p>
 
