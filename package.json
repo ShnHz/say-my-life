@@ -26,7 +26,7 @@
     "core-js": "^2.6.10",
     "element-ui": "^2.13.0",
     "gsap": "^2.1.3",
-    "highlight.js": "^9.15.10",
+    "highlight.js": "^10.4.1",
     "js-md5": "^0.7.3",
     "leancloud-storage": "^4.5.3",
     "markdown-it-vue": "^1.0.11",
