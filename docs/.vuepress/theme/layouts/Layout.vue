@@ -50,7 +50,7 @@ export default {
       isSidebarOpen: false,
       loading: true,
 
-      pageVisible: true
+      pageVisible: true,
     }
   },
 
@@ -94,15 +94,15 @@ export default {
         {
           'no-navbar': !this.shouldShowNavbar,
           'sidebar-open': this.isSidebarOpen,
-          'no-sidebar': !this.shouldShowSidebar
+          'no-sidebar': !this.shouldShowSidebar,
         },
-        userPageClass
+        userPageClass,
       ]
-    }
+    },
   },
   watch: {
     $route: {
-      handler: function(to, from) {
+      handler: function (to, from) {
         if (this.$page.frontmatter.home) {
           this.pageVisible = false
         } else {
@@ -113,8 +113,8 @@ export default {
           }
         }
       },
-      immediate: true
-    }
+      immediate: true,
+    },
   },
   mounted() {
     this.$router.afterEach(() => {
@@ -138,7 +138,7 @@ export default {
     onTouchStart(e) {
       this.touchStart = {
         x: e.changedTouches[0].clientX,
-        y: e.changedTouches[0].clientY
+        y: e.changedTouches[0].clientY,
       }
     },
 
@@ -170,7 +170,9 @@ export default {
           '/life/diary/2019-11.html',
           '/life/diary/2020-03.html',
           '/life/diary/2020-04.html',
-          '/life/diary/2020-05.html'
+          '/life/diary/2020-05.html',
+          '/life/diary/2020-07.html',
+          '/life/diary/2020-09.html',
         ]
 
         if (haveLockPath.indexOf(this.$route.path) > -1) {
@@ -181,8 +183,8 @@ export default {
       } else {
         return false
       }
-    }
-  }
+    },
+  },
 }
 </script>
 <style lang="scss">

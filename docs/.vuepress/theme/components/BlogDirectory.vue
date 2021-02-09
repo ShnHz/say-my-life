@@ -99,8 +99,6 @@ export default {
     scrollTo(href) {
       window.history.pushState({}, 0, window.location.href.split('#')[0] + href)
 
-      console.log(href)
-
       href = href.split('#')[1].toLowerCase()
       window.scrollTo({
         // 通过offsetYop获取元素位置

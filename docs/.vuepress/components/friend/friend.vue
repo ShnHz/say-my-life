@@ -9,6 +9,8 @@
           <a href="mailto:664652740@qq.com">664652740@qq.com</a>，或在下方留言区留言
         </p>
 
+        <p>如果我没有回复的话，可以直接滴滴QQ，一般都是我没看见</p>
+
         <div class="format-wrap">
           <p>名字： 野宁新之助</p>
           <p>
