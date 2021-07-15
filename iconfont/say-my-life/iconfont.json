@@ -1,0 +1,30 @@
+{
+  "id": "1759409",
+  "name": "say-my-life",
+  "font_family": "say-my-life-i",
+  "css_prefix_text": "say-my-life-i-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "490375",
+      "name": "music_note",
+      "font_class": "musicnote",
+      "unicode": "ec4f",
+      "unicode_decimal": 60495
+    },
+    {
+      "icon_id": "3402343",
+      "name": "月亮",
+      "font_class": "yueliang",
+      "unicode": "e6b8",
+      "unicode_decimal": 59064
+    },
+    {
+      "icon_id": "5296051",
+      "name": "太阳",
+      "font_class": "taiyang",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    }
+  ]
+}

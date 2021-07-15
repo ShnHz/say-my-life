@@ -1,0 +1,56 @@
+/* 改变主题色变量 */
+$--color-primary: #3eaf7c;
+
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import "~element-ui/packages/theme-chalk/src/index";
+
+
+.el-checkbox.is-checked {
+    .el-checkbox__inner {
+        background-color: #3eaf7c !important;
+        border-color: #3eaf7c !important;
+    }
+}
+
+.el-checkbox.delayed.is-checked {
+    .el-checkbox__inner {
+        background-color: #fab905 !important;
+        border-color: #fab905 !important;
+    }
+}
+
+.el-checkbox.delete.is-checked {
+    .el-checkbox__inner {
+        background-color: #f56c6c !important;
+        border-color: #f56c6c !important;
+
+        &::after {
+            transform: rotate(90deg) scaleY(1) !important;
+            border-bottom: 0;
+        }
+    }
+}
+
+.el-notification.main-them-notify {
+    background: #3eaf7c;
+    border: none;
+
+    .el-notification__content {
+        margin-top: 0px;
+        color: #fff;
+    }
+
+    .el-notification__closeBtn {
+        color: #fff;
+    }
+}
+
+.el-notification.ercode-notify {
+    width: auto;
+}
+
+.el-date-table td {
+    width: 44px;
+}

@@ -1,0 +1,29 @@
+@font-face {font-family: "say-my-life-i";
+  src: url('iconfont.eot?t=1587892701598'); /* IE9 */
+  src: url('iconfont.eot?t=1587892701598#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAOwAAsAAAAACAQAAANkAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDHAqDBIJtATYCJAMQCwoABCAFhSkHSBsbBxEVnIvIfiaYpz7yw0K+jcKy80lz14MH9K96+ckKqM6qVtZJbMUSHByobmrIMQDMXNqxFIIEyFUY2p5X7jgrR3EdW5dycThtWnkgfxcAjjl1zE0BpnnnYw0bS7QLNEFrGV7bpTqs7RCANf7EImbMikvDEgXtJwBRV11ZjGVGimoIFFgiMK+YqhCrMMNSW6xdB1YG3xefGCYsQcNMQocmVcwsY8pbPifKIdMQeR4C2nRqQJwFEogFFIiqSm0JMrLGIrHW3RWjAEtG0OBt3anPiSYT0o/CtcS/PJBoCBDmUH9bAEagTcJbHGrCOwVqNB6IBvQH2EoBYAlYAE3ACSjOl1CBwMze39GWvcO21g5rbUi3xDDbaLN0bKnBkLHxqM1+t/XiuH6m0Zg52zDOY8Psox56fbpO12u/4Ygwy7S0cVh62E2tO1Rj0KWXrqo3ZhgM5WXrlrhXbJjtUblxqVv5+qEGnUJYmmk0VC9J79LKZDpy5Nis8tJlpfY7y2dFn+S/4wZ586LDWrtge7YgnqeFORZrs2eLomHh6f4c9g+5vcbh4i25Qe7U6Rgx5LbqdrD9SgdHvMo+ON8u2GP2bq9bt712OaW1t6c57/a8dctrt1Nqe0eq382bm30Ou/wtUfMtPmcfpGaKV8lZ2VlfbFNSFq/SG2Slvls0qdFizRqLJquk+vokqyYZaa2k6eIjpACQLYGfqfwpW35dN7Rv7x8XOkz4Y2lz6TUPr7U8wRhThWyB90/rTPtRtI4lymBQmVIa06GavooZmMF9i7FmCvg9TnDm6RR6N0jUAjuJBqBhQTBI7IhCKuwoMMOG6WCOHQlgTQy5s21wYQESoayAaDYTEHhzFTTseQISbz4hFF6YgRnuIoBtXoUdCdZkiMQlbQgX+1nWKoziRtcPic2JbWLdN/Pp4+dBGL18w63B1GJ66tN/1CY50TxMnOMLCXXaEe3pFlUmrjnSZYbdEEKmUvMDVoe7ajmMI+ONBptjt+dYYRQ3un5IbE7sddY9zXz6SH5vEEYv33BrMLVLjpXafwziykKNpXmYuiK/uKl7xi2ToPXTLapMYnzNkS6HcEcIGbilutMDVof7AHM5jKwSd+UOl8GP758N5EAvoIQmpFDCjF392sSmrNh+VgQxyW3UyCeQdB0=') format('woff2'),
+  url('iconfont.woff?t=1587892701598') format('woff'),
+  url('iconfont.ttf?t=1587892701598') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1587892701598#say-my-life-i') format('svg'); /* iOS 4.1- */
+}
+
+.say-my-life-i {
+  font-family: "say-my-life-i" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.say-my-life-i-musicnote:before {
+  content: "\ec4f";
+}
+
+.say-my-life-i-yueliang:before {
+  content: "\e6b8";
+}
+
+.say-my-life-i-taiyang:before {
+  content: "\e600";
+}
+
