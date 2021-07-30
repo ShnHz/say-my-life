@@ -56,7 +56,7 @@ export default {
     this.height = window.innerHeight - 58 + 'px'
     this.$nextTick(function() {
       let _this = this
-      _this.loadScript('XX997fp9jKEMv6p70M8lB4i4jIq3npRu').then(BMap => {
+      _this.loadScript('输入你自己百度地图申请的ak').then(BMap => {
         var map = new BMap.Map('map')
         var point = new BMap.Point(120.19, 30.26)
         map.centerAndZoom(point, 5)
@@ -68,7 +68,7 @@ export default {
         map.enableScrollWheelZoom(true)
         map.enableDoubleClickZoom(true)
         map.setMapStyleV2({
-          styleId: 'ea7b8a5ea93d9e2b21ee89764a227c4a'
+          styleId: '地图styleId'
         })
 
         const deviceSize = new BMap.Size(17, 17) //图标大小
