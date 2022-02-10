@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.0.0-rc.1",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
     "vue-particles": "^1.0.9",
