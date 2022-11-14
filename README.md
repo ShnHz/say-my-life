@@ -2,7 +2,7 @@
 
 See more content from [my blog](https://www.sanghangning.cn)
 
-[![ShnHz's github stats](https://github-readme-stats.vercel.app/api?username=ShnHz&show_icons=true&include_all_commits=true)](https://github.com/ShnHz)
+![ShnHz's GitHub stats](https://github-readme-stats.vercel.app/api?username=ShnHz&show_icons=true&theme=dark&include_all_commits&count_private=true)
 
 <!-- #
 ### - 新增blog
