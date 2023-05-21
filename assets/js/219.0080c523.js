@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[219],{816:function(t,e,n){"use strict";n.r(e);var s=n(24),l=Object(s.a)({},(function(){var t=this.$createElement,e=this._self._c||t;return e("ContentSlotsDistributor",{attrs:{"slot-key":this.$parent.slotKey}},[e("p",[this._v("14块钱买的，画面可玩性贼强，是我体验过的最好玩的横版跳跃游戏，强烈推荐。")])])}),[],!1,null,null,null);e.default=l.exports}}]);

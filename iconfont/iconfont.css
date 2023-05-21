@@ -1,0 +1,91 @@
+@font-face {
+  font-family: "shn-i"; /* Project id 3827528 */
+  src: url('iconfont.woff2?t=1671367288374') format('woff2'),
+       url('iconfont.woff?t=1671367288374') format('woff'),
+       url('iconfont.ttf?t=1671367288374') format('truetype');
+}
+
+.shn-i {
+  font-family: "shn-i" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.shn-i-qianbao_wallet:before {
+  content: "\e623";
+}
+
+.shn-i-jihua_plan:before {
+  content: "\e624";
+}
+
+.shn-i-dayinji_printer:before {
+  content: "\e625";
+}
+
+.shn-i-wendang_word:before {
+  content: "\e626";
+}
+
+.shn-i-huatitaolun_topic-discussion:before {
+  content: "\e627";
+}
+
+.shn-i-wenjianjia-guan_folder-close:before {
+  content: "\e628";
+}
+
+.shn-i-wendangjiazi_document-folder:before {
+  content: "\e629";
+}
+
+.shn-i-shijian_time:before {
+  content: "\e62a";
+}
+
+.shn-i-xia-jiantou_arrow-circle-down:before {
+  content: "\e62b";
+}
+
+.shn-i-xingxing_star:before {
+  content: "\e62c";
+}
+
+.shn-i-zanting_pause-one:before {
+  content: "\e62d";
+}
+
+.shn-i-zhuyi_attention:before {
+  content: "\e62e";
+}
+
+.shn-i-gengduo2_more-two:before {
+  content: "\e620";
+}
+
+.shn-i-huati_topic:before {
+  content: "\e621";
+}
+
+.shn-i-guzhangtu_damage-map:before {
+  content: "\e622";
+}
+
+.shn-i-cart:before {
+  content: "\e698";
+}
+
+.shn-i-set:before {
+  content: "\e6ae";
+}
+
+.shn-i-survey:before {
+  content: "\e6b2";
+}
+
+.shn-i-home:before {
+  content: "\e6d7";
+}
+
